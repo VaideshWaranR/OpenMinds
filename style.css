@@ -1,0 +1,447 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: #007bff;;
+    color: white;
+    padding: 10px 20px;
+    position: fixed; /* Fix the header to the top */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Ensure body content doesn't overlap with the fixed header */
+body {
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+  
+  /* Hero Section */
+  #hero {
+    background: url('./images/main.jpg') no-repeat center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #hero h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  #hero p {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Headings */
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  /* About Us */
+  #about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Lists */
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 25px; /* Adjusted padding for better alignment */
+  }
+  
+  ul li::before {
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.2rem;
+  }
+  /* General Styles for Section */
+#services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Service Card Styles */
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Services List Styles */
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.service-card ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-card ul li i {
+    color: #3498db;
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
+
+  /* Contact Us Form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  form input, form textarea {
+    padding: 0.7rem; /* Increased padding for better touch targets */
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 0.7rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    background:#007bff;;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+/* General Slider Styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Adjust to handle multiple images per slide */
+}
+
+.slide {
+    min-width: 33.33%; /* Display 3 images at a time */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide img {
+    width: 60%; /* Adjust the size of the images */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* Optional: Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for a polished look */
+}
+
+/* Slider Control Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Circular buttons */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; /* Increase icon size */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Specific Styles for Different Sections */
+.events-slider .slide img, 
+.courses-slider .slide img,
+.about-slider .slide img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Additional Styles for UI Enhancement */
+.slide h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.slider-container {
+    max-width: 90%;
+    margin: 0 auto; /* Center the slider within the page */
+    padding: 10px;
+}
+
+.slider {
+    border-radius: 10px; /* Optional: Rounded edges for the entire slider */
+    background-color: #f9f9f9; /* Optional: Light background to make it stand out */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    header{
+        ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Adjust based on header height */
+            right: 20px;
+            background-color:#007bff;;
+            width: 200px;
+            border-radius: 5px;
+        }
+    
+        ul.show {
+            display: flex;
+        }
+    
+        ul li {
+            margin: 15px 0;
+        }
+    
+        .menu-toggle {
+            display: flex;
+        }
+    }
+    #hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    #hero p {
+      font-size: 1.2rem;
+    }
+    .events-slider .slide img, 
+.courses-slider .slide img,
+.about-slider .slide img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+.service-card {
+    padding: 20px;
+}
+
+#services h2 {
+    font-size: 2rem;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+}
+
+.service-card ul li {
+    font-size: 1rem;
+}
+  }
+  
+  @media (max-width: 480px) {
+    header{
+        ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Adjust based on header height */
+            right: 20px;
+            background-color:#007bff;;
+            width: 200px;
+            border-radius: 5px;
+        }
+    
+        ul.show {
+            display: flex;
+        }
+    
+        ul li {
+            margin: 15px 0;
+        }
+    
+        .menu-toggle {
+            display: flex;
+        }
+    }
+    form input, form textarea {
+      font-size: 0.9rem;
+    }
+  
+    form button {
+      font-size: 1rem;
+    }
+  
+    #hero h1 {
+      font-size: 2rem;
+    }
+  
+    #hero p {
+      font-size: 1rem;
+    }
+    .events-slider .slide img, 
+.courses-slider .slide img,
+.about-slider .slide img {
+    width: 50%;
+    height: 180px;
+    object-fit: cover;
+}
+  }
+  
