@@ -22,7 +22,7 @@ html ,body{
 .menu-bar{
   backdrop-filter: blur(9px) saturate(180%);
   -webkit-backdrop-filter: blur(9px) saturate(180%);
-  background-color:  rgba(164, 175, 182, 0.7);
+  background-color:  rgba(255, 255, 255, 0.904);
   height: 40px;
   width: 65%;
   border-radius: 25px;
@@ -30,10 +30,12 @@ html ,body{
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: 15%;
   list-style: none;
+  backdrop-filter: blur(20px);
+  z-index: 10;
 }
 .menu-bar li a{
   width: 24%;
@@ -57,7 +59,7 @@ html ,body{
   background-color: rgba(76, 83, 87, 0.75);
   height:350px;
   width: 55px;
-  position: absolute;
+  position: fixed;
   top: 20%;
   left:2%;
   display: flex;
@@ -66,6 +68,7 @@ html ,body{
   justify-content: space-around;
   padding: 5px;
   border-radius: 15px;
+  z-index: 10;
 }
 .socials li{
   list-style: none;
@@ -342,6 +345,7 @@ html ,body{
 }
 
 #contact-section {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,4 +509,206 @@ font-size: 2rem;
 
 .social-icons i:hover {
   color:rgb(32, 32, 255);
+}
+
+#testimonial{
+  position: relative;
+  height: 70vh;
+  background-color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.t-heading{
+  position: absolute;
+  top: 5%;
+  left: 32%;
+  font-size: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.t-para{
+  position: absolute;
+  top: 15%;
+  left: 28%;
+  font-size: 1.3rem;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Transparent white for the glass effect */
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for visibility on dark background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to enhance the frosted effect */
+  backdrop-filter: blur(10px); /* Creates the frosted glass blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+  width: 85%;
+  color: white; /* Ensure text is visible on the dark background */
+}
+
+
+.card-image img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+.card-content {
+  margin-top: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  color:white;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: aliceblue;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color:#fff;
+  background: #4680ff;;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow.prev {
+  left: 5px;
+}
+
+.arrow.next {
+  right: 5px;
+}
+
+/* Main Programs Section */
+#programs-section {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 50px 10%;
+  background-color: black; /* Dark background */
+  height: auto;
+}
+
+/* Section Heading */
+#programs-section h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Programs Grid Layout */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Program Card Styling with Enhanced Glassmorphism Effect */
+.program-card {
+  background: rgba(255, 255, 255, 0.15); /* More transparent background for glass effect */
+  backdrop-filter: blur(12px); /* Glass blur effect */
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent border */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); /* Glass shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  color: #fff; /* White text inside the card for contrast */
+}
+
+/* Hover Effect to Enhance Interaction */
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25); /* Increased shadow for hover */
+}
+
+.know-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.know-more-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Program Card Image */
+.program-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Light border around the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for image */
+}
+
+/* Program Card Title */
+.program-card h3 {
+  margin: 20px 0 10px 0;
+  font-size: 1.75em;
+  color: #fff; /* White title */
+  font-weight: 600;
+}
+
+/* Program Card Description */
+.program-card p {
+  font-size: 1.1em;
+  color: #ccc; /* Light grey description text for readability */
+  line-height: 1.6;
 }

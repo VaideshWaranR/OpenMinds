@@ -18,3 +18,32 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // Clear form fields
     document.getElementById('contactForm').reset();
 });
+
+
+const slider = document.querySelector('.slider');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let currentSlide = 0;
+
+prev.addEventListener('click', () => {
+  if (currentSlide === 0) {
+    currentSlide = slider.children.length - 1;
+  } else {
+    currentSlide--;
+  }
+  updateSlider();
+});
+
+next.addEventListener('click', () => {
+  if (currentSlide === slider.children.length - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  updateSlider();
+});
+
+function updateSlider() {
+  const slideWidth = slider.children[0].offsetWidth;
+  slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
