@@ -1581,7 +1581,6 @@ h2 {
   width: 85%;
   color: white; /* Ensure text is visible on the dark background */
 }
-
 .card-content h3 {
   margin-bottom: 10px;
 }
@@ -1636,6 +1635,7 @@ h2 {
   transition: background-color 0.3s ease;
   position: relative;
   overflow: hidden;
+  height: fit-content;
 }
 
 .card-image {
@@ -1645,15 +1645,15 @@ h2 {
 
 .card-image img {
   width: 100%; /* Make the image fill the width of the card */
-  height: 250px; /* Maintain aspect ratio */
+  height: 300px; /* Maintain aspect ratio */
   display: block; /* Prevents inline spacing */
   padding: 0;
   /*transition: transform 0.3s ease; /* For zoom effect */
 }
 
 .card-content {
-  height: 20%; /* 20% of the card height for the content */
-  padding: 10px; /* Space between content and edges */
+  height: fit-content; /* 20% of the card height for the content */
+  padding: 20px; /* Space between content and edges */
   background-color: black; /* Default background */
   color: white; /* Text color */
   transition: background-color 0.3s;
