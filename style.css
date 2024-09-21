@@ -1,4 +1,7 @@
 *{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,22 +10,40 @@ html ,body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-.hero-section{
+.hero-section {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
   background-color: black;
   color: white;
   position: relative;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),url('./images/landingpage/1.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right center; /* Start from the right side */
   background-size: cover;
+  transition: background-image 1s ease-in-out;
+  animation: scrollBackground 60s linear infinite; /* Adjust duration for smooth scroll */
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: center center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+.menu-bar-outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu-bar{
   backdrop-filter: blur(9px) saturate(180%);
   -webkit-backdrop-filter: blur(9px) saturate(180%);
-  background-color:  rgba(255, 255, 255, 0.904);
+  background-color:  rgba(255, 255, 255, 0.4);
   height: 40px;
   width: 65%;
   border-radius: 25px;
@@ -32,7 +53,6 @@ html ,body{
   padding: 15px;
   position: fixed;
   top: 15px;
-  left: 15%;
   list-style: none;
   backdrop-filter: blur(20px);
   z-index: 10;
@@ -43,8 +63,8 @@ html ,body{
   text-align: center;
   border-radius: 15px;
   font-size: 1rem;
-  font-family: monospace;
-  font-weight: 600;
+  font-family: "Anton",sans-serif;
+  font-weight: 400;
   cursor: pointer;
   color: black;
   text-decoration: none;
@@ -80,22 +100,24 @@ html ,body{
   top: 20%;
   left: 10%;
   width: 45%;
-  height: 500px;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 20px;
   padding: 20px;
 }
 .hero-content h1{
   font-size: 4.5rem;
-  font-family: monospace;
+  font-family: "Anton",sans-serif;
+  letter-spacing: 2px;
 }
 .hero-content h3{
-  white-space: nowrap;
+  /* white-space: nowrap; */
   font-size: 2rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(98, 205, 255);
-  font-weight: 900;
+  font-weight: 300;
   text-shadow: 0 0 10px rgba(98, 205, 255, 0.7), /* Inner glow */
   0 0 20px rgba(98, 205, 255, 0.7), /* Middle glow */
   0 0 30px rgba(98, 205, 255, 0.7);
@@ -104,16 +126,19 @@ html ,body{
   font-size: 1.5rem;
   line-height: 1.3em;
   word-spacing: 0.3em;
+  text-align: justify;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .enquire-button {
   padding: 10px 50px;
+  width: 300px;
   background: linear-gradient(45deg, #7f00ff, #e100ff); /* Purple gradient */
   color: white;
   font-size: 1.3rem;
-  position: absolute;
+  text-decoration: none;
+  /* position: absolute;
   left: 10%;
-  bottom: 5%;
+  bottom: 5%; */
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(127, 0, 255, 0.7), /* Inner glow */
               0 0 20px rgba(127, 0, 255, 0.7), /* Middle glow */
@@ -143,32 +168,54 @@ html ,body{
   background-size: cover;
 }
 #about{
-  height: 100vh;
+  /* height: 100vh;
   width: 100vw;
-  position: relative;
+  position: relative; */
+ 
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 50px;
+  gap: 50px;
+  
 }
 .about-part1{
-  width: 35vw;
-  height: 60%;
+  /* width: 35vw;
+  height: 870px;
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 10%; */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  
+  
 }
 
 .about-part1 h1{
   font-size: 3.3rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Anton",sans-serif;
+  letter-spacing: 2px;
   font-weight: 800;
+  padding-left: 20px;
+}
+.about-part1 p span{
+font-weight: 300;
 }
 .about-part1 p{
-  font-size: 1.4rem;
-  word-spacing: 0.36em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  padding-right: 100px;
+  font-size: 1.3rem;
+  word-spacing: 0.46em;
+  font-weight: 300;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.35em;
 }
 .about-part1 .about-buttons{
+  padding-left: 20px;
   width: 100%;
   display: flex;
   gap: 10px;
@@ -177,9 +224,12 @@ html ,body{
 .about-buttons button{
   padding: 10px;
   color: white;
-  font-family: monospace;
+  font-family: "Anton",sans-serif;
   font-size: 1rem;
   cursor: pointer;
+  padding-left: 30px;
+  padding-right: 30px;
+  
 }
 .about-buttons button:first-child{
   background-color: #349ef4;
@@ -193,36 +243,40 @@ html ,body{
   border-radius: 10px;
 }
 .about-part2{
-  width: 40vw;
+  
+  /* width: 40vw;
   height: 80%;
   position: absolute;
   top: 10%;
-  right:10%;
+  right:10%; */
+  flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
 }
 .about-img{
-  position: absolute;
-  bottom: 5%;
-  height: 600px;
+  
+  height: 300px;
   width: 600px;
   background-image:url('./images/landingpage/aboutus/1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  position: relative;
+  
+  
 }
 .know-more {
-  width: 400px;
-  height: 170px;
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
+  
+  width: 530px;
+  text-align: justify;
   padding: 10px;
-  font-family: monospace;
+  
   display: flex;
   flex-direction: column;
+  gap: 15px;
   align-items: center;
   justify-content: space-around;
   background-color: #fff;
@@ -236,10 +290,14 @@ html ,body{
 }
 .know-more h1{
   font-size: 1.5rem;
+  font-family: "Anton",sans-serif;
 }
 .know-more p{
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Roboto", sans-serif;
 }
 .know-more button{
   background-color: #349ef4;
@@ -248,9 +306,10 @@ html ,body{
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  font-family: "Anton",sans-serif;
 }
 #gallery{
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   position: relative;
   display: flex;
@@ -264,16 +323,19 @@ html ,body{
   flex-direction: column;
   justify-content: space-between;
 }
-
+.anton-font{
+  font-family: "Roboto", sans-serif;
+}
 .gal-part1 h1{
   font-size: 3.3rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Anton",sans-serif;
   font-weight: 800;
 }
 .gal-part1 p{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   word-spacing: 0.36em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 .gal-part1 button{
@@ -345,49 +407,118 @@ html ,body{
 }
 
 #contact-section {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  align-content: center;
 }
 
-.contact-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid black;
-  display: inline-block;
-}
-.contact-form{
+.contact {
   display: flex;
-  flex-direction: column;
-  width: 50vw;
-  height: 40vh;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Align items vertically */
 }
+
+.contact-form-container {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Space between form and image */
+  max-width: 1000px; /* Control the maximum width of the container */
+  width: 100%;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 500px; /* Control the width of the form */
+}
+
+.contact-form h2 {
+  font-size: 36px; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold text for stronger presence */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Darker color for better readability (adjust as needed) */
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border:0;
-  background-color: gainsboro;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 12px 16px; /* Slightly increased padding for a more spacious feel */
+  margin-bottom: 15px; /* Increased margin for better spacing */
+  border: 1px solid #ccc; /* Light grey border for a clean look */
+  border-radius: 8px; /* More rounded corners for a modern appearance */
+  box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
+  font-size: 16px; /* Slightly larger font size for better readability */
+  transition: all 0.3s ease; /* Smooth transition for interactive states */
+  background-color: #f9f9f9; /* Light background color for input fields */
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff; /* Blue border on focus to match button color */
+  outline: none; /* Removes default outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Subtle shadow effect on focus */
+  background-color: #fff; /* White background on focus for better contrast */
+}
+
+/* Optional: Add placeholder styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888; /* Light grey color for placeholders */
+  font-style: italic; /* Italic style for placeholder text */
+}
+
+
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #8b56ff;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  background-color: #B595FF; /* Purple background for the button */
+  color: #fff; /* White text color */
+  border: none; /* Remove default border */
+  padding: 14px 28px; /* Larger padding for a more substantial button */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-size: 18px; /* Larger font size for better readability */
+  font-weight: bold; /* Bold text for emphasis */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and active states */
 }
 
 .contact-form button:hover {
-  background-color: #9673d4;
+  background-color: #9a5bff; /* Slightly darker purple background on hover */
 }
+
+.contact-form button:active {
+  transform: scale(0.98); /* Slightly shrink the button when pressed for a "pressed" effect */
+}
+
+.contact-form button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(182, 149, 255, 0.5); /* Subtle shadow effect on focus, matching button color */
+}
+
+.contact-form #responseMessage {
+  margin-top: 10px;
+  color: green; /* Adjust color as needed */
+}
+
+.contact-image img {
+  /*width: auto; /* Ensure the image width adjusts naturally */
+  /*height: auto; /* Ensure the image height adjusts naturally */
+  /*max-width: 100%; /* Ensure the image does not exceed the container width */
+  border-radius: 0; /* Remove any rounded corners */
+  box-shadow: none; /* Remove any shadow effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px; /* Adjust the gap for small screens */
+  }
+
+  .contact-image {
+    margin-top: 20px;
+  }
+}
+
 
 #responseMessage {
   color: green;
@@ -398,13 +529,13 @@ html ,body{
 
 /* Footer */
 #footer {
-  background: linear-gradient(90deg, #7027F9, #FF619B);
+  background: linear-gradient(90deg, #4E2E41, #98306E, #4E2E41);
   padding: 30px;
   color: white;
   display: flex;
   justify-content: space-around;
   position: relative;
-  height: 35vh;
+  height: 45vh;
   font-family: monospace;
 }
 
@@ -412,7 +543,6 @@ html ,body{
   text-align: center;
   position: absolute;
   top: 0;
-  left: 0;
   display: flex;
   width: 100vw;
   justify-content: space-between;
@@ -424,33 +554,49 @@ html ,body{
 
 .footer-newsletter h3 {
   font-size: 24px;
+  color: #4DB4FF;
+  left: 5%;
+  padding-top: 10px;
 }
 
 .footer-newsletter p {
   margin: 10px 0;
+  padding-left: 35px;
 }
 
 .subscribe-container {
   display: flex;
   justify-content: center;
   height: 40px;
+  margin-right: 20px;
 }
 
 .subscribe-container input {
   padding: 10px;
-  width: 300px;
+  width: 350px;
+  margin-right: 20px;
   border: none;
-  border-radius: 30px 0 0 30px;
+  border-radius: /*30px 0 0 30px;*/20px;
+  flex: 1;
 }
 
 .subscribe-container button {
   padding: 10px 20px;
-  background-color: white;
-  color: #7027F9;
+  background-color: #703D5C;
+  color: #ffffff;
   border: none;
-  border-radius: 0 30px 30px 0;
+  height: 30px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 20px;/*0 30px 30px 0;*/
   cursor: pointer;
+  margin-left: -130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 /* Footer Links */
 .footer-links {
@@ -458,6 +604,7 @@ html ,body{
   justify-content: space-between;
   width: 60vw;
   position: absolute;
+  top: 35%;
   bottom: 5px;
   padding: 10px;
   right: 10vw;
@@ -466,7 +613,7 @@ html ,body{
 
 .footer-links h4 {
   margin-bottom: 15px;
-  color:blue;
+  color:#4DB4FF;
 }
 
 .footer-links ul {
@@ -477,11 +624,21 @@ html ,body{
 .footer-links ul li {
   margin-bottom: 10px;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.footer-links ul li a {
+  color: inherit; /* Use the parent color */
+  text-decoration: none; /* Remove underline by default */
 }
 
 .footer-links ul li:hover {
-  text-decoration: underline;
   color:blue;
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+.footer-links ul li a:hover {
+  color: darkblue; /* Darker color for the link on hover */
 }
 
 /* Social Media */
@@ -490,6 +647,7 @@ html ,body{
   position: absolute;
   bottom: 5px;
   left: 2vw;
+  top: 25%;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -509,118 +667,6 @@ font-size: 2rem;
 
 .social-icons i:hover {
   color:rgb(32, 32, 255);
-}
-
-#testimonial{
-  position: relative;
-  height: 70vh;
-  background-color:black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-.t-heading{
-  position: absolute;
-  top: 5%;
-  left: 32%;
-  font-size: 3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-.t-para{
-  position: absolute;
-  top: 15%;
-  left: 28%;
-  font-size: 1.3rem;
-}
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 1210px;
-  overflow: hidden;
-  margin-top: 100px;
-}
-
-.slider-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 33.33%;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.1); /* Transparent white for the glass effect */
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for visibility on dark background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to enhance the frosted effect */
-  backdrop-filter: blur(10px); /* Creates the frosted glass blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
-  width: 85%;
-  color: white; /* Ensure text is visible on the dark background */
-}
-
-
-.card-image img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 5px solid #fff;
-}
-
-.card-content {
-  margin-top: 20px;
-}
-
-.card-content h3 {
-  margin-bottom: 10px;
-  color:white;
-}
-
-.card-content p {
-  font-size: 14px;
-  color: aliceblue;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color:#fff;
-  background: #4680ff;;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.arrow.prev {
-  left: 5px;
-}
-
-.arrow.next {
-  right: 5px;
 }
 
 /* Main Programs Section */
@@ -712,3 +758,1479 @@ font-size: 2rem;
   color: #ccc; /* Light grey description text for readability */
   line-height: 1.6;
 }
+
+.quote {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  background-color: #0094FF;
+  color: #fdfdfd;
+  margin-top: 20px;
+}
+
+/* Container for the animated text */
+.animated-text-container {
+  position: relative;
+  height: auto; /* Allow height to grow based on text content */
+  width: 100%; /* Span the width of the container */
+  overflow: visible; /* Ensure text is not clipped */
+  display: flex; /* Use flexbox to center the text */
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Optional: add padding if needed */
+}
+
+/* Style for the animated text */
+.animated-text {
+  font-size: 2rem; /* Adjust based on your design */
+  color: #fff; /* Text color */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.5); /* Multiple layers for a strong glow */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 3s ease-in-out infinite;
+}
+
+/* Keyframes for text sliding in and fading */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Style for the animated text with glowing effect */
+.animated-text {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 3s ease-in-out infinite;
+  font-size: 2rem; /* Adjust font size as needed */
+  white-space: nowrap;
+  color: #fff; /* Text color */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.5); /* Multiple layers for a strong glow */
+}
+
+/* Container for the animated quotes */
+.animated-quotes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Adjust based on content */
+  width: 100%; /* Adjust as needed */
+  padding: 20px;
+  background-color: #0094FF; /* Background color */
+}
+
+/* Container for the quote and author */
+.animated-quote-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+/* Style for the animated quote */
+.animated-quote {
+  font-size: 1.5rem; /* Adjust based on your design */
+  color: #fff; /* Text color */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+}
+
+/* Style for the quote author */
+.quote-author {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #ffffff; /* Slightly lighter color for author */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+  animation-delay: 0s; /* Adjust timing as needed */
+}
+
+/* Keyframes for fading and sliding effect */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+#programs-section {
+  padding: 20px;
+  position: relative;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+}
+
+.programs-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.programs-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.program-card {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust width as needed */
+  scroll-snap-align: center; /* Center the cards */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.program-card h3 {
+  margin: 10px 0 5px;
+}
+
+.program-card p {
+  margin: 0 0 10px;
+}
+
+.program-card .know-more-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(70, 68, 68);
+  color: #fff;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.program-card .know-more-button:hover {
+  background-color: rgba(70, 68, 68, 0.861);
+}
+
+/* Arrow buttons */
+.scroll-arrow {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-arrow:hover {
+  background-color: #0056b3;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+/* Scrollbar styles */
+.programs-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.programs-grid::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+.programs-grid::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+#unlock-section {
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+.section-description {
+  
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  font-family: 'Varela Round', sans-serif;
+  color: #444;
+  line-height: 1.6;
+  max-width: 1050px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.nav-button {
+  background-color: #B595FF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.pcarousel-item {
+  min-width: 33.33%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item {
+  min-width: 33.33%;
+  padding: 0 0.5rem; /* Adjust padding to reduce gap */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  background: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 320px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #459cf3;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#expert-recommendations {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.expert-description {
+  text-align: left; /* Align text to the left */
+  margin: 0 auto 2rem auto; /* Center container horizontally, add space below */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+  font-family: 'Varela Round', sans-serif; /* Use a modern sans-serif font */
+  color: #444; /* Dark gray color for contrast */
+  line-height: 1.6; /* Improve readability with a larger line height */
+  max-width: 1050px; /* Limit width for readability */
+  padding: 0 1rem; /* Padding to ensure text doesn't touch edges on small screens */
+  text-align: justify;
+}
+
+.expert-carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.expert-carousel-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.expert-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.expert-carousel-item {
+  min-width: 33.33%; /* Show 3 items per page */
+  padding: 0 0.5rem; /* Adjust padding to reduce gap */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center the card within the carousel-item */
+}
+
+.expert-card-link {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.expert-card {
+  background: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%; /* Ensure the card fits within the carousel-item */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 370px; /* Adjust height as needed */
+}
+
+.expert-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.expert-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.expert-card-title {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  color: #459cf3;
+}
+
+.expert-card-description {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-nav-button {
+  background-color: #B595FF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /*position: absolute;*/
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-nav-button.prev {
+  left: 10px;
+}
+
+.carousel-nav-button.next {
+  right: 10px;
+}
+
+/* Container for the quote carousel */
+.quote-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Adjust based on content */
+  width: 100%; /* Adjust as needed */
+  padding: 20px;
+  background-color: #0094FF; /* Background color */
+}
+
+/* Container for the quote and author */
+.quote-carousel-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+/* Style for the quote text */
+.quote-text {
+  font-size: 1.5rem; /* Adjust based on your design */
+  color: #fff; /* Text color */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+}
+
+/* Style for the quote author name */
+.quote-author-name {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #ffffff; /* Slightly lighter color for author */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+  animation-delay: 0s; /* Adjust timing as needed */
+}
+
+/* Keyframes for fading and sliding effect */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Container for the carousel section */
+#programs-carousel-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #000000;
+}
+
+/* Style for the section heading */
+#programs-carousel-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: "Anton",sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #8e25ff, #4fa5fc); /* Apply gradient */
+  -webkit-background-clip: text; /* Clip background to text for WebKit browsers */
+  -moz-background-clip: text; /* Clip background to text for Firefox */
+  background-clip: text; /* Standard syntax for clipping background to text */
+  color: transparent; /* Make text color transparent to show gradient */
+}
+
+.view-all-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  background-color: rgb(70, 68, 68);
+  color: #fff; /* Text color for the button */
+  font-size: 1.2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Anton",sans-serif;
+  text-decoration: none; /* Remove underline for links */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: rgba(70, 68, 68, 0.861);
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.view-all-button:focus {
+  outline: none; /* Remove default outline on focus */
+}
+
+/* Style for each program card */
+.program-card {
+  position: relative; /* Allows content to be positioned within the card */
+  background: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #ffffff; /* Set default text color */
+  padding: 0;
+  
+}
+
+/* Ensure the card size matches the image size */
+.program-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Cover the card area with the image */
+}
+
+.program-card .content {
+  position: absolute;
+  top: 75%; /* Start from the middle of the card */
+  left: 0;
+  width: 100%; /* Full width of the card */
+  height: calc(100% - 150px); /* Adjust height to leave space for the button */
+  padding: 1rem; /* Padding around the content */
+  box-sizing: border-box; /* Include padding in the height */
+  display: flex;
+  flex-direction: column;
+  
+  /*justify-content: center; /* Center the content vertically */
+  color: #ffffff; /* Set default text color */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  z-index: 2; /* Ensure content is above the image */
+  transform: translateY(-50%); /* Move the content up to center it */
+}
+
+
+/* Style for program card headings */
+.program-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #ffffff; /* White text for readability */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Style for program card paragraphs */
+.program-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-bottom: 0rem; /* Add margin at the bottom to make space for the button */
+}
+
+/* Style for the "Know More" button */
+.know-more-button {
+  position: absolute; /* Position it absolutely within the card */
+  bottom: 0; /* Align to the bottom of the card */
+  right: 0; /* Align to the right of the card */
+  padding: 0.3rem 0.6rem; /* Smaller padding for a smaller button */
+  background: rgba(66, 66, 66, 0.1); /* Semi-transparent background */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: "Anton",sans-serif;
+  font-size: 0.8rem; /* Smaller font size */
+  margin: 0.5rem; /* Space around the button */
+  z-index: 3; /* Ensure button is above the image and content */
+}
+
+
+/* General Carousel Styles */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.program-carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.pcarousel-item {
+  min-width: 300px; /* Adjust based on your design */
+  margin: 0 10px; /* Space between items */
+}
+
+/* Arrow Button Styles */
+.carousel-nav-button,
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.carousel-nav-button:hover,
+.nav-button:hover {
+  color: #007bff; /* Change to desired hover color */
+}
+
+.carousel-nav-button.prev {
+  position: absolute;
+  left: 10px; /* Positioning for left arrow */
+}
+
+.carousel-nav-button.next {
+  position: absolute;
+  right: 10px; /* Positioning for right arrow */
+}
+
+/* Additional styles to ensure accessibility and visibility */
+.carousel-nav-button:focus,
+.nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007bff; /* Focus effect */
+}
+
+/* Styles for testimonials section */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #007bff; /* Change to desired hover color */
+}
+
+.arrow.prev {
+  position: absolute;
+  left: 10px; /* Positioning for left arrow */
+}
+
+.arrow.next {
+  position: absolute;
+  right: 10px; /* Positioning for right arrow */
+}
+
+#testimonial{
+  position: relative;
+  height: 105vh;
+  background-color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.t-heading{
+  position: absolute;
+  top: 5%;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #8e25ff, #4fa5fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.t-para{
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  right: 10%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Transparent white for the glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for visibility on dark background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to enhance the frosted effect */
+  backdrop-filter: blur(10px); /* Creates the frosted glass blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+  width: 85%;
+  color: white; /* Ensure text is visible on the dark background */
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color:#fff;
+  background: #4680ff;;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow.prev {
+  left: 5px;
+}
+
+.arrow.next {
+  right: 5px;
+}
+
+#testimonial {
+  padding: 5px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  flex: 1 0 33.33%; /* Each slide takes up 1/3 of the slider width */
+  box-sizing: border-box; /* Ensures padding and borders are included in the width */ 
+}
+
+.card {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  width: 300px; /* Adjust width as needed */
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  height: 80%; /* 80% of the card height for the image */
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%; /* Make the image fill the width of the card */
+  height: 250px; /* Maintain aspect ratio */
+  display: block; /* Prevents inline spacing */
+  padding: 0;
+  /*transition: transform 0.3s ease; /* For zoom effect */
+}
+
+.card-content {
+  height: 20%; /* 20% of the card height for the content */
+  padding: 10px; /* Space between content and edges */
+  background-color: black; /* Default background */
+  color: white; /* Text color */
+  transition: background-color 0.3s;
+  background-color: black; /* Initial background color */
+}
+
+.card:hover .card-content {
+  background-color: white; /* Change to white on hover */
+  color: black; /* Change text color on hover */
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+/* Arrow styles (optional) */
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: white; /* Change as needed */
+}
+
+#inspiration-section {
+  padding: 20px;
+  background-color: #000000;
+}
+
+.inspiration-title {
+  font-size: 2.5rem; /* Larger font size for the title */
+  background: linear-gradient(90deg, #8e25ff, #4fa5fc);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent */
+  margin-bottom: 10px; /* Space below the title */
+  text-align: center; /* Center the title */
+  font-weight: bold; /* Make the title bold */
+}
+
+
+.inspiration-text {
+    font-size: 1.2rem; /* Medium font size for the paragraph */
+    color: #ffffff; /* Lighter gray color for the text */
+    margin-bottom: 40px; /* Space below the paragraph */
+    text-align: center; /* Center the text */
+    /* justify-content: center; */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+
+.inspiration-cards-container {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: center; /* Center cards in the container */
+}
+
+.inspiration-card {
+  position: relative;
+  margin: 10px;
+  width: 300px; /* Fixed width for all cards */
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.inspiration-card.expanded {
+  width: calc(100% - 250px); /* Expanded width */
+  z-index: 1; /* Ensure expanded card is on top */
+}
+
+.inspiration-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  transition: opacity 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+}
+
+.inspiration-card.expanded .inspiration-card-content {
+  opacity: 1; /* Show content only when expanded */
+}
+
+.inspiration-card img {
+  width: 100%; /* Full width for the image */
+  height: 100%; /* Full height for the image */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.inspiration-card:not(.expanded) img {
+  filter: grayscale(100%); /* Black and white for collapsed cards */
+}
+
+.resource-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.resource-section h2 {
+  font-family: 'Shippori Antique', sans-serif;
+  font-size: 2em; /* Adjusts the font size */
+  font-weight: 550;
+  color: #000000;    /* Changes text color */
+  text-align: center; /* Centers the text */
+}
+
+.resource-section img {
+  width: 220px;    /* Sets the image width */
+  height: auto;   /* Maintains the aspect ratio */
+  margin: 0;
+  vertical-align: middle; /* Aligns the image with text */
+}
+
+.resource-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.resource-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 0;
+  flex: 0 0 calc(25% - 20px); /* Four cards at a time */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  height: 275px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.card-name {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-details {
+  padding: 15px;
+  font-size: medium;
+  flex: 3;
+}
+
+.carousel-controls {
+  margin: 15px 0;
+}
+
+.carousel-arrow {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background-color: #0056b3;
+}
+
+.r-view-all-button {
+  margin-top: 20px;
+}
+
+.r-view-all-button button {
+  background-color: #3292FE;
+  font-family: "Anton",sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.r-view-all-button button:hover {
+  background-color: #007bff;
+}
+
+.open-minds-section {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+.open-minds-section h2 {
+  color: #fff;
+  font-size: 2.5em; /* Adjust size as needed */
+  font-weight: 600; /* Bold font weight */
+  background: linear-gradient(90deg, #AB5BFB, #7690EA); /* Gradient from primary blue to a lighter blue */
+  -webkit-background-clip: text; /* For webkit browsers */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show the gradient */
+  margin-bottom: 10px; /* Space below the heading */
+  letter-spacing: 1px; /* Space between letters */
+}
+
+.open-minds-section p {
+  color: #fff;
+  font-size: 1.1em; /* Slightly larger than default */
+  color: #ffffff; /* A softer color for the paragraph */
+  line-height: 1.5; /* Increase line height for better readability */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto 20px; /* Center and add space below */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  margin-top: 20px;
+}
+
+.open-minds-card {
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.open-minds-card img {
+  width: 100%;
+  height: 100%; /* Adjust height of image section */
+  object-fit: cover; /* Ensures images are cropped correctly */
+}
+
+.open-minds-content-display {
+  margin-top: 20px;
+}
+
+.open-minds-content {
+  color: #fff;
+  display: none; /* Hide all content by default */
+}
+
+.open-minds-content h3 {
+  font-size: 2.4em; /* Adjust size as needed */
+  font-weight: 500; /* Bold font weight */
+  margin: 0;
+  color: #fff; /* Text color */
+  padding: 10px; /* Padding around the text */
+}
+
+.open-minds-content.hidden {
+  display: none; /* Ensures hidden class keeps content hidden */
+}
+
+.open-minds-content:not(.hidden) {
+  display: block; /* Show the content when not hidden */
+}
+
+.membership-offer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #007BFF, #00BFFF);
+  color: white; /* Text color */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.membership-offer-section h2 {
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Anton",sans-serif;
+}
+
+.membership-offer-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.claim-offer-button {
+  cursor: default;    
+  pointer-events: none;
+  background-color: #62b9ff; /* Button color */
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #6272ff; /* Border color */
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Anton",sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  transition: background-color 0.3s smooth, color 0.3s smooth;
+  animation: blink 1s infinite; /* Add blinking animation */
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+      color: #000;
+  }
+  50% {
+      opacity: 0.5;
+      color: #fff;
+  }
+}
+
+#our-tie-ups-section {
+  overflow: hidden;
+  background-color: #0094FF;
+  height: 175px;
+}
+
+.tie-ups-title {
+  padding: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: "Anton",sans-serif;
+}
+
+.tie-ups-slider {
+  overflow: hidden; /* Hides overflow for scrolling effect */
+  white-space: nowrap; /* Prevents logos from wrapping to the next line */
+  position: relative; /* Positions the scrolling container */
+  display: flex; /* Aligns logos in a row */
+  justify-content: center; /* Centers logos horizontally */
+  flex-wrap: wrap; /* Allows wrapping if the container is too small */
+  gap: 50px; /* Adds space between logos */
+}
+
+.scrolling-logos {
+  display: inline-block; /* Allows the container to adjust to content */
+  animation: scroll 20s linear infinite; /* Animation for scrolling effect */
+}
+
+.tie-up-logo {
+  width: 100px; /* Set the desired width */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 100px;
+  max-width: 100%; /* Prevents logos from exceeding their container */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+      transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for modal background overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  /* background-color: black; */
+  
+ 
+  
+}
+
+/* Modal content box */
+.modal-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* background-color: rgba(19, 18, 18, 0.5); */
+  padding: 50px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap; 
+  border-radius: 8px;
+}
+
+/* Exit button style */
+.close {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.modal-card{
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  border: solid 2px white;
+  border-radius: 8px;
+  position: relative;
+}
+.modal-card-1{
+  background-image: url("images/programs/AIML.png");
+}
+.modal-card-2{
+  background-image: url("images/programs/PB.png");
+}
+.modal-card-3{
+  background-image: url("images/programs/DA.png");
+}
+.modal-card-4{
+  background-image: url("images/programs/DE.png");
+}
+.modal-card-5{
+  background-image: url("images/programs/DS.png");
+}
+.modal-card-6{
+  background-image: url("images/programs/Rob.png");
+}
+.modal-card-content{
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  color: white;
+}
+.modal-card-content h3{
+  font-weight: 800;
+  font-size: 12px;
+}
+.modal-card-content p{
+  text-align: justify;
+  font-size: 9px;
+}
+.modal-card-content a{
+  color: white;
+  text-decoration: none;
+  background-color: rgb(66, 64, 64);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: solid 1px white;
+  font-size: 12px;
+  font-family: "Anton",sans-serif;
+  letter-spacing: 1px;
+}
+
+
+video {
+  pointer-events: none; /* Prevent any interaction with the video */
+}
+
+
+.Myelin-modal-content{
+  background-color: #0094FF;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 40px;
+  padding-left: 60px;
+  /* height: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  border-radius: 8px;
+  
+  gap: 10px;
+}
+
+.Myelin-modal-content2{
+  background-color: #0094FF;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 70px;
+  border-radius: 8px;
+  /* height: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  
+  gap: 10px;
+}
+.Myelin-modal-content li{
+  text-align: left;
+  font-size: 20px;
+}
+.Myelin-modal-content h1{
+  text-align: center;
+  font-size: 30px;
+}
+
+.footer-button{
+  background: none;
+  border: none;
+  color: white;
+}
+
+
+
+/* 
+.card-outer-details{
+  display: flex;
+}
+
+.linked-in{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-left: solid 1px black;
+}
+.linkedin{
+  
+} */

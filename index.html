@@ -9,98 +9,770 @@
     rel="stylesheet"
 />
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="hero-section">
+    <div class="menu-bar-outer">
     <ul class="menu-bar">
       <li><a href="#">Home</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#programs-section">Programs</a></li>
+      <li><a href="#programs-carousel-section">Programs</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact-section">Contact us</a></li>
     </ul>
+    </div>
+
   <ul class="socials">
     <li><i class="ri-facebook-circle-fill"></i></li>
-    <li><i class="ri-facebook-circle-fill"></i></li>
-    <li><i class="ri-facebook-circle-fill"></i></li>
-    <li><i class="ri-facebook-circle-fill"></i></li>
-    <li><i class="ri-facebook-circle-fill"></i></li>
-    <li><i class="ri-facebook-circle-fill"></i></li>
+    <li><i class="ri-instagram-line"></i></li>
+    <li><i class="ri-twitter-x-line"></i></li>
+    <li><i class="ri-linkedin-box-fill"></i></li>
+    <li><i class="ri-youtube-line"></i></li>
+    <li><i class="ri-whatsapp-line"></i></li>
+
   </ul>
-  <div class="hero-content">
-    <h1>OpenMinds</h1>
-    <h3>Evolve 1x Better than Yesterday</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem possimus nulla repudiandae. Velit omnis iure corporis enim, repellat est, autem a deleniti obcaecati voluptates ab architecto perspiciatis, modi beatae recusandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam a id debitis ex enim quasi repellat beatae, ea sed. Ullam, ab! Totam ex, quasi eaque rem nemo veritatis tenetur facere?</p>
+  <div class="hero-content" id="home-id">
+    <h1>Open Minds</h1>
+    <div class="animated-text-container">
+        <h3 class="animated-text">Evolve 1x Better than Yesterday</h3>
+    </div>
+    <p>Our immersive programs cater to academia, corporates, Industries, Healthcare domain and uplifts Job Seekers and common people who strive for a self-improvement, making learning a captivating and transformative adventure. Embrace the future of learning with us! Ready to rewrite your story? Join us and let's make waves together!</p>
+    <br><br><br>
+    <a href="https://forms.gle/Rd75qsirzjSuSguR9" target="_blank" class="enquire-button">Enquire now <i class="ri-arrow-right-line"></i></a>
   </div>
-  <div class="logo"></div>
-  <button class="enquire-button">Enquire now <i class="ri-arrow-right-line"></i></button>
+  <!-- <div class="logo"></div> -->
+ 
   </div>
+  <div class="animated-quotes-container">
+    <div class="animated-quote-container">
+      <div class="quote-author">Nelson Mandela</div><br>
+      <div class="animated-quote">“It always seems impossible, until it is done.”</div>
+    </div>
+  </div>     
   <section id="about">
-    <div class="about-part1">
+
+    <div class="about-part1" id="about-id">
       <h1>About Us</h1>
-      <p>At Open Minds, we are committed to Redefining learning with innovative, interactive, and hands-on Learning experiences Our goal is to close the gap between academia and Real-world application, fostering an environment where learning is both Engaging and Impactful. Discover how we turn knowledge into action and Dreams into Reality</p>
+      <br>
+      <p>At <span>Open Minds</span>, we are committed to <span>Redefining</span> learning with innovative, interactive, and hands-on <span>Learning experiences</span>. Our goal is to close the gap between academia and <span>Real-world application</span>, fostering an environment where learning is both <span>Engaging and Impactful</span>. Discover how we turn <span>knowledge</span> into action and <span>Dreams into Reality</span>.</p>
+      <br>
       <div class="about-buttons">
-        <button>Become our Myelin Member</button>
-        <button>Explore our Programs</button>
+        <button id="openModalBtn2">Become our Myelin Member</button>
+        <!-- Modal structure -->
+    <div id="MyleinModal" class="modal">
+      <div class="Myelin-modal-content">    
+        <span class="close" id="closeModalBtn2">&times;</span> 
+        
+        <h1>Join Our Exclusive Circle</h1>
+       <p> Stay ahead and be the first to know about our premium membership program.
+         Unlock unparalleled benefits and exclusive updates tailored just for you. 
+        Don't miss out on the opportunity to elevate your experience.
+        Stay tuned and be part of something extraordinary!</p>
+    
+      </div>  
+    </div>
+
+        <button onclick="scrollToProgram()">Explore our Programs</button>
       </div>
     </div>
+
     <div class="about-part2">
       <div class="about-img"> 
+        <!-- <video width="500" height="300" autoplay muted loop>
+        <source src="./video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
     </div>
-    <div class="know-more">
+      <div class="know-more">
       <h1>Know us Better</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae, voluptate dolore blanditiis facilis adipisci, sus</p>
-      <button>Click Here !</button>
+      <p>Get to know us better, discover our story, meet our team, and understand our values and process.</p>
+      <button onclick="downloadFile()">Click Here !</button>
+      </div>  
+    </div>
+
+    
+  </section>
+
+  <!-- <section id="our-tie-ups-section">
+    <h2 class="tie-ups-title" id="tie-id">Our Tie-Ups</h2>
+    <div class="tie-ups-slider">
+      <div class="scrolling-logos">
+        <img src="images/logos/google.png" alt="Google Logo" class="tie-up-logo">
+        <img src="images/logos/microsoft.png" alt="Microsoft Logo" class="tie-up-logo">
+        <img src="images/logos/metalLB.png" alt="MetalLB Logo" class="tie-up-logo">
+        <img src="images/logos/linkedIn.png" alt="LinkedIn Logo" class="tie-up-logo">
+        <img src="images/logos/instagram.png" alt="Instagram Logo" class="tie-up-logo">
+        <img src="images/logos/applePay.png" alt="Apple Pay Logo" class="tie-up-logo">
+        <img src="images/logos/amazon.png" alt="Amazon Logo" class="tie-up-logo">
+      </div>
+    </div>
+  </section> -->
+
+
+  <section id="programs-carousel-section">
+    <h2 id="prog-id">Programs Offered at Open Minds</h2>
+    <button class="view-all-button" id="openModalBtn">View All Courses</button><br><br><br><br>
+     
+
+
+    <!-- Modal structure -->
+    <div id="ViewAllCoursesModal" class="modal">
+    <div class="modal-content">    <span class="close" id="closeModalBtn">&times;</span>
+      
+        <div class="modal-card modal-card-1">
+          <div class="modal-card-content">
+            <h3>Artificial Intelligence</h3>
+            <p>Learn to build intelligent systems using AI and ML algorithms.</p>
+            
+        </div>
+        </div>
+
+        <div class="modal-card modal-card-2">
+          <div class="modal-card-content">
+            <h3>Power BI</h3>
+          <p>Master data visualization and business intelligence with Power BI.</p>
+            
+        </div>
+        </div>
+
+        <div class="modal-card modal-card-3">
+          <div class="modal-card-content">
+            <h3>Data Analytics</h3>
+            <p>Analyze and interpret complex data to drive business decisions.</p>
+            
+        </div>
+        </div>
+
+        <div class="modal-card modal-card-4">
+          <div class="modal-card-content">
+            <h3>Data Engineering</h3>
+            <p>Design and implement data processing systems and architectures.</p>
+            
+        </div>
+        </div>
+
+        <div class="modal-card modal-card-5">
+          <div class="modal-card-content">
+            <h3>Data Science</h3>
+          <p>Apply statistical and computational techniques to extract insights from data.</p>
+            
+        </div>
+        </div>
+
+        <div class="modal-card modal-card-6">
+          <div class="modal-card-content">
+            <h3>Robotics</h3>
+          <p>Explore the design, construction, and operation of robots.</p>
+            
+        </div>
+        </div>
+
+
+        
+        
+      
     </div>
     </div>
+
+ <!-- modal -->
+ <div id="program-modal-1" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-1">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/AIML.png" alt="Artificial Intelligence">
+      <div class="content">
+          <h3>Artificial Intelligence and Machine Learning</h3>
+          <p>Learn to build intelligent systems using AI and ML algorithms.</p>
+      </div>
+  </div>
+  </div>
+</div>    
+<div id="program-modal-2" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-2">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/PB.png" alt="Power BI">
+      <div class="content">
+          <h3>Power BI</h3>
+          <p>Master data visualization and business intelligence with Power BI.</p>
+      </div>
+  </div>
+  </div>
+</div>   
+<div id="program-modal-3" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-3">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/DA.png" alt="Data Analytics">
+      <div class="content">
+          <h3>Data Analytics</h3>
+          <p>Analyze and interpret complex data to drive business decisions.</p>
+      </div>
+  </div>
+</div>
+  </div>
+</div>   
+<div id="program-modal-4" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-4">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/DE.png" alt="Data Engineering">
+        <div class="content">
+          <h3>Data Engineering</h3>
+          <p>Design and implement data processing systems and architectures.</p>
+        </div>
+    </div>
+  </div>
+</div>   
+<div id="program-modal-5" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-5">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/DS.png" alt="Data Science">
+      <div class="content">
+          <h3>Data Science</h3>
+          <p>Apply statistical and computational techniques to extract insights from data.</p>
+      </div>
+  </div>
+  </div>
+</div>   
+<div id="program-modal-6" class="modal">
+  <div class="modal-content">    <span class="close" id="program-close-6">&times;</span> 
+    <div class="program-card">
+      <img src="images/programs/Rob.png" alt="Robotics">
+      <div class="content">
+          <h3>Robotics</h3>
+          <p>Explore the design, construction, and operation of robots.</p>
+      </div>
+  </div>
+  </div>
+</div>    
+<!-- end of modal -->
+
+
+    <div class="carousel-container">
+        <button class="carousel-nav-button prev p-prev">&lt;</button>
+        <div class="carousel-wrapper ">
+            <div class="carousel program-carousel">
+                <div class="pcarousel-item">
+                    <div class="program-card">
+                        <img src="images/programs/AIML.png" alt="Artificial Intelligence">
+                        <div class="content">
+                            <h3>Artificial Intelligence and Machine Learning</h3>
+                            <p>Learn to build intelligent systems using AI and ML algorithms.</p>
+                            <button  id="program-details-1"class="know-more-button">Know More</button>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="pcarousel-item">
+                    <div class="program-card">
+                        <img src="images/programs/PB.png" alt="Power BI">
+                        <div class="content">
+                            <h3>Power BI</h3>
+                            <p>Master data visualization and business intelligence with Power BI.</p>
+                            <button id="program-details-2"class="know-more-button">Know More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pcarousel-item">
+                    <div class="program-card">
+                        <img src="images/programs/DA.png" alt="Data Analytics">
+                        <div class="content">
+                            <h3>Data Analytics</h3>
+                            <p>Analyze and interpret complex data to drive business decisions.</p>
+                            <button id="program-details-3"class="know-more-button">Know More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pcarousel-item">
+                  <div class="program-card">
+                    <img src="images/programs/DE.png" alt="Data Engineering">
+                      <div class="content">
+                        <h3>Data Engineering</h3>
+                        <p>Design and implement data processing systems and architectures.</p>
+                        <button id="program-details-4"class="know-more-button">Know More</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="pcarousel-item">
+                  <div class="program-card">
+                      <img src="images/programs/DS.png" alt="Data Science">
+                      <div class="content">
+                          <h3>Data Science</h3>
+                          <p>Apply statistical and computational techniques to extract insights from data.</p>
+                          <button id="program-details-5"class="know-more-button">Know More</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="pcarousel-item">
+                  <div class="program-card">
+                      <img src="images/programs/Rob.png" alt="Robotics">
+                      <div class="content">
+                          <h3>Robotics</h3>
+                          <p>Explore the design, construction, and operation of robots.</p>
+                          <button id="program-details-6"class="know-more-button">Know More</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      <button class="p-next carousel-nav-button next">&gt;</button>
     </div>
   </section>
-  <section id="programs-section">
-    <h2>Our Programs</h2>
-    <div class="programs-grid">
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+  
+  <div class="membership-offer-section">
+    <h2>Get 50% Off Open Minds Membership</h2>
+    <p>Get unlimited access to 100+ programs today</p>
+    <button class="claim-offer-button">Coming Soon</button>
+</div>
+
+<section class="resource-section">
+  <h2 id="res-id">We Bring a Wealth of <img src="experience.png"><br>from a wide range of backgrounds</h2>
+  <p>Our distinguished resource panel features top-tier experts who bring real-world insights and a wealth of experience to our programs.</p>
+  <div class="resource-carousel">
+      <div class="resource-card" id="manibalaji">
+          <div class="card-image" style="background-image: url('images/resource/manibalaji.png');">
+              <div class="card-name">Manibalaji S</div>
+          </div>
+          <!-- <div class="card-outer-details"> -->
+          <div class="card-details">
+              <p>Founder | CEO</p>
+              <p>Open Minds</p>
+          </div>
+          <!-- <div class="linked-in">
+            <h1 class="linkedin"><i class="ri-linkedin-box-fill"></i></h1>
+          </div> -->
+          <!-- </div> -->
       </div>
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+      <div class="resource-card" id="siva">
+          <div class="card-image" style="background-image: url('images/resource/siva.png');">
+              <div class="card-name">Siva Srinivasan S</div>
+          </div>
+          <div class="card-details">
+              <p>Co-Founder | CEO</p>
+              <p>Open Minds</p>
+          </div>
       </div>
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+      <div class="resource-card" id="bhuvaneshwari">
+          <div class="card-image" style="background-image: url('images/resource/bhuvaneshwari.png');">
+              <div class="card-name">Dr Bhuvaneshwari M</div>
+          </div>
+          <div class="card-details">
+              <p>Director | Healthcare</p>
+              <p>Open Minds</p>
+          </div>
       </div>
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+      <div class="resource-card" id="kiruthika">
+          <div class="card-image" style="background-image: url('images/resource/kiruthika.png');">
+              <div class="card-name">Kiruthika S</div>
+          </div>
+          <div class="card-details">
+              <p>Director | Journal Wings</p>
+              <p>Walmart, Chennai</p>
+          </div>
       </div>
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+      <div class="resource-card" id="selvi">
+        <div class="card-image" style="background-image: url('images/resource/selvi.png');">
+            <div class="card-name">Selvi Saravanan</div>
+          </div>
+          <div class="card-details">
+              <p>SAP | IT Professional</p>
+              <p>Walmart, Chennai</p>
+          </div>
       </div>
-      <div class="program-card">
-        <img src="https://th.bing.com/th/id/OIP.gRlePYCr_W-M81y68PdA1AHaEK?rs=1&pid=ImgDetMain" alt="Designer">
-        <h3>Designer</h3>
-        <p>Artistry fuels innovation in the digital landscapes.</p>
-        <a href="#" class="know-more-button">Know More</a>
+      <div class="resource-card" id="saravanan">
+        <div class="card-image" style="background-image: url('images/resource/saravanan.png');">
+            <div class="card-name">Saravanan</div>
+          </div>
+          <div class="card-details">
+              <p>Robotic | Mechatronics Professional</p>
+              <p>Walmart, Chennai</p>
+          </div>
       </div>
+      <div class="resource-card" id="shalini">
+        <div class="card-image" style="background-image: url('images/resource/shalini.png');">
+            <div class="card-name">Dr S Shalini</div>
+          </div>
+          <div class="card-details">
+              <p>AI and Network Security</p>
+              <p>Walmart, Chennai</p>
+          </div>
+      </div>
+      <div class="resource-card" id="ugendar">
+        <div class="card-image" style="background-image: url('images/resource/ugendar.png');">
+            <div class="card-name">Ugendar Raj Gajendran</div>
+          </div>
+          <div class="card-details">
+              <p>Full Stack Professional</p>
+              <p>Walmart, Chennai</p>
+          </div>
+      </div>
+      <div class="resource-card" id="sailesh">
+        <div class="card-image" style="background-image: url('images/resource/sailesh.png');">
+            <div class="card-name">Sailesh R</div>
+          </div>
+          <div class="card-details">
+              <p>UI/UX Professional</p>
+              <p>Walmart, Chennai</p>
+          </div>
+      </div>
+  </div>
+  <div class="carousel-controls">
+      <button class="carousel-arrow left-arrow">&#10094;</button>
+      <button class="carousel-arrow right-arrow">&#10095;</button>
+  </div>
+  <!-- <div class="r-view-all-button">
+      <button id="resources-open">View all our Resources</button>
+  </div> -->
+  </section>
+
+
+
+
+<!-- resources popup -->
+<div id="resources-modal" class="modal">
+  <div class="modal-content">    <span class="close" id="resources-close">&times;</span>
+
+  <div class="resource-card">
+      <div class="card-image" style="background-image: url('images/resource/manibalaji.png');">
+          <div class="card-name">Manibalaji S</div>
+      </div>
+      <div class="card-details">
+          <p>Founder | CEO</p>
+          <p>Open Minds<br>official@openminds1x.com</p>
+      </div>
+  </div>
+  <div class="resource-card">
+      <div class="card-image" style="background-image: url('images/resource/siva.png');">
+          <div class="card-name">Siva Srinivasan S</div>
+      </div>
+      <div class="card-details">
+          <p>Co-Founder | CEO</p>
+          <p>Open Minds<br>official@openminds1x.com</p>
+      </div>
+  </div>
+  <div class="resource-card">
+      <div class="card-image" style="background-image: url('images/resource/bhuvaneshwari.png');">
+          <div class="card-name">Dr Bhuvaneshwari</div>
+      </div>
+      <div class="card-details">
+          <p>Director | Healthcare</p>
+          <p>Open Minds<br>official@openminds1x.com</p>
+      </div>
+  </div>
+  <div class="resource-card">
+      <div class="card-image" style="background-image: url('images/resource/kiruthika.png');">
+          <div class="card-name">Kiruthika</div>
+      </div>
+      <div class="card-details">
+          <p>Director | Journal Wings</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  <div class="resource-card">
+    <div class="card-image" style="background-image: url('images/resource/selvi.png');">
+        <div class="card-name">Selvi Saravanan</div>
+      </div>
+      <div class="card-details">
+          <p>SAP | IT Professional</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  <div class="resource-card">
+    <div class="card-image" style="background-image: url('images/resource/saravanan.png');">
+        <div class="card-name">Saravanan</div>
+      </div>
+      <div class="card-details">
+          <p>Robotic | Mechatronics Professional</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  <div class="resource-card">
+    <div class="card-image" style="background-image: url('images/resource/shalini.png');">
+        <div class="card-name">Dr S Shalini</div>
+      </div>
+      <div class="card-details">
+          <p>AI and Network Security Professional</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  <div class="resource-card">
+    <div class="card-image" style="background-image: url('images/resource/ugendar.png');">
+        <div class="card-name">Ugendar Raj Gajendran</div>
+      </div>
+      <div class="card-details">
+          <p>Full Stack Professional</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  <div class="resource-card">
+    <div class="card-image" style="background-image: url('images/resource/sailesh.png');">
+        <div class="card-name">Sailesh R</div>
+      </div>
+      <div class="card-details">
+          <p>UI/UX Professional</p>
+          <p>Walmart, Chennai<br>Ex-Company</p>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <section class="open-minds-section" id="new-id">
+    <h2>What’s New on Open Minds</h2>
+    <p>Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.</p>
+
+    <div class="card-container">
+      
+        <div class="open-minds-card" data-content="professor-show">
+            <img src="images/new/image1.png" alt="A Professor’s Show">
+        </div>
+        <div class="open-minds-card" data-content="professor-coming">
+            <img src="images/new/image2.png" alt="The Professor is Coming">
+        </div>
+        <div class="open-minds-card" data-content="startup-awards">
+            <img src="images/new/image3.png" alt="Startup Awards 2024">
+        </div>
+        <div class="open-minds-card" data-content="art-of-communication">
+            <img src="images/new/image4.png" alt="Get to know the Art of Communication">
+        </div>
+        <div class="open-minds-card" data-content="food-tech-vision">
+            <img src="images/new/image5.png" alt="Food Tech has got a Computer Vision">
+        </div>
+    </div>
+
+    <div class="open-minds-content-display">
+        <div id="professor-show" class="open-minds-content hidden">
+            <h3>A Professor’s Show</h3>
+            <p>The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds. The Professor, a central character in the event, delivered an eye-opening presentation on how AI is revolutionizing the biotech industry.</p>
+        </div>
+        <div id="professor-coming" class="open-minds-content hidden">
+            <h3>The Professor is Coming</h3>
+            <p>Open Minds hosted "The Success Heist" at Rajalakshmi Engineering College...</p>
+        </div>
+        <div id="startup-awards" class="open-minds-content hidden">
+            <h3>Startup Awards 2024</h3>
+            <p>We Got our Recognition!</p>
+        </div>
+        <div id="art-of-communication" class="open-minds-content hidden">
+            <h3>Get to know the Art of Communication</h3>
+            <p>Discover the Art of Communication: Connect, Inspire, and Engage...</p>
+        </div>
+        <div id="food-tech-vision" class="open-minds-content hidden">
+            <h3>Food Tech has got a Computer Vision</h3>
+            <p>Explore the transformative use of machine learning in biotechnology...</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <section id="unlock-section">
+    <h2 id="super-id">Unlock your Superhuman Potential</h2>
+    <p class="section-description">
+      Explore our Life Skills section, where you'll find pages, blogs, videos, and nutritional information designed to enhance your physical and mental health. Discover food habits and supplements that boost your physical well-being and cognitive abilities. Gain access to brain hacks, breathing techniques, and more to elevate your everyday performance. Join us on the journey to becoming the best version of yourself!
+    </p>
+    <div class="carousel-container">
+      <button class="nav-button prev super-prev">&lt;</button>
+      <div class="carousel-wrapper">
+        <div class="carousel super-carousel">
+          <div class="carousel-item super-item">
+            <a href="https://youtu.be/uT_GcOGEFsk?si=96dL2I_2nidUmVNc" target="_blank" class="card-link">
+              <div class="card">
+                <img src="https://img.youtube.com/vi/uT_GcOGEFsk/maxresdefault.jpg" alt="YouTube Video 1" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Unleash Your Super Brain To Learn Faster | Jim Kwik</h3>
+                  <p class="card-description">Do you want to learn how to improve your memory? Discover 10 Powerful Hacks To Unlock Your Superbrain To Learn Faster</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item super-item">
+            <a href="https://youtu.be/Cf0VF9EpM1k?si=bffKQVgFK0PzoJSa" target="_blank" class="card-link">
+              <div class="card">
+                <img src="https://img.youtube.com/vi/Cf0VF9EpM1k/maxresdefault.jpg" alt="YouTube Video 2" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Only The TOP 5% Of The Population Knows THIS!</h3>
+                  <p class="card-description">"This Was Kept Secret From The Poor People" | Robin Sharma</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item super-item">
+            <a href="https://youtu.be/h_4GDXWBPCk?si=kxJ0Y08CDY5fskUQ" target="_blank" class="card-link">
+              <div class="card">
+                <img src="https://img.youtube.com/vi/h_4GDXWBPCk/maxresdefault.jpg" alt="YouTube Video 3" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">20 Minute Silva Centering Exercise With Vishen Lakhiani</h3>
+                  <p class="card-description">Enter a deeper, healthier level of mind with this centering meditation. We hope you enjoy this 20 minute guided relaxation meditation.  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item super-item">
+            <a href="https://youtu.be/mX3Mt5glQKY?si=z4XvFZUSb73BGrQK" target="_blank" class="card-link">
+              <div class="card">
+                <img src="https://img.youtube.com/vi/mX3Mt5glQKY/maxresdefault.jpg" alt="YouTube Video 2" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Creatine Enhances Brain Function, Boosts Cognitive Health</h3>
+                  <p class="card-description">Exercise supports cognitive health after sleep deprivation, new study finds.  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item super-item">
+            <a href="https://youtu.be/cAv7kgmShR8?si=kJJeBBhYU24BA8uJ" target="_blank" class="card-link">
+              <div class="card">
+                <img src="https://img.youtube.com/vi/cAv7kgmShR8/maxresdefault.jpg" alt="YouTube Video 3" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">The 6 Phase Meditation Method - Brian Rose & Vishen Lakhiani</h3>
+                  <p class="card-description">Vishen Lakhiani is an entrepreneur, bestselling author, motivational speaker, personal growth expert, activist and all round ball of energy.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="nav-button next super-next">&gt;</button>
     </div>
   </section>
+
+<section id="inspiration-section">
+  <h1 class="inspiration-title" id="inspire-id">Get Inspired</h1>
+  <p class="inspiration-text">Let the wisdom of self-help gurus and influential figures inspire your journey.</p>
+  <div class="inspiration-cards-container">
+      <div class="inspiration-card expanded">
+          <img src="images/inspiration/thiruvalluvar.png" alt="Thiruvalluvar">
+          <div class="inspiration-card-content">
+              <h3>Thiruvalluvar</h3>
+              <p>“Learning is excellence of wealth that none can destroy...”</p>
+          </div>
+      </div>
+      <div class="inspiration-card">
+          <img src="images/inspiration/tesla.png" alt="Nikola Tesla">
+          <div class="inspiration-card-content">
+              <h3>Nikola Tesla</h3>
+              <p>“If you want to find the secrets of the universe, think in terms of energy, frequency, and vibration.”</p>
+          </div>
+      </div>
+      <div class="inspiration-card">
+          <img src="images/inspiration/musk.png" alt="Elon Musk">
+          <div class="inspiration-card-content">
+              <h3>Elon Musk</h3>
+              <p>“When something is important enough, you do it even if the odds are not in your favor.”</p>
+          </div>
+      </div>
+      <div class="inspiration-card">
+          <img src="images/inspiration/steve.png" alt="Steve Jobs">
+          <div class="inspiration-card-content">
+              <h3>Steve Jobs</h3>
+              <p>“The people who are crazy enough to think they can change the world are the ones who do.”</p>
+          </div>
+      </div>
+      <div class="inspiration-card">
+          <img src="images/inspiration/tony.png" alt="Tony Robbins">
+          <div class="inspiration-card-content">
+              <h3>Tony Robbins</h3>
+              <p>“The path to success is to take massive, determined action.”</p>
+          </div>
+      </div>
+      <div class="inspiration-card">
+          <img src="images/inspiration/jim.png" alt="Jim Rohn">
+          <div class="inspiration-card-content">
+              <h3>Jim Rohn</h3>
+              <p>“We must all suffer one of two things: the pain of discipline or the pain of regret or disappointment.”</p>
+          </div>
+      </div>
+  </div>
+  </section>
+
+  <section id="expert-recommendations">
+    <h2 id="refer-id">Refer the Experts</h2>
+    <p class="expert-description">
+      Check out our curated selection of expert videos! Here you'll find valuable insights, tips, and knowledge from top professionals in various fields. Explore these resources to enhance your understanding and skills, and apply expert advice to improve your well-being and performance. Dive into these expert talks and become informed with the latest and greatest in your areas of interest!
+    </p>
+    <div class="expert-carousel-container">
+      <button class="carousel-nav-button expert-prev prev">&lt;</button>
+      <div class="expert-carousel-wrapper">
+        <div class="expert-carousel">
+          <div class="expert-carousel-item">
+            <a href="https://www.youtube.com/watch?v=Cf0VF9EpM1k" target="_blank" class="expert-card-link">
+              <div class="expert-card">
+                <img src="https://img.youtube.com/vi/Cf0VF9EpM1k/maxresdefault.jpg" alt="YouTube Video 1" class="expert-card-img">
+                <div class="expert-card-body">
+                  <h3 class="expert-card-title">Only The TOP 5% Of The Population Knows THIS!</h3>
+                  <p class="expert-card-description">"This Was Kept Secret From The Poor People" | Robin Sharma</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="expert-carousel-item">
+            <a href="https://www.youtube.com/watch?v=uT_GcOGEFsk" target="_blank" class="expert-card-link">
+              <div class="expert-card">
+                <img src="https://img.youtube.com/vi/uT_GcOGEFsk/maxresdefault.jpg" alt="YouTube Video 2" class="expert-card-img">
+                <div class="expert-card-body">
+                  <h3 class="expert-card-title">Unleash Your Super Brain To Learn Faster | Jim Kwik</h3>
+                  <p class="expert-card-description">Do you want to learn how to improve your memory? Discover 10 Powerful Hacks To Unlock Your Superbrain To Learn Faster</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="expert-carousel-item">
+            <a href="https://www.youtube.com/watch?v=7N8SyduUyVw" target="_blank" class="expert-card-link">
+              <div class="expert-card">
+                <img src="https://img.youtube.com/vi/7N8SyduUyVw/maxresdefault.jpg" alt="YouTube Video 3" class="expert-card-img">
+                <div class="expert-card-body">
+                  <h3 class="expert-card-title">6 Things I Wish I'd Learned At 20 | Robin Sharma</h3>
+                  <p class="expert-card-description">In this inspirational and content-rich episode of the Mastery Sessions podcast</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="expert-carousel-item">
+            <a href="https://youtu.be/TNQFhU_cwDs?si=7R57v7zqmDXCvGiQ" target="_blank" class="expert-card-link">
+              <div class="expert-card">
+                <img src="https://img.youtube.com/vi/TNQFhU_cwDs/maxresdefault.jpg" alt="YouTube Video 4" class="expert-card-img">
+                <div class="expert-card-body">
+                  <h3 class="expert-card-title">3 Things That Secretly Destroy Your Productivity - Tim Ferriss</h3>
+                  <p class="expert-card-description">Chris and Tim Ferriss discuss the top things that are ruining your productivity. What does Tim Ferriss reccomend you stop doing? </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="expert-carousel-item">
+            <a href="https://youtu.be/SuZ8lEHtDI8?si=z8ocIkA32W7RTgDT" target="_blank" class="expert-card-link">
+              <div class="expert-card">
+                <img src="https://img.youtube.com/vi/SuZ8lEHtDI8/maxresdefault.jpg" alt="YouTube Video 5" class="expert-card-img">
+                <div class="expert-card-body">
+                  <h3 class="expert-card-title">Video Title 5</h3>
+                  <p class="expert-card-description">Short caption or description for Video 5.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-nav-button next expert-next">&gt;</button>
+    </div>
+  </section>
+
+  <div class="quote-carousel-container">
+    <div class="quote-carousel-item">
+      <div class="quote-author-name">Mahatma Gandhi</div><br>
+      <div class="quote-text">“Live as if you were to die tomorrow. Learn as if you were to live forever.”</div>
+    </div>
+</div>     
   <section id="gallery">
-    <div class="gal-part1">
+    <div class="gal-part1" id="gallery-id">
       <h1>Gallery</h1>
-      <p>At Open Minds, we are committed to Redefining learning with innovative, interactive, and hands-on Learning experiences Our goal is to close the gap between academia and Real-world application, fostering an environment where learning is both Engaging and Impactful. Discover how we turn knowledge into action and Dreams into Reality</p>
-      <button>View more</button>
+      <p>Step into our Gallery to witness the dynamic interactions and enriching experiences that define Open Minds. Each photo tells a story of growth, connection, and discovery, showcasing the innovative approaches we take to education. This collection serves as a window into the engaging and inspiring atmosphere we create for our learners. Through these photos, we capture the essence of our unique and engaging programs, reflecting the joy and enthusiasm of our participants.</p>
+      <br><button>View more</button><br>
     </div>
     <div class="gal-part2">
       <div class="gal-img"></div>
@@ -108,30 +780,25 @@
       <div class="gal3-img"></div>
     </div>
   </section>
-
 <div class="page-break">
-
 </div>
 
-
-
 <section id="testimonial">
-  <h1 class="t-heading">What Our Client Says</h1>
-  <p class="t-para">Discover the stories behind our success through "What Our Client Says".</p>
+  <h1 class="t-heading" id="client-id">What Our Client Says</h1><br><br><br><br><br><br>
+  <p class="t-para">Discover the stories behind our success through "What Our Clients Say." This section presents genuine testimonials from our clients, providing insight into the benefits and value of our services.</p>
   <div class="slider-container">
-    <div class="arrow prev">&#10094;</div>
+    <div class="arrow prev arrow-prev">&#10094;</div>
     <div class="slider-wrapper">
       <div class="slider">
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="David Dell" />
+              <img src="images/reviews.png" alt="Murari Vijay" />
             </div>
             <div class="card-content">
-              <h3>David Dell</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Murari Vijay</h3>
+              <p>Student</p>
+              <p>The shipwreck game and quizzes effectively tested participants' critical thinking and subject knowledge.</p>
             </div>
           </div>
         </div>
@@ -139,13 +806,12 @@
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="Rose Bush" />
+              <img src="images/reviews.png" alt="Janani J" />
             </div>
             <div class="card-content">
-              <h3>Rose Bush</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Janani J</h3>
+              <p>Student</p>
+              <p>This program exceeded my expectations with its comprehensive content and engaging delivery.</p>
             </div>
           </div>
         </div>
@@ -153,74 +819,114 @@
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="Jones Gail" />
+              <img src="images/reviews.png" alt="Holly Thompson" />
             </div>
             <div class="card-content">
-              <h3>Jones Gail</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>Learnt more information regarding how AI is involved in Biotech.</p>
             </div>
           </div>
         </div>
+
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="Jones Gail" />
+              <img src="images/reviews.png" alt="Holly Thompson" />
             </div>
             <div class="card-content">
-              <h3>Jones Gail</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>I understood the fact that learning AIML is very much necessary for the future and got insights on how AIML is used at present.</p>
             </div>
           </div>
         </div>
+
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="Jones Gail" />
+              <img src="images/reviews.png" alt="Holly Thompson" />
             </div>
             <div class="card-content">
-              <h3>Jones Gail</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>The ultimatum of inclusion of AI in our day-to-day life and on professional life. The need for AI and the need to work with AI.</p>
             </div>
           </div>
         </div>
+
         <div class="slide">
           <div class="card">
             <div class="card-image">
-              <img src="./images/landingpage/1.png" alt="Jones Gail" />
+              <img src="images/reviews.png" alt="Holly Thompson" />
             </div>
             <div class="card-content">
-              <h3>Jones Gail</h3>
-              <p>
-                The lorem text the section that contains header with having open functionality.
-              </p>
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>Prompt communication and timely delivery, I highly recommend this. The quality is excellent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/reviews.png" alt="Holly Thompson" />
+            </div>
+            <div class="card-content">
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>Prompt communication and timely delivery, I highly recommend this store. The quality is excellent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/reviews.png" alt="Holly Thompson" />
+            </div>
+            <div class="card-content">
+              <h3>Holly Thompson</h3>
+              <p>Student</p>
+              <p>Prompt communication and timely delivery, I highly recommend this store. The quality is excellent.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="arrow next">&#10095;</div>
+    <div class="arrow next arrow-next">&#10095;</div>
   </div>
-</div>
+</section>
+<section id="contact-section">
+  <div class="contact" id="touch-id">
+    <div class="contact-form-container">
+      <div class="contact-form">
+        <br><br><br><br><h2>Get in Touch</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="email" id="email" placeholder="Email Address" required>
+          <textarea id="message" placeholder="Message" rows="4" required></textarea>
+          <button type="submit">Submit →</button>
+          <p id="responseMessage"></p>
+        </form>
+      </div>
+      <div class="contact-image">
+        <img src="images/get_in_touch.png" width="500" height="500" alt="Contact Image">
+      </div>
+    </div>
+  </div>
 </section>
 
-  <section id="contact-section">
-    <div class="contact">
-    <h2>Get in Touch</h2>
-    <form id="contactForm" class="contact-form">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email Address" required>
-        <textarea id="message" placeholder="Message" rows="4" required></textarea>
-        <button type="submit">Submit →</button>
-        <p id="responseMessage"></p>
-    </form>
-     </div>
-  </section>
+<!-- subscribe popup -->
+<div id="subscribe-modal" class="modal">
+  <div class="Myelin-modal-content2">    <span class="close" id="subscribe-close">&times;</span><br>
+     <h1>Newsletter Coming Soon !!!</h1><br>
+    </div>
+    </div>
+
+   
+
 
 <section id="footer">
     <div class="footer-newsletter">
@@ -230,37 +936,37 @@
       </div>
         <div class="subscribe-container">
             <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
+            <button class="subscriber-button" id="subscribe-popup">Subscribe</button>
         </div>
     </div>
-
     <div class="footer-links">
         <div class="company">
-            <h4>Company</h4>
+            <!-- <h4>Company</h4> -->
             <ul>
-                <li>About</li>
-                <li>Programs</li>
-                <li>Reviews</li>
-                <li>Meet the team</li>
+                <li><button class="footer-button" onclick="scroller('home-id')">Home</button></li>
+                <li><button class="footer-button" onclick="scroller('about-id')">About</button></li>
+                <li><button class="footer-button" onclick="scroller('tie-id')">Tie Ups</button></li>
+                <li><button class="footer-button" onclick="scroller('prog-id')">Programs Offered</button></li>
             </ul>
         </div>
 
         <div class="help">
-            <h4>Help</h4>
+            <!-- <h4>Help</h4> -->
             <ul>
-                <li>Customer Support</li>
-                <li>Terms and Conditions</li>
-                <li>Privacy Policy</li>
+                <li><button class="footer-button" onclick="scroller('res-id')">Resource Persons</button></li>
+                <li><button class="footer-button" onclick="scroller('new-id')">What's New</button></li>
+                <li><button class="footer-button" onclick="scroller('super-id')">Superhuman Potential</button></li>
+                <li><button class="footer-button" onclick="scroller('inspire-id')">Get Inspired</button></li>
             </ul>
         </div>
 
         <div class="resources">
-            <h4>Resources</h4>
+            <!-- <h4>Resources</h4> -->
             <ul>
-                <li>Free E-Books</li>
-                <li>Development Tutorial</li>
-                <li>How-To Blog</li>
-                <li>YouTube Playlist</li>
+                <li><button class="footer-button" onclick="scroller('refer-id')">Refer the Experts</button></li>
+                <li><button class="footer-button" onclick="scroller('gallery-id')">Gallery</button></li>
+                <li><button class="footer-button" onclick="scroller('client-id')">What's our client says</button></li>
+                <li><button class="footer-button" onclick="scroller('touch-id')">Get In Touch</button></li>
             </ul>
         </div>
     </div>
@@ -269,12 +975,13 @@
       <img src="./images/landingpage/logo.jpg" alt="Company Logo">
       <div class="social-icons">
         <i class="ri-facebook-circle-line"></i>
-        <i class="ri-facebook-circle-line"></i>
-        <i class="ri-facebook-circle-line"></i>
-        <i class="ri-facebook-circle-line"></i>
+        <i class="ri-instagram-line"></i>
+          <i class="ri-linkedin-box-fill"></i>
+            <i class="ri-whatsapp-line"></i>
       </div>
   </div>
 </section>
 <script src="script.js"></script>
 </body>
 </html>
+
