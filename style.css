@@ -59,12 +59,12 @@ html ,body{
 }
 .menu-bar li a{
   width: 24%;
-  padding: 5px 20px;
+  padding: 2px 15px;
   text-align: center;
-  border-radius: 15px;
-  font-size: 1rem;
-  font-family: "Anton",sans-serif;
-  font-weight: 400;
+  border-radius: 35px;
+  font-family: 'Shippori Antique B1';
+  font-size: 1.2rem;
+  font-weight: 500;
   cursor: pointer;
   color: black;
   text-decoration: none;
@@ -76,12 +76,12 @@ html ,body{
 .socials{
   backdrop-filter: blur(9px) saturate(180%);
   -webkit-backdrop-filter: blur(9px) saturate(180%);
-  background-color: rgba(76, 83, 87, 0.75);
+  background-color: rgba(255, 255, 255, 0.4);
   height:350px;
-  width: 55px;
+  width: 50px;
   position: fixed;
   top: 20%;
-  left:2%;
+  left: 1.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +93,34 @@ html ,body{
 .socials li{
   list-style: none;
   font-size: 2rem;
+}
+
+.facebook {
+  color: #3b5998; /* Bright Facebook color */
+}
+
+.instagram {
+  color: #ff0080; /* Bright Instagram color */
+}
+
+.twitter {
+  color: #00acee; /* Bright Twitter color */
+}
+
+.linkedin {
+  color: #0077b5; /* Bright LinkedIn color */
+}
+
+.youtube {
+  color: #ff0000; /* Bright YouTube color */
+}
+
+.whatsapp {
+  color: #25D366; /* Bright WhatsApp color */
+}
+
+.socials li:hover {
+  filter: brightness(1.5); /* Brighten on hover */
 }
 
 .hero-content{
@@ -109,25 +137,27 @@ html ,body{
 }
 .hero-content h1{
   font-size: 4.5rem;
-  font-family: "Anton",sans-serif;
-  letter-spacing: 2px;
+  font-family: "Audiowide";
+  /* letter-spacing: 2px; */
 }
 .hero-content h3{
   /* white-space: nowrap; */
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  color: rgb(98, 205, 255);
-  font-weight: 300;
-  text-shadow: 0 0 10px rgba(98, 205, 255, 0.7), /* Inner glow */
-  0 0 20px rgba(98, 205, 255, 0.7), /* Middle glow */
-  0 0 30px rgba(98, 205, 255, 0.7);
+  font-size: 2.5rem;
+  font-family: 'Montserrat';
+  color: #4DB4FF;
+  font-weight: 900;
+  font-style: normal;
+  text-shadow: 
+  0 0 5px rgba(98, 205, 255, 0.5), /* Inner glow */
+  0 0 10px rgba(98, 205, 255, 0.5), /* Middle glow */
+  0 0 15px rgba(98, 205, 255, 0.5); /* Outer glow */
 }
 .hero-content p{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.3em;
   word-spacing: 0.3em;
   text-align: justify;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Poppins";
 }
 .enquire-button {
   padding: 10px 50px;
@@ -146,6 +176,7 @@ html ,body{
   
   /* Optional: To make it more vibrant */
   transition: all 0.3s ease;
+  transform: translateY(-70px); /* Reset the button position */
 }
 
 .enquire-button:hover {
@@ -174,10 +205,10 @@ html ,body{
  
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 50px;
   padding-left: 80px;
   padding-right: 50px;
-  gap: 50px;
+  gap: 0px;
   
 }
 .about-part1{
@@ -196,40 +227,47 @@ html ,body{
 
 .about-part1 h1{
   font-size: 3.3rem;
-  font-family: "Anton",sans-serif;
-  letter-spacing: 2px;
-  font-weight: 800;
+  /* letter-spacing: 2px; */
   padding-left: 20px;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .about-part1 p span{
-font-weight: 300;
+font-weight: 500;
 }
 .about-part1 p{
-  padding: 20px;
-  padding-right: 100px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 5px;
   font-size: 1.3rem;
   word-spacing: 0.46em;
-  font-weight: 300;
   text-align: justify;
-  font-family: "Roboto", sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   line-height: 1.35em;
+  transform: translateY(-50px); /* Reset the text position */
 }
 .about-part1 .about-buttons{
   padding-left: 20px;
-  width: 100%;
+  width: 520px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
+  transform: translateY(-100px); /* Reset the button position */
 }
 .about-buttons button{
   padding: 10px;
   color: white;
-  font-family: "Anton",sans-serif;
-  font-size: 1rem;
+  font-family: "Shippori Antique";
+  font-size: 0.9rem;
   cursor: pointer;
   padding-left: 30px;
   padding-right: 30px;
-  
+   
 }
 .about-buttons button:first-child{
   background-color: #349ef4;
@@ -250,12 +288,13 @@ font-weight: 300;
   top: 10%;
   right:10%; */
   flex: 1;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  padding: 50px;
+  /* flex-direction: column; */
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .about-img{
   
@@ -263,10 +302,10 @@ font-weight: 300;
   width: 600px;
   background-image:url('./images/landingpage/aboutus/1.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   background-size: contain;
-  
-  
+  margin-left: 100px;
+  padding-right: 10px;
 }
 .know-more {
   
@@ -283,6 +322,7 @@ font-weight: 300;
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  margin-left: 100px;
 }
 .know-more:hover {
   transform: translateY(-10px); /* Lift the card on hover */
@@ -290,23 +330,29 @@ font-weight: 300;
 }
 .know-more h1{
   font-size: 1.5rem;
-  font-family: "Anton",sans-serif;
+  font-family: "Sora";
+  font-weight: 700;
 }
 .know-more p{
-  font-weight: 300;
-  font-size: 1.1rem;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Questrial";
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 .know-more button{
   background-color: #349ef4;
   color: white;
+  font-family: "Montserrat", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1.2rem;
   border: 0;
-  padding: 10px;
+  width: 200px;
+  height: 35px;
+  padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  font-family: "Anton",sans-serif;
 }
 #gallery{
   height: 120vh;
@@ -317,33 +363,35 @@ font-weight: 300;
   align-items: center;
 }
 .gal-part1{
-  width: 30vw;
+  width: 35vw;
   height:60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.anton-font{
-  font-family: "Roboto", sans-serif;
-}
 .gal-part1 h1{
-  font-size: 3.3rem;
-  font-family: "Anton",sans-serif;
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 800;
+  font-style: normal;
+  margin-bottom: 20px;
 }
 .gal-part1 p{
   font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.3em;
   word-spacing: 0.36em;
-  font-family: "Roboto", sans-serif;
-  text-align: justify;
+  font-family: "Questrial";
 }
 
 .gal-part1 button{
   padding: 10px;
-  width: 170px;
+  width: 210px;
   background: linear-gradient(45deg, #7f00ff, #e100ff); /* Purple gradient */
   color: white;
-  font-size: 1.3rem;
+  font-family: "Shippori Antique";
+  font-size: 1.1rem;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(127, 0, 255, 0.7), /* Inner glow */
               0 0 20px rgba(127, 0, 255, 0.7), /* Middle glow */
@@ -351,6 +399,9 @@ font-weight: 300;
   
   /* Optional: To make it more vibrant */
   transition: all 0.3s ease;
+  text-align: left;
+  padding-left: 15px;
+  border: none;
 }
 .gal-part1 button:hover {
   /* Add a hover effect for extra glow */
@@ -373,19 +424,19 @@ font-weight: 300;
 }
 
 .gal-img{
-  background-image:url('./images/landingpage/gallery/3.jpg');
+  background-image:url('./images/gallery/img3.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .gal2-img{
-  background-image:url('./images/landingpage/gallery/2.jpg');
+  background-image:url('./images/gallery/img5.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .gal3-img{
-  background-image:url('./images/landingpage/gallery/1.jpg');
+  background-image:url('./images/gallery/img1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -405,6 +456,65 @@ font-weight: 300;
   top: 20%;
   left: 20%;
 }
+
+.gallery-text-content {
+  position: relative;
+  top: 140px;
+  left: 35%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 20px;
+}
+
+.gallery-text-content h1 {
+  font-family: "Montserrat", sans-serif; /* Custom font for the heading */
+  font-size: 28px; /* Heading size */
+  font-weight: 700; /* Bold text for emphasis */
+  margin-top: 25px;
+  margin-bottom: 35px; /* Space below heading */
+}
+
+.gallery-text-content p {
+  font-family: "Quicksand", sans-serif; /* Custom font for the content */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 400; /* Normal font weight */
+  margin: 20px 0; /* Space above and below paragraphs */
+}
+
+.gallery-text-content strong {
+  font-family: "Quicksand", sans-serif; /* Custom font for strong text */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 700; /* Bold text for emphasis */
+  color: #000; /* Strong text color for emphasis */
+}
+
+p.special-content {
+  font-family: "Questrial", sans-serif; /* Custom font for the content */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 500; /* Bold text for emphasis */
+  padding-top: 10px; /* Space above the paragraph */
+}
+
+.close-button {
+  position: relative;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  top: 25px;
+  left: 1180px;
+  background: #35a4f9; /* White background */
+  border-radius: 100%;
+  border: none;
+  /*Shadow effect - deep shadow*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 24px; /* Size of the 'X' */
+  color: #ffffff; /* Color of the 'X' */
+  cursor: pointer; /* Cursor style on hover */
+}
+
+.close-button:hover {
+  color: #000000; /* Change color on hover */
+}
+
 
 #contact-section {
   padding: 20px;
@@ -431,25 +541,44 @@ font-weight: 300;
   max-width: 500px; /* Control the width of the form */
 }
 
+.contact-form .get-in-line {
+  position: relative;
+  width: 120px; /* Adjust width as needed */
+  height: 4px; /* Adjust height for thickness */
+  border-radius: 8px;
+  background-color: #000000; /* Line color */
+  margin: -12px 120px 0; /* Center the line and add space above */
+  transform: translateY(-50px); /* Reset the line position */
+}
+
 .contact-form h2 {
-  font-size: 36px; /* Larger font size for emphasis */
+  font-family: "Shippori Antique", sans-serif; /* Custom font for the heading */
+  font-size: 40px; /* Larger font size for emphasis */
   font-weight: 700; /* Bold text for stronger presence */
   margin-bottom: 20px; /* Space below the heading */
   color: #333; /* Darker color for better readability (adjust as needed) */
   line-height: 1.2; /* Adjust line height for better spacing */
+  transform: translateY(-50px); /* Reset the heading position */
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 300px;
   padding: 12px 16px; /* Slightly increased padding for a more spacious feel */
+  margin-left: 90px;
   margin-bottom: 15px; /* Increased margin for better spacing */
   border: 1px solid #ccc; /* Light grey border for a clean look */
-  border-radius: 8px; /* More rounded corners for a modern appearance */
+  border-radius: 25px; /* More rounded corners for a modern appearance */
   box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
+  font-family: "Inter", sans-serif; /* Custom font for input fields */
   font-size: 16px; /* Slightly larger font size for better readability */
   transition: all 0.3s ease; /* Smooth transition for interactive states */
-  background-color: #f9f9f9; /* Light background color for input fields */
+  background-color: #E8EBF2; /* Light background color for input fields */
+}
+
+.contact-form textarea {
+  height: 150px; /* Adjust height for the textarea */
+  resize: none; /* Disable resizing for the textarea */
 }
 
 .contact-form input:focus,
@@ -464,6 +593,7 @@ font-weight: 300;
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #888; /* Light grey color for placeholders */
+  font-size: 14px; /* Adjust font size as needed */
   font-style: italic; /* Italic style for placeholder text */
 }
 
@@ -473,11 +603,14 @@ font-weight: 300;
   color: #fff; /* White text color */
   border: none; /* Remove default border */
   padding: 14px 28px; /* Larger padding for a more substantial button */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  font-size: 18px; /* Larger font size for better readability */
-  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 25px; /* Rounded corners for a modern look */
+  font-family: "Questrial", sans-serif; /* Custom font for the button */
+  font-size: 25px; /* Larger font size for better readability */
+  font-weight: 400;
   cursor: pointer; /* Pointer cursor to indicate it's clickable */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and active states */
+  width: 300px;
+  margin-left: 90px;
 }
 
 .contact-form button:hover {
@@ -554,14 +687,19 @@ font-weight: 300;
 
 .footer-newsletter h3 {
   font-size: 24px;
+  font-weight: 600;
   color: #4DB4FF;
   left: 5%;
   padding-top: 10px;
+  margin-left: 25px;
 }
 
 .footer-newsletter p {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
   margin: 10px 0;
   padding-left: 35px;
+  margin-left: 50px;
 }
 
 .subscribe-container {
@@ -569,9 +707,11 @@ font-weight: 300;
   justify-content: center;
   height: 40px;
   margin-right: 20px;
+  margin-left: 150px;
 }
 
 .subscribe-container input {
+  font-family: "Questrial", sans-serif;
   padding: 10px;
   width: 350px;
   margin-right: 20px;
@@ -581,6 +721,7 @@ font-weight: 300;
 }
 
 .subscribe-container button {
+  font-family: "Questrial", sans-serif;
   padding: 10px 20px;
   background-color: #703D5C;
   color: #ffffff;
@@ -622,7 +763,9 @@ font-weight: 300;
 }
 
 .footer-links ul li {
-  margin-bottom: 10px;
+  font-family: "Questrial", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
@@ -653,10 +796,12 @@ font-weight: 300;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-left: 50px;
 }
 
 .social-media img {
   max-width: 100px;
+  margin-top: 15px;
   margin-bottom: 5px;
   border-radius: 50%;
 }
@@ -727,7 +872,6 @@ font-size: 2rem;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
 }
 
 .know-more-button:hover {
@@ -761,7 +905,7 @@ font-size: 2rem;
 
 .quote {
   font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-weight: 900;
   text-align: center;
   background-color: #0094FF;
@@ -841,7 +985,7 @@ font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px; /* Adjust based on content */
+  height: 175px; /* Adjust based on content */
   width: 100%; /* Adjust as needed */
   padding: 20px;
   background-color: #0094FF; /* Background color */
@@ -857,21 +1001,32 @@ font-size: 2rem;
 
 /* Style for the animated quote */
 .animated-quote {
-  font-size: 1.5rem; /* Adjust based on your design */
+  font-size: 22px; /* Adjust based on your design */
+  /* font-family: "Quicksand"; */
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 275px;
+  margin-right: 275px;
   color: #fff; /* Text color */
   opacity: 0;
   transform: translateY(100%);
   animation: fadeSlideIn 5s ease-in-out infinite;
+  margin-top: -10px;
 }
 
 /* Style for the quote author */
 .quote-author {
-  font-size: 1.5rem; /* Adjust as needed */
+  font-size: 22px; /* Adjust as needed */
+  /* font-family: "Quicksand", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   color: #ffffff; /* Slightly lighter color for author */
   opacity: 0;
   transform: translateY(100%);
   animation: fadeSlideIn 5s ease-in-out infinite;
-  animation-delay: 0s; /* Adjust timing as needed */
+  animation-delay: 0s;
 }
 
 /* Keyframes for fading and sliding effect */
@@ -955,7 +1110,7 @@ font-size: 2rem;
   color: #fff;
   border: 1px solid white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 .program-card .know-more-button:hover {
@@ -983,10 +1138,12 @@ font-size: 2rem;
 }
 
 .left-arrow {
+  background-color: rgba(218, 215, 215, 0.406);
   margin-right: 10px;
 }
 
 .right-arrow {
+  background-color: rgba(218, 215, 215, 0.406);
   margin-left: 10px;
 }
 
@@ -1013,7 +1170,7 @@ h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 3rem;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Shippori Antique', sans-serif;
   font-weight: 500;
   color: #333;
 }
@@ -1022,7 +1179,7 @@ h2 {
   
   margin: 0 auto 2rem auto;
   font-size: 1.1rem;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #444;
   line-height: 1.6;
   max-width: 1050px;
@@ -1036,11 +1193,13 @@ h2 {
   justify-content: space-around;
   position: relative;
   overflow: hidden;
+
 }
 
 .carousel-wrapper {
   flex: 1;
   overflow: hidden;
+  margin-left: 30px;
 }
 
 .carousel {
@@ -1065,11 +1224,11 @@ h2 {
 }
 
 .nav-button.prev {
-  left: 10px;
+  left: 3px;
 }
 
 .nav-button.next {
-  right: 10px;
+  right: 20px;
 }
 
 .pcarousel-item {
@@ -1089,6 +1248,7 @@ h2 {
 }
 
 .card-link {
+  margin-left: 30px;
   text-decoration: none;
 }
 
@@ -1114,6 +1274,7 @@ h2 {
 
 .card-body {
   padding: 1rem;
+  height: 175px;
   display: flex;
   flex-direction: column;
 }
@@ -1125,7 +1286,7 @@ h2 {
 }
 
 .card-description {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #ffffff;
   margin-top: 0.5rem;
 }
@@ -1143,13 +1304,14 @@ h2 {
 .expert-description {
   text-align: left; /* Align text to the left */
   margin: 0 auto 2rem auto; /* Center container horizontally, add space below */
-  font-size: 1.1rem; /* Slightly larger font size for readability */
-  font-family: 'Varela Round', sans-serif; /* Use a modern sans-serif font */
-  color: #444; /* Dark gray color for contrast */
+  font-size: 1.3rem; /* Slightly larger font size for readability */
+  font-family: 'Montserrat', sans-serif; /* Use a modern sans-serif font */
+  font-weight: 500; /* Normal font weight */
+  color: #000000; /* Dark gray color for contrast */
   line-height: 1.6; /* Improve readability with a larger line height */
-  max-width: 1050px; /* Limit width for readability */
+  max-width: 1150px; /* Limit width for readability */
   padding: 0 1rem; /* Padding to ensure text doesn't touch edges on small screens */
-  text-align: justify;
+  text-align: center;
 }
 
 .expert-carousel-container {
@@ -1191,7 +1353,10 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 0;
-  height: 370px; /* Adjust height as needed */
+  width: 300px;
+  height: 350px; /* Adjust height as needed */
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 .expert-card-img {
@@ -1202,19 +1367,21 @@ h2 {
 
 .expert-card-body {
   padding: 1rem;
+  height: 175px;
   display: flex;
   flex-direction: column;
 }
 
 .expert-card-title {
   font-size: 1.2rem;
+  font-weight: 600;
   margin: 0;
   text-align: center;
   color: #459cf3;
 }
 
 .expert-card-description {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #ffffff;
   margin-top: 0.5rem;
 }
@@ -1252,7 +1419,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px; /* Adjust based on content */
+  height: 175px; /* Adjust based on content */
   width: 100%; /* Adjust as needed */
   padding: 20px;
   background-color: #0094FF; /* Background color */
@@ -1268,6 +1435,10 @@ h2 {
 
 /* Style for the quote text */
 .quote-text {
+  /* font-family: "Quicksand", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.5rem; /* Adjust based on your design */
   color: #fff; /* Text color */
   opacity: 0;
@@ -1277,6 +1448,10 @@ h2 {
 
 /* Style for the quote author name */
 .quote-author-name {
+  /* font-family: "Quicksand", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.5rem; /* Adjust as needed */
   color: #ffffff; /* Slightly lighter color for author */
   opacity: 0;
@@ -1321,9 +1496,11 @@ h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 3rem;
-  font-family: "Anton",sans-serif;
+  font-family: "Shippori Antique", system-ui;
+  font-optical-sizing: auto;
   font-weight: 400;
-  letter-spacing: 2px;
+  font-style: normal;
+  /* letter-spacing: 2px; */
   background: linear-gradient(90deg, #8e25ff, #4fa5fc); /* Apply gradient */
   -webkit-background-clip: text; /* Clip background to text for WebKit browsers */
   -moz-background-clip: text; /* Clip background to text for Firefox */
@@ -1337,11 +1514,14 @@ h2 {
   margin-top: 1rem;
   background-color: rgb(70, 68, 68);
   color: #fff; /* Text color for the button */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.2rem;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
-  font-family: "Anton",sans-serif;
   text-decoration: none; /* Remove underline for links */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -1388,10 +1568,10 @@ h2 {
   box-sizing: border-box; /* Include padding in the height */
   display: flex;
   flex-direction: column;
-  
+  gap: 10px;
   /*justify-content: center; /* Center the content vertically */
   color: #ffffff; /* Set default text color */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.137)); /* Gradient for text overlay */
   z-index: 2; /* Ensure content is above the image */
   transform: translateY(-50%); /* Move the content up to center it */
 }
@@ -1402,14 +1582,19 @@ h2 {
   font-size: 1.2rem;
   margin: 0;
   color: #ffffff; /* White text for readability */
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: left;
 }
 
 /* Style for program card paragraphs */
 .program-card p {
-  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  text-align: left;
   margin: 0;
   margin-bottom: 0rem; /* Add margin at the bottom to make space for the button */
+  margin-right: 70px;
 }
 
 /* Style for the "Know More" button */
@@ -1422,8 +1607,8 @@ h2 {
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
-  font-family: "Anton",sans-serif;
-  font-size: 0.8rem; /* Smaller font size */
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem; /* Smaller font size */
   margin: 0.5rem; /* Space around the button */
   z-index: 3; /* Ensure button is above the image and content */
 }
@@ -1444,6 +1629,8 @@ h2 {
 
 .program-carousel {
   display: flex;
+  margin-left: 40px;
+  margin-right: 50px;
   transition: transform 0.3s ease;
 }
 
@@ -1455,12 +1642,15 @@ h2 {
 /* Arrow Button Styles */
 .carousel-nav-button,
 .nav-button {
-  background-color: transparent;
+  background-color: #4b99ff;
   border: none;
+  margin-left: 60px;
+  margin-right: -15px;
   font-size: 24px; /* Adjust size as needed */
   cursor: pointer;
-  padding: 10px;
+  padding: 0;
   transition: color 0.3s;
+  justify-content: center;
 }
 
 .carousel-nav-button:hover,
@@ -1470,12 +1660,12 @@ h2 {
 
 .carousel-nav-button.prev {
   position: absolute;
-  left: 10px; /* Positioning for left arrow */
+  left: 0px; /* Positioning for left arrow */
 }
 
 .carousel-nav-button.next {
   position: absolute;
-  right: 10px; /* Positioning for right arrow */
+  right: 15px; /* Positioning for right arrow */
 }
 
 /* Additional styles to ensure accessibility and visibility */
@@ -1518,7 +1708,7 @@ h2 {
 
 #testimonial{
   position: relative;
-  height: 105vh;
+  height: 110vh;
   background-color:black;
   display: flex;
   flex-direction: column;
@@ -1531,7 +1721,7 @@ h2 {
   top: 5%;
   text-align: center;
   font-size: 3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Shippori Antique", sans-serif;
   background: linear-gradient(90deg, #8e25ff, #4fa5fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1543,7 +1733,12 @@ h2 {
   top: 18%;
   left: 10%;
   right: 10%;
-  font-size: 1.3rem;
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 120px;
+  max-width: 800px;
+  line-height: 1.8;
   text-align: center;
 }
 .slider-container {
@@ -1582,13 +1777,18 @@ h2 {
   color: white; /* Ensure text is visible on the dark background */
 }
 .card-content h3 {
-  margin-bottom: 10px;
+  font-size: 16px;
+  /* margin-bottom: 10px; */
+}
+
+.card-content .card-small-text {
+  font-size: 13px;
+  color: #00b3ff;
 }
 
 .card-content p {
-  font-size: 14px;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 12px;
+  /* margin-bottom: 5px; */
 }
 
 .arrow {
@@ -1605,11 +1805,11 @@ h2 {
 }
 
 .arrow.prev {
-  left: 5px;
+  left: 100px;
 }
 
 .arrow.next {
-  right: 5px;
+  right: 100px;
 }
 
 #testimonial {
@@ -1652,8 +1852,12 @@ h2 {
 }
 
 .card-content {
-  height: fit-content; /* 20% of the card height for the content */
-  padding: 20px; /* Space between content and edges */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  height: auto;
+  padding: 10px; /* Space between content and edges */
   background-color: black; /* Default background */
   color: white; /* Text color */
   transition: background-color 0.3s;
@@ -1678,10 +1882,12 @@ h2 {
 
 #inspiration-section {
   padding: 20px;
+  height: 625px;
   background-color: #000000;
 }
 
 .inspiration-title {
+  font-family: 'Shippori Antique', sans-serif;
   font-size: 2.5rem; /* Larger font size for the title */
   background: linear-gradient(90deg, #8e25ff, #4fa5fc);
   -webkit-background-clip: text; /* Clip the background to the text */
@@ -1691,10 +1897,32 @@ h2 {
   font-weight: bold; /* Make the title bold */
 }
 
+.inspiration-card-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem; /* Larger font size for the title */
+  font-weight: bold; /* Make the title bold */
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px; /* Space below the title */
+  text-align: left; /* Center the title */
+  margin-left: 25px;
+}
+
+.inspiration-card-content p {
+  font-family: 'Shippori Antique', sans-serif;
+  font-size: 1.1rem; /* Adjust font size as needed */
+  color: #ffffff; /* White text color */
+  line-height: 1.6; /* Increase line height for better readability */
+  text-align: left; /* Center the text */
+  margin-left: 25px;
+}
+
 
 .inspiration-text {
+    font-family: 'Montserrat', sans-serif; /* Use a modern sans-serif font */
     font-size: 1.2rem; /* Medium font size for the paragraph */
     color: #ffffff; /* Lighter gray color for the text */
+    margin-left: 75px;
+    margin-right: 75px;
     margin-bottom: 40px; /* Space below the paragraph */
     text-align: center; /* Center the text */
     /* justify-content: center; */
@@ -1703,6 +1931,8 @@ h2 {
 
 
 .inspiration-cards-container {
+  margin-left: 100px;
+  margin-right: 50px;
   display: flex; /* Flexbox for side-by-side layout */
   justify-content: center; /* Center cards in the container */
 }
@@ -1711,6 +1941,7 @@ h2 {
   position: relative;
   margin: 10px;
   width: 300px; /* Fixed width for all cards */
+  height: 350px;
   transition: all 0.3s ease;
   border-radius: 50px;
   cursor: pointer;
@@ -1728,7 +1959,7 @@ h2 {
   left: 0;
   right: 0;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background: linear-gradient(rgba(0, 0, 0, 0.121), rgba(0, 0, 0, 0.486)); /* Gradient for text overlay */
   color: white;
   text-align: center;
   transition: opacity 0.3s ease; /* Smooth transition */
@@ -1756,9 +1987,10 @@ h2 {
 }
 
 .resource-section h2 {
-  font-family: 'Shippori Antique', sans-serif;
+  font-family: 'Shippori Antique', system-ui;
+  font-optical-sizing: auto;
   font-size: 2em; /* Adjusts the font size */
-  font-weight: 550;
+  font-weight: 500; /* Adjusts the font weight */
   color: #000000;    /* Changes text color */
   text-align: center; /* Centers the text */
 }
@@ -1766,11 +1998,34 @@ h2 {
 .resource-section img {
   width: 220px;    /* Sets the image width */
   height: auto;   /* Maintains the aspect ratio */
-  margin: 0;
+  margin-top: -8px;
   vertical-align: middle; /* Aligns the image with text */
 }
 
+.resource-section p {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.1em; /* Adjusts the font size */
+  color: #000000;    /* Changes text color */
+  max-width: 800px; /* Limits the width of the text */
+  margin: 10px; /* Centers the text and adds space below */
+  margin-left: 0;
+  text-align: left; /* Centers the text */
+}
+
+.resource-section .content-top {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em; /* Adjusts the font size */
+  color: #000000;    /* Changes text color */
+  line-height: 1.5; /* Adjusts the line height */
+  /*max-width: 800px; /* Limits the width of the text */
+  margin-left: 200px;
+  margin-right: 60px;
+  text-align: center;
+  /*margin: 0 auto 20px; /* Centers the text and adds space below */
+}
+
 .resource-carousel {
+  margin-left: 60px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -1778,7 +2033,7 @@ h2 {
 
 .resource-card {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 8px;
   margin: 10px;
   padding: 0;
@@ -1804,10 +2059,25 @@ h2 {
 
 .card-name {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.989));
   padding: 10px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.7rem;
+}
+
+.card-line {
+  position: relative;
+  bottom: 0;
+  width: 70%;
+  height: 2px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #007bff;
 }
 
 .card-details {
@@ -1816,7 +2086,17 @@ h2 {
   flex: 3;
 }
 
+.card-details .card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em; /* Adjusts the font size */
+  font-weight: 600; /* Adjusts the font weight */
+  color: #585858;    /* Changes text color */
+  margin: 0; /* Removes default margin */
+}
+
 .carousel-controls {
+  display: flex;
+  justify-content: space-between; /* Space the arrows apart */
   margin: 15px 0;
 }
 
@@ -1824,10 +2104,24 @@ h2 {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 100%;
   padding: 10px;
+  font-size: large;
   cursor: pointer;
 }
+
+.carousel-arrow.left-arrow {
+  /* Optional: Add some margin to the left arrow if needed */
+  margin-right: auto;
+  transform: translateY(-230px) translateX(50px); /* Adjust vertical position */
+}
+
+.carousel-arrow.right-arrow {
+  /* Optional: Add some margin to the right arrow if needed */
+  margin-left: auto;
+  transform: translateY(-230px);
+}
+
 
 .carousel-arrow:hover {
   background-color: #0056b3;
@@ -1856,10 +2150,12 @@ h2 {
   background-color: #000000;
   text-align: center;
   padding: 20px;
+  height: 650px;
 }
 
 .open-minds-section h2 {
   color: #fff;
+  font-family: "Shippori Antique", sans-serif; /* Use a modern sans-serif font */
   font-size: 2.5em; /* Adjust size as needed */
   font-weight: 600; /* Bold font weight */
   background: linear-gradient(90deg, #AB5BFB, #7690EA); /* Gradient from primary blue to a lighter blue */
@@ -1871,10 +2167,11 @@ h2 {
 
 .open-minds-section p {
   color: #fff;
-  font-size: 1.1em; /* Slightly larger than default */
+  font-family: "Montserrat", sans-serif; /* Use a modern sans-serif font */
+  font-size: 1.2em; /* Slightly larger than default */
   color: #ffffff; /* A softer color for the paragraph */
   line-height: 1.5; /* Increase line height for better readability */
-  max-width: 600px; /* Limit width for better readability */
+  max-width: 800px; /* Limit width for better readability */
   margin: 0 auto 20px; /* Center and add space below */
 }
 
@@ -1906,16 +2203,30 @@ h2 {
 }
 
 .open-minds-content {
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   display: none; /* Hide all content by default */
 }
 
 .open-minds-content h3 {
+  font-family: "Shippori Antique", sans-serif;
   font-size: 2.4em; /* Adjust size as needed */
   font-weight: 500; /* Bold font weight */
   margin: 0;
-  color: #fff; /* Text color */
+  color: #ffffff; /* Text color */
   padding: 10px; /* Padding around the text */
+  transform: translateY(310px);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.open-minds-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  transform: translateY(310px);
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .open-minds-content.hidden {
@@ -1937,19 +2248,59 @@ h2 {
   color: white; /* Text color */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  height: 210px;
+  overflow: hidden;
 }
 
 .membership-offer-section h2 {
   color: white;
-  font-size: 2em;
-  font-weight: 400;
+  font-size: 40px;
   margin-bottom: 10px;
-  font-family: "Anton",sans-serif;
+  font-family: 'Montserrat';
+  font-weight: bolder;
 }
 
 .membership-offer-section p {
   font-size: 1.2em;
-  margin-bottom: 20px;
+  font-family: 'Poppins';
+  /* margin-bottom: 20px; */
+}
+
+.membership-offer-section img {
+  position: absolute;
+  width: 250px;
+  float: left;
+  margin-right: 15px;
+}
+
+.confetti-container {
+  width: 100%; /* Make it full width */
+  display: flex; /* Use flex for positioning */
+  justify-content: center; /* Center confetti horizontally */
+}
+
+.left-confetti {
+  justify-content: flex-start; /* Align left */
+  transform: translateY(70px);
+}
+
+.right-confetti {
+  justify-content: flex-end; /* Align right */
+  transform: translateY(-130px);
+}
+
+.left-img {
+  width: 250px; /* Set a width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between the image and text */
+  transform: rotate(45deg);
+}
+
+.right-img {
+  width: 250px; /* Set a width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between the image and text */
+  transform: rotate(-45deg);
 }
 
 .claim-offer-button {
@@ -1959,11 +2310,12 @@ h2 {
   color: white;
   padding: 10px 20px;
   border: 2px solid #6272ff; /* Border color */
+  width: 225px;
   border-radius: 15px;
   cursor: pointer;
-  font-family: "Anton",sans-serif;
-  font-size: 1.5em;
-  letter-spacing: 1px;
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  /* letter-spacing: 1px; */
   transition: background-color 0.3s smooth, color 0.3s smooth;
   animation: blink 1s infinite; /* Add blinking animation */
 }
@@ -2233,4 +2585,610 @@ video {
 }
 .linkedin{
   
+} */
+
+/*.gallery-container {
+  margin: auto;
+  width: 50%;
+  /*text-align: center;*/
+/*}*/
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-item input[type="radio"] {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border: 1px solid #555;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 0 2px #000;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.image-bg {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background-size: cover;
+  transition: background-image 0.7s ease-in-out;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.gallery-item input[type="radio"]:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #000;
+}
+
+#gallery1:checked ~ .gallery-item {
+  background-image: url("images/programs/AIML.png");
+  background-size: cover;
+}
+
+#gallery2:checked ~ .gallery-item {
+  background-image: url("images/programs/PB.png");
+  background-size: cover;
+}
+
+#gallery3:checked ~ .gallery-item {
+  background-image: url("images/programs/DA.png");
+  background-size: cover;
+}
+
+#gallery4:checked ~ .gallery-item {
+  background-image: url("images/programs/DE.png");
+  background-size: cover;
+}
+
+#gallery5:checked ~ .gallery-item {
+  background-image: url("images/programs/DS.png");
+  background-size: cover;
+}
+
+#gallery6:checked ~ .gallery-item {
+  background-image: url("images/programs/Rob.png");
+  background-size: cover;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; /* Image max width */
+  max-height: 80%; /* Image max height */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.animated-quotes-container {
+  position: relative;
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #0094FF; /* Your background color */
+  text-align: center; /* Center the content */
+}
+
+.quote-icon {
+  position: relative;
+  font-family: Harrington; /* Choose a decorative font */
+  width: 70px; /* Set width for the circle */
+  height: 70px;
+  border-radius: 100%;
+  border: 1px solid #ffffff; /* White border */
+  top: 5px; /* Adjust position as needed */
+  left: 200px; /* Adjust position as needed */
+  font-size: 100px; /* Adjust size as needed */
+  color: #ffffff; /* Choose a bright color */
+  z-index: 1; /* Ensure it's above other content */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.animated-quote-container {
+  margin-top: 40px; /* Add space to accommodate the icon */
+}
+
+.quote-line {
+  position: absolute;
+  width: 280px; /* Adjust width as needed */
+  height: 4px; /* Adjust height for thickness */
+  border-radius: 8px;
+  background-color: #ffb700; /* Line color */
+  /* margin-left: 30px; */
+  /* padding-top: 5px;
+  padding-left: 100px;
+  padding-right: 200px; */
+  /* margin-left: 30px; */
+  /* margin-bottom: 10px; */
+  /*margin: 100px auto 0; /* Center the line and add space above */
+  margin: 130px auto 0; /* Center the line and add space above */
+}
+
+.quote-text {
+  /* font-family: "Quicksand", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 22px; /* Adjust based on your design */
+  margin-left: 275px;
+  margin-right: 275px;
+  color: #fff; /* Text color */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+  margin-top: -20px; /* Adjust as needed */
+}
+
+.quote-author-name {
+  font-size: 22px; /* Adjust as needed */
+  /* font-family: "Quicksand", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff; /* Slightly lighter color for author */
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fadeSlideIn 5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.gallery-container {
+  width: 720px;
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* margin: 50px auto 20px; */
+}
+
+.gallery-container img {
+  width: 50%;
+  border: 4px solid #fff;
+  margin-left: 15px;
+  /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); */
+}
+
+ul.thumb {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.thumb li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+/* Initial hidden state for the thumbnail section */
+.om-modal-hidden {
+  display: none; /* Hidden by default */
+}
+
+/* Gallery modal styles */
+#om-gallery-modal {
+  width: 100%;
+  padding: 20px;
+  background-color: #fefefe; /* Match the original section background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block; /* Show it by default */
+}
+
+.om-gallery-modal-container {
+  text-align: center;
+}
+
+.om-modal-close {
+  cursor: pointer;
+  font-size: 28px;
+  color: #333;
+  float: right; /* Float close button to the right */
+}
+
+.om-gallery-thumbnail-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.om-gallery-thumbnail-list li {
+  margin: 5px;
+}
+
+[type=radio] {
+  display: none;
+}
+
+.open-section {
+  background-color: #000; /* Semi-transparent background */
+}
+
+.open-section h2 {
+  color: #fff;
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  background: linear-gradient(90deg, #AB5BFB, #7690EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 35px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#slider {
+  height: 60vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.open-para {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem; /* Medium font size for the paragraph */
+  text-align: center;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 25px;
+  color: #ffffff; /* Lighter gray color for the text */ 
+  /* max-width: 900px; */
+}
+
+#slider label {
+  margin: auto;
+  width: 300px; /* Width remains the same */
+  height: 300px; /* Adjust height as needed */
+  border-radius: 40px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-100%, 0, -200px); /* Increased distance */
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-60%, 0, -100px); /* Increased distance */
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0, 0, 0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(60%, 0, -100px); /* Increased distance */
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(100%, 0, -200px); /* Increased distance */
+}
+
+
+/* #slide1 { background: #00BCD4; }
+#slide2 { background: #4CAF50; }
+#slide3 { background: #CDDC39; }
+#slide4 { background: #FFC107; }
+#slide5 { background: #FF5722; } */
+
+img.open {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+
+
+
+
+/* .open-minds-section {
+  width: 100%;
+}
+
+.open-minds-container {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.open-minds-img {
+  width: 330px;
+  height: 200px;
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  background-size: contain;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.open-minds-img-1 {
+  left: 15%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.open-minds-img-2 .open-minds-img-4{
+  height: 250px;
+  opacity: 0.8;
+  width: 380px;
+  z-index: 1;
+}
+
+.open-minds-img-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.open-minds-img-3 {
+  box-shadow: -2px 5px 33px 6px;
+  color: rgba(0, 0, 0, 0.35);
+  height: 300px;
+  width: 430px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.open-minds-img-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.open-minds-img-5 {
+  left: 85%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.open-minds-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+
+.open-minds-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+
+.open-minds-controls button:focus {
+  outline: none;
+}
+
+.open-minds-controls-previous {
+  position: relative;
+}
+
+.open-minds-controls-previous::before {
+  border: solid #0000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.open-minds-controls-previous:hover::before {
+  left: -40px;
+}
+
+.open-minds-controls-next {
+  position: relative;
+}
+
+.open-minds-controls-next::before {
+  border: solid #0000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  padding: 10px;
+  position: absolute;
+  right: -30px;
+  top: 45%;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.15s ease-in-out;
+  width: 5px;
+}
+
+.open-minds-controls-next:hover::before {
+  right: -40px;
+} */
+
+
+ /* .container-fixed {
+  width: 20px;
+  margin: 0 auto;
+ }
+
+ .stacked-cards {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+ }
+
+ .stacked-cards li {
+  width: 220%;
+  height: 250px;
+  position: absolute;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0px #333;
+  list-style: none;
+  left: 50%;
+  transition: 0.5s ease transform;
+ }
+
+  .stacked-cards li:after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .stacked-cards li.active:after {
+    display: none;
+  }
+
+  .stacked-cards li img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    z-index: 4;
+    border-radius: 8px;
+  }
+
+  .stacked-cards li.active {
+    cursor: pointer;
+    border: 1px solid #fff;
+    box-shadow: 0 5px 10px 0px;
+  }
+
+  .stacked-cards li, 
+  .stacked-cards li:nth-child(n), 
+  .stacked-cards li:nth-child(2n), 
+  .stacked-cards li:nth-child(3n),
+  .stacked-cards li:nth-child(4n),
+  .stacked-cards li:nth-child(5n) {
+    background-color: #fff;
+  }
+
+  .stacked-cards ul {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+  } */
+
+/* .collection{
+    height: 100vh;
+    background-color: #1e232e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection .o-content{
+  height: 200px;
+  width: 200px;
+  background-color: #1b1f2a;
+  border: .2rem solid rgba(255,255,255,.1);
+  border-radius: 30px;
+  /* border-bottom: .4rem solid #0099ff; */
+  /* border-top: .4rem solid #0099ff; */
+  overflow: hidden;
+  /* padding: .2rem; */
+}
+
+.o-content img{
+    /* width: 100%;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem; */
+    width: 200px;
+    height: 200px;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Change color as needed */
+}
+
+.text-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-content h3{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.text-content p{
+  max-width: 22rem;
+  font-size: .8rem;
+  font-weight: 400;
+  text-align: center;
+}
+.btn{
+  background-color: #0099ff;
+  padding: .2rem;
+  border: 2px solid #0099ff;
+  outline: none;
+  font-size: .8rem;
+  border-radius: .5rem;
+  margin: 1rem 0;
+  cursor: pointer;
 } */

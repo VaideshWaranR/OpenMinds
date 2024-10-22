@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenMinds</title>
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Shippori Antique B1' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
   <div class="hero-section">
@@ -22,11 +41,11 @@
       <li><a href="#about">About Us</a></li>
       <li><a href="#programs-carousel-section">Programs</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact-section">Contact us</a></li>
+      <li><a href="#contact-section">Contact Us</a></li>
     </ul>
     </div>
 
-  <ul class="socials">
+  <!-- <ul class="socials">
     <li><i class="ri-facebook-circle-fill"></i></li>
     <li><i class="ri-instagram-line"></i></li>
     <li><i class="ri-twitter-x-line"></i></li>
@@ -34,7 +53,16 @@
     <li><i class="ri-youtube-line"></i></li>
     <li><i class="ri-whatsapp-line"></i></li>
 
-  </ul>
+  </ul> -->
+  <ul class="socials">
+    <li><img src="images/social/facebook.png" width="45px"></li>
+    <li><img src="images/social/instagram.png" width="45px"></li>
+    <li><img src="images/social/twitter.png" width="45px"></li>
+    <li><img src="images/social/linkedin.png" width="45px"></li>
+    <li><img src="images/social/youtube.png" width="45px"></li>
+    <li><img src="images/social/whatsapp.png" width="45px"></li>
+</ul>
+
   <div class="hero-content" id="home-id">
     <h1>Open Minds</h1>
     <div class="animated-text-container">
@@ -42,16 +70,18 @@
     </div>
     <p>Our immersive programs cater to academia, corporates, Industries, Healthcare domain and uplifts Job Seekers and common people who strive for a self-improvement, making learning a captivating and transformative adventure. Embrace the future of learning with us! Ready to rewrite your story? Join us and let's make waves together!</p>
     <br><br><br>
-    <a href="https://forms.gle/Rd75qsirzjSuSguR9" target="_blank" class="enquire-button">Enquire now <i class="ri-arrow-right-line"></i></a>
+    <a href="https://forms.gle/Rd75qsirzjSuSguR9" target="_blank" class="enquire-button">Enquire Now <i class="ri-arrow-right-line"></i></a>
   </div>
   <!-- <div class="logo"></div> -->
  
   </div>
   <div class="animated-quotes-container">
+    <div class="quote-icon"> “ </div>
     <div class="animated-quote-container">
       <div class="quote-author">Nelson Mandela</div><br>
-      <div class="animated-quote">“It always seems impossible, until it is done.”</div>
+      <div class="animated-quote">“It always seems impossible, until it is done.”</div><br><br><br>
     </div>
+    <div class="quote-line"></div>
   </div>     
   <section id="about">
 
@@ -88,7 +118,7 @@
       </video> -->
     </div>
       <div class="know-more">
-      <h1>Know us Better</h1>
+      <h1>Know Us Better</h1>
       <p>Get to know us better, discover our story, meet our team, and understand our values and process.</p>
       <button onclick="downloadFile()">Click Here !</button>
       </div>  
@@ -321,14 +351,20 @@
   </section>
   
   <div class="membership-offer-section">
-    <h2>Get 50% Off Open Minds Membership</h2>
+    <div class="confetti-container left-confetti">
+      <img src="images/confetti.gif" alt="confetti" class="left-img">
+  </div>
+    <h2>Open Minds Membership</h2>
     <p>Get unlimited access to 100+ programs today</p>
     <button class="claim-offer-button">Coming Soon</button>
+    <div class="confetti-container right-confetti">
+      <img src="images/confetti.gif" alt="confetti" class="right-img">
+  </div>
 </div>
 
 <section class="resource-section">
-  <h2 id="res-id">We Bring a Wealth of <img src="experience.png"><br>from a wide range of backgrounds</h2>
-  <p>Our distinguished resource panel features top-tier experts who bring real-world insights and a wealth of experience to our programs.</p>
+  <h2 id="res-id">We bring a wealth of<img src="experience.png"><br>from a wide range of backgrounds</h2>
+  <p class="content-top">Our distinguished resource panel features top-tier experts who bring real-world insights and a wealth of experience to our programs.</p>
   <div class="resource-carousel">
       <div class="resource-card" id="manibalaji">
           <div class="card-image" style="background-image: url('images/resource/manibalaji.png');">
@@ -336,8 +372,10 @@
           </div>
           <!-- <div class="card-outer-details"> -->
           <div class="card-details">
-              <p>Founder | CEO</p>
+              <p class="card-title">Founder | CEO</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>official@openminds1x.com</p>
           </div>
           <!-- <div class="linked-in">
             <h1 class="linkedin"><i class="ri-linkedin-box-fill"></i></h1>
@@ -349,26 +387,32 @@
               <div class="card-name">Siva Srinivasan S</div>
           </div>
           <div class="card-details">
-              <p>Co-Founder | CEO</p>
+              <p class="card-title">Co-Founder | CEO</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>official@openminds1x.com</p>
           </div>
       </div>
       <div class="resource-card" id="bhuvaneshwari">
           <div class="card-image" style="background-image: url('images/resource/bhuvaneshwari.png');">
-              <div class="card-name">Dr Bhuvaneshwari M</div>
+              <div class="card-name">Dr Bhuvaneshwari</div>
           </div>
           <div class="card-details">
-              <p>Director | Healthcare</p>
+              <p class="card-title">Director | Healthcare</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>official@openminds1x.com</p>
           </div>
       </div>
       <div class="resource-card" id="kiruthika">
           <div class="card-image" style="background-image: url('images/resource/kiruthika.png');">
-              <div class="card-name">Kiruthika S</div>
+              <div class="card-name">Kiruthika Gowththam</div>
           </div>
           <div class="card-details">
-              <p>Director | Journal Wings</p>
+              <p class="card-title">Director | Journal Wings</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="selvi">
@@ -376,8 +420,10 @@
             <div class="card-name">Selvi Saravanan</div>
           </div>
           <div class="card-details">
-              <p>Senior SAP Consultant Middle East</p>
+              <p class="card-title">Senior SAP Consultant Middle East</p>
+              <div class="card-line"></div>
               <p>Fuji</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="saravanan">
@@ -385,8 +431,10 @@
             <div class="card-name">Saravanan</div>
           </div>
           <div class="card-details">
-              <p>Robotic | Mechatronics Professional</p>
+              <p class="card-title">Robotic | Mechatronics Professional</p>
+              <div class="card-line"></div>
               <p>Majid AI Futtaim</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="shalini">
@@ -394,8 +442,10 @@
             <div class="card-name">Dr S Shalini</div>
           </div>
           <div class="card-details">
-              <p>AI and Network Security professional</p>
+              <p class="card-title">AI and Network Security professional</p>
+              <div class="card-line"></div>
               <p>Sathyabama University</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="ugendar">
@@ -403,8 +453,10 @@
             <div class="card-name">Ugendar Raj Gajendran</div>
           </div>
           <div class="card-details">
-              <p>System Engineer</p>
+              <p class="card-title">System Engineer</p>
+              <div class="card-line"></div>
               <p>TCS</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="sailesh">
@@ -412,8 +464,10 @@
             <div class="card-name">Sailesh R</div>
           </div>
           <div class="card-details">
-              <p>UI/UX Professional</p>
+              <p class="card-title">UI/UX Professional</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Dr.PM Kavitha">
@@ -421,8 +475,10 @@
             <div class="card-name">Dr.PM Kavitha</div>
           </div>
           <div class="card-details">
-              <p>Assistant Professor</p>
+              <p class="card-title">Assistant Professor</p>
+              <div class="card-line"></div>
               <p>SRM Institute</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Jagadeesh">
@@ -430,8 +486,10 @@
             <div class="card-name">Jagadeesh R</div>
           </div>
           <div class="card-details">
-              <p>Data  Analytics</p>
+              <p class="card-title">Data  Analytics</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Shibin">
@@ -439,8 +497,10 @@
             <div class="card-name">SHIBIN.T</div>
           </div>
           <div class="card-details">
-              <p>Snr . Engineer projects & design </p>
+              <p class="card-title">Snr . Engineer projects & design </p>
+              <div class="card-line"></div>
               <p>Genex utility management pvt Ltd </p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="ANANTHAN PANDURANGAN ">
@@ -448,8 +508,10 @@
             <div class="card-name">ANANTHAN PANDURANGAN </div>
           </div>
           <div class="card-details">
-              <p>Doctor</p>
+              <p class="card-title">Doctor</p>
+              <div class="card-line"></div>
               <p>Open Minds</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Vinoth S">
@@ -457,8 +519,10 @@
             <div class="card-name">Vinoth S</div>
           </div>
           <div class="card-details">
-              <p>CEO</p>
+              <p class="card-title">CEO</p>
+              <div class="card-line"></div>
               <p>Nano Technologies</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Dr.Saranya J">
@@ -466,8 +530,10 @@
             <div class="card-name">Dr.Saranya J</div>
           </div>
           <div class="card-details">
-              <p>Associate Professor</p>
+              <p class="card-title">Associate Professor</p>
+              <div class="card-line"></div>
               <p>Rajalakshmi Engineering College</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Ezhil Thalapathi R T">
@@ -475,8 +541,10 @@
             <div class="card-name">Ezhil Thalapathi R T</div>
           </div>
           <div class="card-details">
-              <p>Founder/CEO</p>
+              <p class="card-title">Founder/CEO</p>
+              <div class="card-line"></div>
               <p>ETA INDUSTRIES </p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Manikanda Bharath K ">
@@ -484,8 +552,10 @@
             <div class="card-name">Manikanda Bharath K </div>
           </div>
           <div class="card-details">
-              <p>Project manager </p>
+              <p class="card-title">Project manager </p>
+              <div class="card-line"></div>
               <p>Ocean Square</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Sumetha Jeevaa">
@@ -493,8 +563,10 @@
             <div class="card-name">Sumetha Jeevaa</div>
           </div>
           <div class="card-details">
-              <p>Associate Consultant</p>
+              <p class="card-title">Associate Consultant</p>
+              <div class="card-line"></div>
               <p>Infosys Ltd</p>
+              <p>Ex-Company</p>
           </div>
       </div>
       <div class="resource-card" id="Balaji Pandurangan">
@@ -502,8 +574,10 @@
             <div class="card-name">Balaji Pandurangan</div>
           </div>
           <div class="card-details">
-              <p>Assistant Manager </p>
+              <p class="card-title">Assistant Manager </p>
+              <div class="card-line"></div>
               <p>State Bank of India </p>
+              <p>Ex-Company</p>
           </div>
       </div>
   </div>
@@ -609,11 +683,101 @@
 
 
 
+<section class="open-section">
+<section id="slider">
+  <h2>What’s New on Open Minds</h2>
+  <p class="open-para">Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.</p>
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+  
+  <label for="s1" id="slide1"><img class="open" src="images/new/image1.png"></label>
+  <label for="s2" id="slide2"><img class="open" src="images/new/image2.jpg"></label>
+  <label for="s3" id="slide3"><img class="open" src="images/new/image3.png"></label>
+  <label for="s4" id="slide4"><img class="open" src="images/new/image4.jpg"></label>
+  <label for="s5" id="slide5"><img class="open" src="images/new/image5.jpg"></label>
+
+  <div id="professor-show" class="open-minds-content hidden">
+    <h3>A Professor’s Show</h3>
+    <p>The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds. The Professor, a central character in the event, delivered an eye-opening presentation on how AI is revolutionizing the biotech industry.</p>
+</div>
+<div id="professor-coming" class="open-minds-content hidden">
+    <h3> Explore the World of Mechatronics with Me</h3>
+    <p>Uncover the exciting fusion of mechanics, electronics, and automation in this interactive session. Learn how mechatronics shapes the future of technology through hands-on activities and discussions. Gain insights into real-world applications and boost your engineering knowledge. Let’s explore mechatronics together!</p>
+</div>
+<div id="startup-awards" class="open-minds-content hidden">
+  <h3>Startup Awards 2024</h3>
+  <p>We Got our Recognition!</p>
+</div>
+<div id="art-of-communication" class="open-minds-content hidden">
+    <h3> Open Mic Night - English Evenings by Open Minds</h3>
+    <p>Join us every evening for an immersive English experience! Part of The TIE Program, this series offers a platform to explore language and communication. Practice speaking English in front of a supportive audience, and engage in enriching discussions to boost your confidence and skills.</p>
+</div>
+<div id="food-tech-vision" class="open-minds-content hidden">
+    <h3>English Vinglish - Master the Nuances of English</h3>
+    <p>
+      A dynamic program designed to help students master the intricacies of communication. Learn through movies, games, and engaging conversations with expert tutors. Explore diverse methods to improve language skills in a fun and interactive environment. Join us to elevate your English fluency!</p>
+</div>
+</section>
+</section>
+
+
+<!-- <section class="open-minds-section" id="new-id">
+  <h2>What’s New on Open Minds</h2>
+  <p>Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.</p>
+
+  <div class="card-container">
+      <input type="radio" name="open-minds-slider" id="card1" checked>
+      <input type="radio" name="open-minds-slider" id="card2">
+      <input type="radio" name="open-minds-slider" id="card3">
+      <input type="radio" name="open-minds-slider" id="card4">
+      <input type="radio" name="open-minds-slider" id="card5">
+
+      <label for="card1" class="open-minds-card">
+          <img src="images/new/image1.png" alt="A Professor’s Show">
+      </label>
+      <label for="card2" class="open-minds-card">
+          <img src="images/new/image2.jpg" alt="The Professor is Coming">
+      </label>
+      <label for="card3" class="open-minds-card">
+          <img src="images/new/image3.png" alt="Startup Awards 2024">
+      </label>
+      <label for="card4" class="open-minds-card">
+          <img src="images/new/image4.jpg" alt="Get to know the Art of Communication">
+      </label>
+      <label for="card5" class="open-minds-card">
+          <img src="images/new/image5.jpg" alt="Food Tech has got a Computer Vision">
+      </label>
+  </div>
+  <div id="professor-show" class="open-minds-content hidden">
+    <h3>A Professor’s Show</h3>
+    <p>The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds. The Professor, a central character in the event, delivered an eye-opening presentation on how AI is revolutionizing the biotech industry.</p>
+</div>
+<div id="professor-coming" class="open-minds-content hidden">
+    <h3> Explore the World of Mechatronics with Me</h3>
+    <p>Uncover the exciting fusion of mechanics, electronics, and automation in this interactive session. Learn how mechatronics shapes the future of technology through hands-on activities and discussions. Gain insights into real-world applications and boost your engineering knowledge. Let’s explore mechatronics together!</p>
+</div>
+<div id="startup-awards" class="open-minds-content hidden">
+    <h3>Startup Awards 2024</h3>
+    <p>We Got our Recognition!</p>
+</div>
+<div id="art-of-communication" class="open-minds-content hidden">
+    <h3> Open Mic Night - English Evenings by Open Minds</h3>
+    <p>Join us every evening for an immersive English experience! Part of The TIE Program, this series offers a platform to explore language and communication. Practice speaking English in front of a supportive audience, and engage in enriching discussions to boost your confidence and skills.</p>
+</div>
+<div id="food-tech-vision" class="open-minds-content hidden">
+    <h3>English Vinglish - Master the Nuances of English</h3>
+    <p>
+      A dynamic program designed to help students master the intricacies of communication. Learn through movies, games, and engaging conversations with expert tutors. Explore diverse methods to improve language skills in a fun and interactive environment. Join us to elevate your English fluency!</p>
+</div>
+</section> -->
 
 
 
 
-  <section class="open-minds-section" id="new-id">
+  <!-- <section class="open-minds-section" id="new-id">
     <h2>What’s New on Open Minds</h2>
     <p>Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.</p>
 
@@ -660,13 +824,63 @@
         </div>
 
     </div>
+</section> -->
+
+<!-- <section class="collection"></section>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+  <div class="o-content swiper-slide">
+    <img src="images/new/image1.png" alt="">
+  </div>
+  <div class="o-content swiper-slide">
+    <img src="images/new/image2.jpg" alt="">
+  </div>
+  <div class="o-content swiper-slide">
+    <img src="images/new/image3.png" alt="">
+  </div>
+  <div class="o-content swiper-slide">
+    <img src="images/new/image4.jpg" alt="">
+  </div>
+  <div class="o-content swiper-slide">
+    <img src="images/new/image5.jpg" alt="">
+  </div>
+  </div>
+  <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+<!-- <section>
+  <div class="container-fixed stacked-cards stack-cards-slide">
+    <h2>Slide</h2>
+    <ul>
+      <li><img src="images/new/image1.png" alt="Image 1"></li>
+      <li><img src="images/new/image2.jpg" alt="Image 2"></li>
+      <li><img src="images/new/image3.png" alt="Image 3"></li>
+      <li><img src="images/new/image4.jpg" alt="Image 4"></li>
+      <li><img src="images/new/image5.jpg" alt="Image 5"></li>
+    </ul>
+  </div>
+</section> -->
 
 
-
+<!-- <section id="open-minds-section">
+    <div class="open-minds-container">
+      <img class="open-minds-img open-minds-img-1" src="images/new/image1.png" alt="Image 1" data-index="1">
+      <img class="open-minds-img open-minds-img-2" src="images/new/image2.jpg" alt="Image 2" data-index="2">
+      <img class="open-minds-img open-minds-img-3" src="images/new/image3.png" alt="Image 3" data-index="3">
+      <img class="open-minds-img open-minds-img-4" src="images/new/image4.jpg" alt="Image 4" data-index="4">
+      <img class="open-minds-img open-minds-img-5" src="images/new/image5.jpg" alt="Image 5" data-index="5">
+    </div>
+    <div class="open-minds-controls">
+      <button class="open-minds-controls-previous">&lt;</button>
+      <button class="open-minds-controls-next">&gt;</button>
+    </div>
+</section> -->
 
   <section id="unlock-section">
-    <h2 id="super-id">Unlock your Superhuman Potential</h2>
+    <h2 id="super-id">Unlock your Superhuman Potential<img src="brain.png" alt="brain" width="60px" style="transform: translateY(-25px);"></h2>
     <p class="section-description">
       Explore our Life Skills section, where you'll find pages, blogs, videos, and nutritional information designed to enhance your physical and mental health. Discover food habits and supplements that boost your physical well-being and cognitive abilities. Gain access to brain hacks, breathing techniques, and more to elevate your everyday performance. Join us on the journey to becoming the best version of yourself!
     </p>
@@ -737,13 +951,13 @@
 
 <section id="inspiration-section">
   <h1 class="inspiration-title" id="inspire-id">Get Inspired</h1>
-  <p class="inspiration-text">Let the wisdom of self-help gurus and influential figures inspire your journey.</p>
+  <p class="inspiration-text">Let the wisdom of self-help gurus and influential figures inspire your journey. Our "Get Inspired" section is designed to fuel your ambition and ignite your passion for continuous learning and growth.</p>
   <div class="inspiration-cards-container">
       <div class="inspiration-card expanded">
           <img src="images/inspiration/thiruvalluvar.png" alt="Thiruvalluvar">
           <div class="inspiration-card-content">
               <h3>Thiruvalluvar</h3>
-              <p>“Learning is excellence of wealth that none can destroy...”</p>
+              <p>“Learning is excellence of wealth that none can destroy. To man nought else affords reality of joy.”</p>
           </div>
       </div>
       <div class="inspiration-card">
@@ -842,8 +1056,8 @@
               <div class="expert-card">
                 <img src="https://img.youtube.com/vi/SuZ8lEHtDI8/maxresdefault.jpg" alt="YouTube Video 5" class="expert-card-img">
                 <div class="expert-card-body">
-                  <h3 class="expert-card-title">Video Title 5</h3>
-                  <p class="expert-card-description">Short caption or description for Video 5.</p>
+                  <h3 class="expert-card-title">The 5 Signs You're Burnt Out, NOT LAZY! | Tom Bilyeu</h3>
+                  <p class="expert-card-description">Even at his peak, Tom battles laziness daily. In this episode, he reveals how to overcome mental barriers and stay motivated.</p>
                 </div>
               </div>
             </a>
@@ -855,22 +1069,150 @@
   </section>
 
   <div class="quote-carousel-container">
+    <div class="quote-icon"> “ </div>
     <div class="quote-carousel-item">
       <div class="quote-author-name">Mahatma Gandhi</div><br>
       <div class="quote-text">“Live as if you were to die tomorrow. Learn as if you were to live forever.”</div>
     </div>
-</div>     
+    <div class="quote-line"></div>
+</div>  
+<div class="gallery-wrapper">   
   <section id="gallery">
     <div class="gal-part1" id="gallery-id">
       <h1>Gallery</h1>
       <p>Step into our Gallery to witness the dynamic interactions and enriching experiences that define Open Minds. Each photo tells a story of growth, connection, and discovery, showcasing the innovative approaches we take to education. This collection serves as a window into the engaging and inspiring atmosphere we create for our learners. Through these photos, we capture the essence of our unique and engaging programs, reflecting the joy and enthusiasm of our participants.</p>
-      <br><button>View more</button><br>
+      <br><button>View Pictures <i class="ri-arrow-right-line"></i></button><br>
     </div>
     <div class="gal-part2">
       <div class="gal-img"></div>
       <div class="gal2-img"></div>
       <div class="gal3-img"></div>
     </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <section id="gallery">
+    <div class="gal-part1" id="gallery-id">
+      <h1>Gallery</h1>
+      <p>Step into our Gallery to witness the dynamic interactions and enriching experiences that define Open Minds. Each photo tells a story of growth, connection, and discovery, showcasing the innovative approaches we take to education. This collection serves as a window into the engaging and inspiring atmosphere we create for our learners. Through these photos, we capture the essence of our unique and engaging programs, reflecting the joy and enthusiasm of our participants.</p>
+      <br><button id="om-gallery-view-more-button">View more</button><br>
+    </div>
+    <div class="gal-part2">
+      <div class="gal-img" onclick="openOmGallery('images/gallery/img1.png')"></div>
+      <div class="gal2-img" onclick="openOmGallery('images/gallery/img2.png')"></div>
+      <div class="gal3-img" onclick="openOmGallery('images/gallery/img3.png')"></div>
+    </div>
+  </section>
+  
+
+  <div id="om-gallery-modal" class="om-modal-hidden">
+    <div class="om-gallery-modal-container">
+      <span id="om-modal-close-button" class="om-modal-close">&times;</span>
+      <img src="images/gallery/img1.png" id="om-modal-gallery-image">
+      <ul class="om-gallery-thumbnail-list">
+        <li><a href="images/gallery/img1.png"><img src="images/gallery/img1.png" width="80px"></a></li>
+        <li><a href="images/gallery/img2.png"><img src="images/gallery/img2.png" width="80px"></a></li>
+        <li><a href="images/gallery/img3.png"><img src="images/gallery/img3.png" width="80px"></a></li>
+        <li><a href="images/gallery/img4.png"><img src="images/gallery/img4.png" width="80px"></a></li>
+        <li><a href="images/gallery/img5.png"><img src="images/gallery/img5.png" width="80px"></a></li>
+        <li><a href="images/gallery/img6.png"><img src="images/gallery/img6.png" width="80px"></a></li>
+        <li><a href="images/gallery/img7.png"><img src="images/gallery/img7.png" width="80px"></a></li>
+        <li><a href="images/gallery/img8.png"><img src="images/gallery/img8.png" width="80px"></a></li>
+        <li><a href="images/gallery/img9.png"><img src="images/gallery/img9.png" width="80px"></a></li>
+        <li><a href="images/gallery/img10.png"><img src="images/gallery/img10.png" width="80px"></a></li>
+        <li><a href="images/gallery/img11.png"><img src="images/gallery/img11.png" width="80px"></a></li>
+        <li><a href="images/gallery/img12.png"><img src="images/gallery/img12.png" width="80px"></a></li>
+      </ul>
+    </div>
+  </div>  
+  
+  
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>  
+  <script src="script.js"></script>
+</section> -->
+
+
+
+
+
+
+  <section class="new-gallery" style="display: none;">
+    <button class="close-button">&times;</button>
+    <div class="gallery-container" style="display: none;"><img src="images/gallery/img1.png"></div>
+        <ul class="thumb" style="display: none;">
+          <li><a href="images/gallery/img1.png" target="gallery-container"><img src="images/gallery/img1.png" width="80px"></a></li>
+          <li><a href="images/gallery/img2.png" target="gallery-container"><img src="images/gallery/img2.png" width="80px"></a></li>
+          <li><a href="images/gallery/img3.png" target="gallery-container"><img src="images/gallery/img3.png" width="80px"></a></li>
+          <li><a href="images/gallery/img4.png" target="gallery-container"><img src="images/gallery/img4.png" width="80px"></a></li>
+          <li><a href="images/gallery/img5.png" target="gallery-container"><img src="images/gallery/img5.png" width="80px"></a></li>
+          <li><a href="images/gallery/img6.png" target="gallery-container"><img src="images/gallery/img6.png" width="80px"></a></li>
+          <li><a href="images/gallery/img7.png" target="gallery-container"><img src="images/gallery/img7.png" width="80px"></a></li>
+          <li><a href="images/gallery/img8.png" target="gallery-container"><img src="images/gallery/img8.png" width="80px"></a></li>
+          <li><a href="images/gallery/img9.png" target="gallery-container"><img src="images/gallery/img9.png" width="80px"></a></li>
+          <li><a href="images/gallery/img10.png" target="gallery-container"><img src="images/gallery/img10.png" width="80px"></a></li>
+          <li><a href="images/gallery/img11.png" target="gallery-container"><img src="images/gallery/img11.png" width="80px"></a></li>
+          <li><a href="images/gallery/img12.png" target="gallery-container"><img src="images/gallery/img12.png" width="80px"></a></li>
+        </ul>
+    </div>
+    <div class="gallery-text-content" style="display: none;">
+      <h1>The Success Heist : AI in Biotechnology</h1>
+      <p><strong>Program Name :</strong> The Success Heist</p>
+      <p><strong>Theme :</strong> Money Heist</p>
+      <p><strong>Organized By :</strong> Open Minds</p>
+      <p><strong>Held At :</strong> <strong>Rajalakshmi Engineering College</strong></p>
+      <p><strong>Character :</strong> The Professor</p>
+      <p class="special-content">
+          Open Minds hosted "The Success Heist" at Rajalakshmi Engineering College, themed around the popular series "Money Heist." 
+          The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds. 
+          The Professor, a central character in the event, delivered an eye-opening presentation on how AI is revolutionizing the biotech industry. 
+          The session covered the critical role of AI in various applications, from drug discovery to gene editing.
+      </p>
+  </div>  
+  </section>
+</div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Click event for gal3-img
+        $('.gal3-img').click(function() {
+          $('#gallery').hide(); // Hide the original gallery
+          $('.new-gallery').show(); // Show the new gallery section
+          $('.gallery-container').show(); // Show the main image container
+          $('.thumb').show(); // Show the thumbnail list
+          $('.gallery-text-content').show(); // Show the gallery text content
+          $('.new-gallery').css('height', 150); // Adjust height to prevent extra whitespace
+        });
+
+
+        // Close button functionality
+        $('.close-button').click(function() {
+          $('.new-gallery').hide(); // Hide the new gallery section
+          $('.gallery-text-content').hide(); // Hide the main image container
+          $('#gallery').show(); // Show the original gallery
+        });
+
+        // Thumbnail click event to change main image
+        $('.thumb a').click(function(e){
+          e.preventDefault();
+          $('.gallery-container img').attr('src', $(this).attr('href'));
+        });
+      });
+    </script>
+
+    <div id="imageModal" class="modal">
+      <span class="close" id="modalClose">&times;</span>
+      <img class="modal-content" id="modalImage">
+      <div id="caption"></div>
+  </div>
   </section>
 <div class="page-break">
 </div>
@@ -890,7 +1232,7 @@
             </div>
             <div class="card-content">
               <h3>Ramya Neelamegam</h3>
-              <p>Student</p>
+              <p class="card-small-text">Student</p>
               <p>“The TIE Program by Open Minds: Knotting Success, One Idea at a Time.” 🎯</p>
             </div>
           </div>
@@ -903,7 +1245,7 @@
             </div>
             <div class="card-content">
               <h3>Meera</h3>
-              <p>Student</p>
+              <p class="card-small-text">Student</p>
              <p>“Open Minds Programs: Where Curiosity Meets Creativity!” 🌟</p>     </div>
           </div>
         </div>
@@ -915,7 +1257,7 @@
             </div>
             <div class="card-content">
               <h3>Kumar Prasanth</h3>
-              <p>Student</p>
+              <p class="card-small-text">Student</p>
              <p>“The Career Bundle: Your Passport to Professional Greatness!” </p> </div>
           </div>
         </div>
@@ -926,7 +1268,7 @@
             </div>
             <div class="card-content">
               <h3>Kalpana Devi M</h3>
-              <p>Student</p>
+              <p class="card-small-text">Student</p>
              <p>Great teaching and easy to crack communication assessments</p>   </div>
           </div>
         </div>
@@ -938,7 +1280,7 @@
             </div>
             <div class="card-content">
               <h3>Gnana Merlin A</h3>
-              <p>Student</p>
+              <p class="card-small-text">Student</p>
             <p>“Siva Srinivasan, the Architect of Inspiration!” </p>  </div>
           </div>
         </div>
@@ -946,12 +1288,14 @@
     </div>
     <div class="arrow next arrow-next">&#10095;</div>
   </div>
+  <br><br>
 </section>
 <section id="contact-section">
   <div class="contact" id="touch-id">
     <div class="contact-form-container">
       <div class="contact-form">
         <br><br><br><br><h2>Get in Touch</h2>
+        <div class="get-in-line"></div>
         <form id="contactForm">
           <input type="text" id="name" placeholder="Full Name" required>
           <input type="email" id="email" placeholder="Email Address" required>

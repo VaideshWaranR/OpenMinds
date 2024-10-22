@@ -396,64 +396,155 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-let currentIndex = 0;
-
-const cards = document.querySelectorAll('.resource-card');
-const totalCards = cards.length;
-const cardsToShow = 4;
-
-function updateCarousel() {
-    cards.forEach((card, index) => {
-        card.style.display = (index >= currentIndex && index < currentIndex + cardsToShow) ? 'block' : 'none';
-    });
-}
-
-document.querySelector('.right-arrow').addEventListener('click', () => {
-    if (currentIndex + cardsToShow < totalCards) {
-        currentIndex += 1;
-        updateCarousel();
-    }
-});
-
-document.querySelector('.left-arrow').addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex -= 1;
-        updateCarousel();
-    }
-});
-
-// Initial display setup
-updateCarousel();
 
 document.addEventListener('DOMContentLoaded', function() {
-  const prevButton = document.querySelector('.carousel-arrow.left-arrow');
-  const nextButton = document.querySelector('.carousel-arrow.right-arrow');
-  const slides = document.querySelectorAll('.resource-card');
-  const slidesToShow = 4; // Number of slides to display at a time
+  const productContainers = document.querySelectorAll('.resource-carousel');
+  const nxtBtn = document.querySelectorAll('.right-arrow');
+  const preBtn = document.querySelectorAll('.left-arrow');
+
+  productContainers.forEach((item, i) => {
+      nxtBtn[i].addEventListener('click', () => {
+          const containerWidth = item.clientWidth; // Use clientWidth for consistency
+          const totalWidth = item.scrollWidth;
+
+          // If scrolled to the end, reset to start
+          if (item.scrollLeft + containerWidth >= totalWidth) {
+              item.scrollLeft = 0; // Loop back to the start
+          } else {
+              item.scrollLeft += containerWidth; // Scroll right
+          }
+      });
+
+      preBtn[i].addEventListener('click', () => {
+          const containerWidth = item.clientWidth; // Use clientWidth for consistency
+
+          // If scrolled to the beginning, reset to end
+          if (item.scrollLeft === 0) {
+              item.scrollLeft = item.scrollWidth - containerWidth; // Loop back to the end
+          } else {
+              item.scrollLeft -= containerWidth; // Scroll left
+          }
+      });
+  });
+});
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+// let currentIndex = 0;
+
+// const cards = document.querySelectorAll('.resource-card');
+// const totalCards = cards.length;
+// const cardsToShow = 4;
+
+// function updateCarousel() {
+//     cards.forEach((card, index) => {
+//         card.style.display = (index >= currentIndex && index < currentIndex + cardsToShow) ? 'block' : 'none';
+//     });
+// }
+
+// document.querySelector('.right-arrow').addEventListener('click', () => {
+//     if (currentIndex + cardsToShow < totalCards) {
+//         currentIndex += 1;
+//         updateCarousel();
+//     }
+// });
+
+// document.querySelector('.left-arrow').addEventListener('click', () => {
+//     if (currentIndex > 0) {
+//         currentIndex -= 1;
+//         updateCarousel();
+//     }
+// });
+
+// // Initial display setup
+// updateCarousel();
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const prevButton = document.querySelector('.carousel-arrow.left-arrow');
+//   const nextButton = document.querySelector('.carousel-arrow.right-arrow');
+//   const slides = document.querySelectorAll('.resource-card');
+//   const slidesToShow = 4; // Number of slides to display at a time
+//   let currentIndex = 0;
+
+//   // Function to show the current set of slides
+//   function showSlides() {
+//       slides.forEach((slide, index) => {
+//           slide.classList.remove('active'); // Remove active class
+//       });
+
+//       for (let i = 0; i < slidesToShow; i++) {
+//           const slideIndex = (currentIndex + i) % slides.length;
+//           slides[slideIndex].classList.add('active'); // Add active class
+//       }
+//   }
+
+//   // Event listener for the previous button
+//   prevButton.addEventListener('click', () => {
+//       currentIndex = (currentIndex - slidesToShow + slides.length) % slides.length;
+//       if (currentIndex < 0) {
+//           currentIndex = slides.length - slidesToShow; // Go to the last set if negative
+//       }
+//       showSlides();
+//   });
+
+//   // Event listener for the next button
+//   nextButton.addEventListener('click', () => {
+//       currentIndex = (currentIndex + slidesToShow) % slides.length;
+//       if (currentIndex + slidesToShow > slides.length) {
+//         currentIndex = 0;
+//       }
+//       showSlides();
+//   });
+
+//   // Initialize the carousel
+//   showSlides();
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.open');
+  const contents = document.querySelectorAll('.open-minds-content');
   let currentIndex = 0;
 
-  // Function to update the visible slides
-  function updateSlides() {
-      slides.forEach((slide, index) => {
-          slide.style.display = (index >= currentIndex && index < currentIndex + slidesToShow) ? 'block' : 'none';
-      });
+  // Function to show content and update the card display
+  function updateDisplay() {
+      // Hide all content sections
+      contents.forEach(content => content.classList.add('hidden'));
+
+      // Show the selected content
+      const selectedContent = contents[currentIndex];
+      selectedContent.classList.remove('hidden');
   }
 
-  // Event listener for the previous button
-  prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - slidesToShow + slides.length) % slides.length;
-      updateSlides();
+  // Event listener for cards
+  cards.forEach((card, index) => {
+      card.addEventListener('click', function() {
+          if (index === currentIndex - 1 || (currentIndex === 0 && index === cards.length - 1)) {
+              // Move left (previous card clicked)
+              currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          } else if (index === currentIndex + 1 || (currentIndex === cards.length - 1 && index === 0)) {
+              // Move right (next card clicked)
+              currentIndex = (currentIndex + 1) % cards.length;
+          }
+          updateDisplay(); // Update content display
+      });
   });
 
-  // Event listener for the next button
-  nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + slidesToShow) % slides.length;
-      updateSlides();
-  });
+  // Initialize with the first card's content displayed
+  updateDisplay(); // Display the first card's content initiall
 
-  // Initialize the slider by displaying the first set of slides
-  updateSlides();
-});
+
+}); 
 
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.open-minds-card');
@@ -488,11 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
   updateDisplay(); // Display the first card's content initiall
 
 
-});
-
-
-
-
+}); 
 
 function scrollToSection() {
   const target = document.getElementById('contact-section');
@@ -809,3 +896,140 @@ function scroller(param) {
   requestAnimationFrame(animation);
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const radios = document.querySelectorAll('input[name="gallery"]');
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const caption = document.getElementById("caption");
+  const closeBtn = document.getElementById("modalClose");
+
+  radios.forEach(radio => {
+      radio.addEventListener("change", function() {
+          if (this.checked) {
+              const imageUrl = this.nextElementSibling.src; // Assuming the image is linked
+              modalImage.src = imageUrl;
+              modal.style.display = "block";
+          }
+      });
+  });
+
+  closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+});
+
+
+
+function openOmGallery(imageSrc) {
+  // Hide the original gallery section
+  $('#gallery').hide();
+
+  // Show the thumbnail section
+  $('#om-gallery-modal').show();
+  $('#om-modal-gallery-image').attr('src', imageSrc);
+}
+
+// Close button functionality
+$('#om-modal-close-button').click(function() {
+  // Show the original gallery section
+  $('#gallery').show();
+
+  // Hide the thumbnail section
+  $('#om-gallery-modal').hide();
+});
+
+// Thumbnail click functionality
+$('.om-gallery-thumbnail-list a').click(function(e) {
+  e.preventDefault();
+  $('#om-modal-gallery-image').attr('src', $(this).attr('href'));
+});
+
+// const openMindsContainer = document.querySelector('.open-minds-container');
+// const openMindsControlsContainer = document.querySelector('.open-minds-controls');
+// const openMindsControls = ['previous', 'next'];
+// const openMindsImg = document.querySelectorAll('.open-minds-img');
+
+// class OpenMindsGallery {
+//   constructor(container, img, controls) {
+//     this.container = container;
+//     this.controls = controls;
+//     this.img = [...img];
+//   }
+//   updateGallery() {
+//     this.img.forEach((e1 => {
+//       e1.classList.remove('open-minds-img-1');
+//       e1.classList.remove('open-minds-img-2');
+//       e1.classList.remove('open-minds-img-3');
+//       e1.classList.remove('open-minds-img-4');
+//       e1.classList.remove('open-minds-img-5');
+//     }));
+//     this.img.slice(0, 5).forEach((e1, i) => {
+//         e1.classList.add(`open-minds-img-${i + 1}`);
+//     });
+//   }
+//   setCurrentState(direction) {
+//     if (direction.className === 'open-minds-controls-previous') {
+//       this.img.unshift(this.img.pop());
+//     }
+//     else {
+//       this.img.push(this.img.shift());
+//     }
+//     this.updateGallery();
+//   }
+//   setControls() {
+//     this.controls.forEach((control) => {
+//       openMindsControlsContainer.appendChild(document.createElement('button')).className = `open-minds-controls-${control}`;
+//       document.querySelector(`.open-minds-controls-${control}`).innerText = control;
+//     });
+//   }
+//   useControls() {
+//     const triggers = [...openMindsControlsContainer.childNodes];
+//     triggers.forEach((control => {
+//       control.addEventListener('click', () => {
+//         e.preventDefault();
+//         this.setCurrentState(control);
+//       });
+//     });
+//   }
+// }
+
+// const openMindsGallery = new OpenMindsGallery(openMindsContainer, openMindsImg, openMindsControls);
+
+// openMindsGallery.setControls();
+// openMindsGallery.useControls();
+
+// var stackedCardSlide = new stackedCards({
+//   selector: '.stacked-cards',
+//   layout: 'slide',
+//   transformOrigin: 'center',});
+//   stackedCardSlide.init();
+
+// var swiper = new Swiper(".mySwiper", {
+//   effect: "coverflow",
+//   grabCursor: false, // Disable dragging
+//   centeredSlides: true,
+//   loop: true,
+//   slidesPerView: "auto",
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 0,
+//     depth: 150,
+//     modifier: 2.5,
+//     slideShadows: true,
+//   },
+//   // autoplay: {
+//   //   delay: 3000,
+//   //   disableOnInteraction: false,
+//   // },
+//   navigation: { // Enable navigation buttons
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+  
