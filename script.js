@@ -629,8 +629,8 @@ function scrollToProgram() {
 
 function downloadFile() {
   const link = document.createElement('a');
-  link.href = './pdf.pdf';  
-  link.download = 'OpenMinds.pdf'; 
+  link.href = './Open Minds_Business Profile.pdf';  
+  link.download = 'Open Minds_Business Profile.pdf'; 
   link.click();
 }
 
