@@ -69,13 +69,20 @@
       <h3 class="animated-text">Evolve 1x Better than Yesterday</h3>
   </div>
   <div class="blur-box">
-      <p>Our immersive programs cater to academia, corporates, Industries, Healthcare domain and uplifts Job Seekers and common people who strive for a self-improvement, making learning a captivating and transformative adventure. Embrace the future of learning with us! Ready to rewrite your story? Join us and let's make waves together!</p>
-  </div>
+    <p>Our <span class="highlight">Immersive programs</span> cater to academia, corporates, industries, healthcare domains, and <span class="highlight">Uplift job seekers</span> and common people who strive for <span class="highlight">Self-improvement</span>, making learning a <span class="highlight">Transformative adventure</span>.</p>
+    <br>
+    <div class="centered-paragraphs">
+        <p>Embrace the future of learning with us!</p> 
+        <p>Ready to rewrite your story?</p> 
+        <p>Join us and let's make waves together!</p>
+    </div>
+</div>
+
   <br><br><br>
   <a href="https://forms.gle/Rd75qsirzjSuSguR9" target="_blank" class="enquire-button">Enquire Now <i class="ri-arrow-right-line"></i></a>
 </div>
 
-  <!-- <div class="logo"></div> -->
+
  
   </div>
   <div class="animated-quotes-container">
@@ -113,17 +120,16 @@
       </div>
     </div>
 
-    <div class="about-part2">
-      <div class="about-img"> 
-        <!-- <video width="500" height="300" autoplay muted loop>
-        <source src="./video.mp4" type="video/mp4">
+    <div class="about-video-container">
+      <video width="600" height="300" autoplay muted loop>
+        <source src="lv_0_20241030170443.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video> -->
-    </div>
+      </video>
+      
       <div class="know-more">
-      <h1>Know Us Better</h1>
-      <p>Get to know us better, discover our story, meet our team, and understand our values and process.</p>
-      <button onclick="downloadFile()">Click Here !</button>
+        <h1>Know Us Better</h1>
+        <p>Get to know us better, discover our story, meet our team, and understand our values and process.</p>
+        <button onclick="downloadFile()">Click Here !</button>
       </div>  
     </div>
 
@@ -145,7 +151,191 @@
     </div>
   </section> -->
 
+  <!--what we serve-->
+  <section id="what-we-serve">
+    <h2 id="serve-title">What We Serve</h2>
+    <h3>Explore our services designed to empower, inspire, and shape your growth journey.</h3>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- Images with onclick to center the image and show description -->
+        <img src="../images/new/graphics.png" alt="Image 1" onclick="selectImage(0, 'Creative visuals that bring your ideas to life. We craft captivating designs that communicate your message with clarity and style.')">
+        <img src="../images/new/mentorship.png" alt="Image 2" onclick="selectImage(1, 'Guidance that fuels your personal and professional growth. Our experts provide tailored support to help you navigate your career path with confidence.')">
+        <img src="../images/new/nifty.png" alt="Image 3" onclick="selectImage(2, 'Sharpen your skills and gain a competitive edge. We fine-tune your abilities with specialized training, ensuring you stay ahead in your field.')">
+        <img src="../images/new/skills.png" alt="Image 4" onclick="selectImage(3, 'Innovative programs that challenge conventional thinking. We offer thought-provoking sessions that spark ideas, encourage collaboration, and foster inclusivity.')">
+      </div>
+    </div>
+  
+    <!-- Description box below the carousel -->
+    <div class="description-box" id="descriptionBox">
+      <p id="descriptionText">Click on an image for details.</p>
+    </div>
+  
+    <script>
+      const carousel = document.getElementById('carousel');
+      const descriptionText = document.getElementById('descriptionText');
+      const images = carousel.getElementsByTagName('img');
+  
+      function selectImage(index, description) {
+        // Remove 'selected' class from all images
+        for (let img of images) {
+          img.classList.remove('selected');
+        }
+  
+        // Add 'selected' class to the clicked image
+        images[index].classList.add('selected');
+  
+        // Update description text
+        descriptionText.textContent = description;
+  
+        // Center the clicked image
+        const imageWidth = images[index].offsetWidth + 20; // Image width + margin
+        const offset = (carousel.offsetWidth / 2) - (imageWidth / 2) - (index * imageWidth);
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
+  
+      // Set the default description to the first image on page load
+      window.onload = () => {
+        selectImage(0, 'Creative visuals that bring your ideas to life. We craft captivating designs that communicate your message with clarity and style.');
+      };
+    </script>
+  </section>
+  
+<!--5E inclusive modal-->
+<section id="fiveE-inclusive">
+  <div class="inclusive-modal">
+    <div class="title-container">
+      <h1 class="animated-title">Why Do We Stand Out?</h1>
+      <div class="accent-line"></div>
+    </div>
+    <h2 class="animated-subtitle">The 5E Inclusive Model</h2>
+    <p class="animated-paragraph">
+      "Our 5E Inclusive Model significantly impacts learning by fostering deeper understanding and active engagement, empowering learners for a comprehensive educational experience."
+    </p>
+  </div>
 
+  <!-- Floating particles -->
+  <div class="floating-particle"></div>
+  <div class="floating-particle"></div>
+  <div class="floating-particle"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.querySelector('.inclusive-modal');
+      const title = document.querySelector('.animated-title');
+      const subtitle = document.querySelector('.animated-subtitle');
+      const paragraph = document.querySelector('.animated-paragraph');
+      const line = document.querySelector('.accent-line');
+      
+      let hasAnimated = false;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            
+            // Trigger animations with delays
+            setTimeout(() => title.classList.add('visible'), 300);
+            setTimeout(() => line.classList.add('drawn'), 500);
+            setTimeout(() => subtitle.classList.add('visible'), 600);
+            setTimeout(() => paragraph.classList.add('visible'), 900);
+          }
+        });
+      });
+
+      observer.observe(modal);
+    });
+  </script>
+</section>
+  
+ <!--btw pg 4 and 5 -->
+<!-- Section -->
+<!-- Section -->
+<section class="trusted-us-section">
+  <h2>Who Trusted Us</h2>
+  <div class="scroll-container">
+    <!-- Auto-scrollable list -->
+    <div class="trusted-companies" id="scrollable-companies">
+      <div class="company">Own Us Technologies</div>
+      <div class="company">Ocean Square</div>
+      <div class="company">ETA</div>
+      <div class="company">Deeveesha</div>
+      <div class="company">MapeITSolutions</div>
+      <div class="company">Nano Technologies</div>
+      <div class="company">Rajalakshmi Engineering College</div>
+      
+      <!-- Duplicate the content for seamless looping -->
+      <div class="company">Own Us Technologies</div>
+      <div class="company">Ocean Square</div>
+      <div class="company">ETA</div>
+      <div class="company">Deeveesha</div>
+      <div class="company">MapeITSolutions</div>
+      <div class="company">Nano Technologies</div>
+      <div class="company">Rajalakshmi Engineering College</div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function autoScrollCompanies() {
+    const scrollableCompanies = document.getElementById('scrollable-companies');
+    const scrollSpeed = 1; // Adjust for speed; higher = faster scroll
+
+    function scrollStep() {
+      scrollableCompanies.scrollLeft += scrollSpeed;
+
+      // Reset to the beginning once we reach the end of the original content
+      if (scrollableCompanies.scrollLeft >= scrollableCompanies.scrollWidth / 2) {
+        scrollableCompanies.scrollLeft = 0;
+      }
+    }
+
+    // Start the scrolling at a steady interval
+    let scrollInterval = setInterval(scrollStep, 30);
+
+    // Pause scrolling on mouse hover
+    scrollableCompanies.addEventListener('mouseenter', () => {
+      clearInterval(scrollInterval);
+    });
+
+    // Resume scrolling when mouse leaves
+    scrollableCompanies.addEventListener('mouseleave', () => {
+      scrollInterval = setInterval(scrollStep, 30);
+    });
+  }
+
+  // Start auto-scroll when the page loads
+  window.onload = autoScrollCompanies;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
   <section id="programs-carousel-section">
     <h2 id="prog-id">Programs Offered at Open Minds</h2>
     <button class="view-all-button" id="openModalBtn">View All Courses</button><br><br><br><br>
@@ -364,6 +554,58 @@
       <img src="images/confetti.gif" alt="confetti" class="right-img">
   </div>
 </div>
+
+<!-- factulities pg 7 -->
+
+<div class="impact-counter-section">
+  <div class="impact-counter-box">
+    <img src="images/chef/Studio.png" alt="Faculties Impacted" class="impact-image">
+    <h2 class="impact-heading">Faculties Impacted</h2>
+    <p class="impact-description">
+      Empowering educators with specialized training programs to enhance existing versions. Our programs equip faculties with innovative methods and tools for effective instruction.
+    </p>
+    <span class="impact-counter" data-target="50">0</span> 
+  </div>
+
+  <div class="impact-counter-box">
+    <img src="images/chef/DALL-E.webp" alt="Students Impacted" class="impact-image">
+    <h2 class="impact-heading">Students Impacted</h2>
+    <p class="impact-description">
+      Transforming the learning experience for students through hands-on training and skill development. Our programs prepare students to excel in their fields and embrace future challenges.
+    </p>
+    <span class="impact-counter" data-target="350">0</span> 
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Start the counter when the page is fully loaded
+    startCounter();
+  });
+  
+  function startCounter() {
+    const counters = document.querySelectorAll('.impact-counter');
+  
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+  
+        const increment = target / 200; // Adjust for speed
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20); // Adjust for smoothness
+        } else {
+          counter.innerText = target + '+';
+        }
+      };
+  
+      updateCount();
+    });
+  }
+  </script>
+  
+
 
 <section class="resource-section">
   <h2 id="res-id">We bring a wealth of<img src="experience.png"><br>from a wide range of backgrounds</h2>
@@ -686,49 +928,101 @@
 
 
 
-<section class="open-section">
-<section id="slider">
-  <h2>What’s New on Open Minds</h2>
-  <p class="open-para">Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.</p>
-  <input type="radio" name="slider" id="s1" checked>
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s4">
-  <input type="radio" name="slider" id="s5">
-  <input type="radio" name="slider" id="s6">
-  <input type="radio" name="slider" id="s7">
-  <input type="radio" name="slider" id="s8">
-  
-  <label for="s1" id="slide1"><img class="open" src="images/new/image1.png"></label>
-  <label for="s2" id="slide2"><img class="open" src="images/new/image2.jpg"></label>
-  <label for="s4" id="slide4"><img class="open" src="images/new/image4.jpg"></label>
-  <label for="s5" id="slide5"><img class="open" src="images/new/image5.jpg"></label>
-  <label for="s6" id="slide6"><img class="open" src="images/new/image6.jpg"></label>
-  <label for="s7" id="slide7"><img class="open" src="images/new/image7.jpg"></label>
-  <label for="s8" id="slide8"><img class="open" src="images/new/image8.jpg"></label>
+<section class="news-section">
+  <section id="news-slider">
+    <h2>What’s New on Open Minds</h2>
+    <p class="news-description">
+      Discover the latest news and updates from Open Minds, ensuring you're always in the loop with the most current happenings.
+    </p>
 
-  <div id="professor-show" class="open-minds-content hidden">
-    <h3>A Professor’s Show</h3>
-    <p>The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds. The Professor, a central character in the event, delivered an eye-opening presentation on how AI is revolutionizing the biotech industry.</p>
-</div>
-<div id="professor-coming" class="open-minds-content hidden">
-    <h3> Explore the World of Mechatronics with Me</h3>
-    <p>Uncover the exciting fusion of mechanics, electronics, and automation in this interactive session. Learn how mechatronics shapes the future of technology through hands-on activities and discussions. Gain insights into real-world applications and boost your engineering knowledge. Let’s explore mechatronics together!</p>
-</div>
-<div id="startup-awards" class="open-minds-content hidden">
-  <h3>Startup Awards 2024</h3>
-  <p>We Got our Recognition!</p>
-</div>
-<div id="art-of-communication" class="open-minds-content hidden">
-    <h3> Open Mic Night - English Evenings by Open Minds</h3>
-    <p>Join us every evening for an immersive English experience! Part of The TIE Program, this series offers a platform to explore language and communication. Practice speaking English in front of a supportive audience, and engage in enriching discussions to boost your confidence and skills.</p>
-</div>
-<div id="food-tech-vision" class="open-minds-content hidden">
-    <h3>English Vinglish - Master the Nuances of English</h3>
-    <p>
-      A dynamic program designed to help students master the intricacies of communication. Learn through movies, games, and engaging conversations with expert tutors. Explore diverse methods to improve language skills in a fun and interactive environment. Join us to elevate your English fluency!</p>
-</div>
+    <!-- Display all 8 images in a grid layout -->
+    <div class="news-carousel">
+      <div class="news-slide" onclick="showNewsContent(0)">
+        <img src="images/new/image1.png" alt="Slide 1">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(1)">
+        <img src="images/new/image2.jpg" alt="Slide 2">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(2)">
+        <img src="images/new/image3.jpg" alt="Slide 3">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(3)">
+        <img src="images/new/image4.jpg" alt="Slide 4">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(4)">
+        <img src="images/new/image5.jpg" alt="Slide 5">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(5)">
+        <img src="images/new/image6.jpg" alt="Slide 6">
+      </div>
+      <div class="news-slide" onclick="showNewsContent(6)">
+        <img src="images/new/image7.jpg" alt="Slide 7">
+      </div>
+    </div>
+
+    <!-- Content sections that appear below each image -->
+    <div class="news-content" id="newsContent0">
+      <h3>A Professor’s Show</h3>
+      <p>The program was designed for a diverse audience from Biotechnology and Food Technology backgrounds...</p>
+    </div>
+    <div class="news-content" id="newsContent1">
+      <h3>Explore the World of Mechatronics</h3>
+      <p>Uncover the exciting fusion of mechanics, electronics, and automation in this interactive session...</p>
+    </div>
+    <div class="news-content" id="newsContent2">
+      <h3>Startup Awards 2024</h3>
+      <p>We Got our Recognition!</p>
+    </div>
+    <div class="news-content" id="newsContent3">
+      <h3>Open Mic Night</h3>
+      <p>Join us every evening for an immersive English experience...</p>
+    </div>
+    <div class="news-content" id="newsContent4">
+      <h3>English Vinglish</h3>
+      <p>A dynamic program designed to help students master the intricacies of communication...</p>
+    </div>
+    <div class="news-content" id="newsContent5">
+      <h3>Tech Expo 2024</h3>
+      <p>Explore cutting-edge technologies and innovations...</p>
+    </div>
+    <div class="news-content" id="newsContent6">
+      <h3>Annual Science Fest</h3>
+      <p>Celebrating science and innovation with engaging activities...</p>
+    </div>
+    <div class="news-content" id="newsContent7">
+      <h3>Workshops on AI</h3>
+      <p>Gain insights into the world of Artificial Intelligence...</p>
+    </div>
+  </section>
 </section>
-</section>
+
+
+
+
+<script>
+function showNewsContent(index) {
+  // Hide all content sections
+  document.querySelectorAll('.news-content').forEach((content) => {
+    content.style.display = 'none';
+  });
+
+  // Show the selected content below the clicked image
+  const selectedContent = document.getElementById(`newsContent${index}`);
+  if (selectedContent) {
+    selectedContent.style.display = 'block';
+
+    // Scroll the content into view smoothly
+    selectedContent.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+}
+
+
+
+</script>
+
 
 
 <!-- <section class="open-minds-section" id="new-id">
@@ -885,76 +1179,68 @@
       <button class="open-minds-controls-next">&gt;</button>
     </div>
 </section> -->
-
-  <section id="unlock-section">
-    <h2 id="super-id">Unlock your Superhuman Potential<img src="brain.png" alt="brain" width="60px" style="transform: translateY(-25px);"></h2>
-    <p class="section-description">
-      Explore our Life Skills section, where you'll find pages, blogs, videos, and nutritional information designed to enhance your physical and mental health. Discover food habits and supplements that boost your physical well-being and cognitive abilities. Gain access to brain hacks, breathing techniques, and more to elevate your everyday performance. Join us on the journey to becoming the best version of yourself!
-    </p>
-    <div class="carousel-container">
-      <button class="nav-button prev super-prev">&lt;</button>
-      <div class="carousel-wrapper">
-        <div class="carousel super-carousel">
-          <div class="carousel-item super-item">
-            <a href="https://youtu.be/uT_GcOGEFsk?si=96dL2I_2nidUmVNc" target="_blank" class="card-link">
-              <div class="card">
-                <img src="https://img.youtube.com/vi/uT_GcOGEFsk/maxresdefault.jpg" alt="YouTube Video 1" class="card-img">
-                <div class="card-body">
-                  <h3 class="card-title">Unleash Your Super Brain To Learn Faster | Jim Kwik</h3>
-                  <p class="card-description">Do you want to learn how to improve your memory? Discover 10 Powerful Hacks To Unlock Your Superbrain To Learn Faster</p>
-                </div>
+<section id="unlock-section">
+  <h2 id="super-id">
+    Unlock your Superhuman Potential
+    <img src="brain.png" alt="brain" width="60px" style="transform: translateY(-25px);">
+  </h2>
+  <p class="unlock-section-description">
+    Explore our Life Skills section, where you'll find pages, blogs, videos, and nutritional information designed to enhance your physical and mental health. Discover food habits and supplements that boost your physical well-being and cognitive abilities. Gain access to brain hacks, breathing techniques, and more to elevate your everyday performance. Join us on the journey to becoming the best version of yourself!
+  </p>
+  <div class="unlock-carousel-container">
+    <div class="unlock-carousel-wrapper">
+      <div class="unlock-carousel">
+        <!-- Carousel item 1 -->
+        <div class="unlock-carousel-item">
+          <a href="https://youtu.be/uT_GcOGEFsk?si=96dL2I_2nidUmVNc" target="_blank" class="unlock-card-link">
+            <div class="unlock-card">
+              <div class="unlock-card-image">
+                <img src="https://img.youtube.com/vi/uT_GcOGEFsk/maxresdefault.jpg" alt="YouTube Video 1">
               </div>
-            </a>
-          </div>
-          <div class="carousel-item super-item">
-            <a href="https://youtu.be/Cf0VF9EpM1k?si=bffKQVgFK0PzoJSa" target="_blank" class="card-link">
-              <div class="card">
-                <img src="https://img.youtube.com/vi/Cf0VF9EpM1k/maxresdefault.jpg" alt="YouTube Video 2" class="card-img">
-                <div class="card-body">
-                  <h3 class="card-title">Only The TOP 5% Of The Population Knows THIS!</h3>
-                  <p class="card-description">"This Was Kept Secret From The Poor People" | Robin Sharma</p>
-                </div>
+              <div class="unlock-card-content">
+                <h3 class="unlock-card-title">Unleash Your Super Brain To Learn Faster | Jim Kwik</h3>
+                <p class="unlock-card-description">Do you want to learn how to improve your memory? Discover 10 Powerful Hacks To Unlock Your Superbrain To Learn Faster</p>
               </div>
-            </a>
-          </div>
-          <div class="carousel-item super-item">
-            <a href="https://youtu.be/h_4GDXWBPCk?si=kxJ0Y08CDY5fskUQ" target="_blank" class="card-link">
-              <div class="card">
-                <img src="https://img.youtube.com/vi/h_4GDXWBPCk/maxresdefault.jpg" alt="YouTube Video 3" class="card-img">
-                <div class="card-body">
-                  <h3 class="card-title">20 Minute Silva Centering Exercise With Vishen Lakhiani</h3>
-                  <p class="card-description">Enter a deeper, healthier level of mind with this centering meditation. We hope you enjoy this 20 minute guided relaxation meditation.  </p>
-                </div>
+            </div>
+          </a>
+        </div>
+        <!-- Carousel item 2 -->
+        <div class="unlock-carousel-item">
+          <a href="https://youtu.be/Cf0VF9EpM1k?si=bffKQVgFK0PzoJSa" target="_blank" class="unlock-card-link">
+            <div class="unlock-card">
+              <div class="unlock-card-image">
+                <img src="https://img.youtube.com/vi/Cf0VF9EpM1k/maxresdefault.jpg" alt="YouTube Video 2">
               </div>
-            </a>
-          </div>
-          <div class="carousel-item super-item">
-            <a href="https://youtu.be/mX3Mt5glQKY?si=z4XvFZUSb73BGrQK" target="_blank" class="card-link">
-              <div class="card">
-                <img src="https://img.youtube.com/vi/mX3Mt5glQKY/maxresdefault.jpg" alt="YouTube Video 2" class="card-img">
-                <div class="card-body">
-                  <h3 class="card-title">Creatine Enhances Brain Function, Boosts Cognitive Health</h3>
-                  <p class="card-description">Exercise supports cognitive health after sleep deprivation, new study finds.  </p>
-                </div>
+              <div class="unlock-card-content">
+                <h3 class="unlock-card-title">Only The TOP 5% Of The Population Knows THIS!</h3>
+                <p class="unlock-card-description">"This Was Kept Secret From The Poor People" | Robin Sharma</p>
               </div>
-            </a>
-          </div>
-          <div class="carousel-item super-item">
-            <a href="https://youtu.be/cAv7kgmShR8?si=kJJeBBhYU24BA8uJ" target="_blank" class="card-link">
-              <div class="card">
-                <img src="https://img.youtube.com/vi/cAv7kgmShR8/maxresdefault.jpg" alt="YouTube Video 3" class="card-img">
-                <div class="card-body">
-                  <h3 class="card-title">The 6 Phase Meditation Method - Brian Rose & Vishen Lakhiani</h3>
-                  <p class="card-description">Vishen Lakhiani is an entrepreneur, bestselling author, motivational speaker, personal growth expert, activist and all round ball of energy.</p>
-                </div>
+            </div>
+          </a>
+        </div>
+        <!-- Carousel item 3 -->
+        <div class="unlock-carousel-item">
+          <a href="https://youtu.be/h_4GDXWBPCk?si=kxJ0Y08CDY5fskUQ" target="_blank" class="unlock-card-link">
+            <div class="unlock-card">
+              <div class="unlock-card-image">
+                <img src="https://img.youtube.com/vi/h_4GDXWBPCk/maxresdefault.jpg" alt="YouTube Video 3">
               </div>
-            </a>
-          </div>
+              <div class="unlock-card-content">
+                <h3 class="unlock-card-title">20 Minute Silva Centering Exercise With Vishen Lakhiani</h3>
+                <p class="unlock-card-description">Enter a deeper, healthier level of mind with this centering meditation. We hope you enjoy this 20-minute guided relaxation meditation.</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-      <button class="nav-button next super-next">&gt;</button>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
+
 
 <section id="inspiration-section">
   <h1 class="inspiration-title" id="inspire-id">Get Inspired</h1>
@@ -1224,79 +1510,132 @@
 <div class="page-break">
 </div>
 
-<section id="testimonial">
-  <h1 class="t-heading" id="client-id">What Our Client Says</h1><br><br><br><br><br><br>
-  <p class="t-para">Discover the stories behind our success through "What Our Clients Say." This section presents genuine testimonials from our clients, providing insight into the benefits and value of our services.</p>
-  <div class="slider-container">
-    <div class="arrow prev arrow-prev">&#10094;</div>
-    <div class="slider-wrapper">
-      <div class="slider">
 
-        <div class="slide">
-          <div class="card">
-            <div class="card-image">
+<section id="testimonial">
+  <!-- Main Heading and Introduction -->
+  <div class="t-intro-box">
+  <h1 class="t-heading" id="client-id">The Taste Tellers</h1>
+  <p class="t-para">Discover the stories behind our success through "What Our Clients Say." This section presents genuine testimonials from our clients, providing insight into the benefits and value of our services.</p>
+</div>
+  <!-- Taste of Users Section -->
+  <h2 class="t-subheading">Taste of Users</h2>
+  <p class="t-para-small">Discover firsthand experiences and feedback from our program participants. Their testimonials showcase the impact and value of our offerings in their journey.</p>
+
+  <div class="user-slider-container">
+    <div class="user-slider-wrapper">
+      <div class="user-slider">
+        <!-- User Testimonials -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
               <img src="images/female.jpg" alt="Janani J" />
             </div>
-            <div class="card-content">
+            <div class="testimonial-card-content">
               <h3>Ramya Neelamegam</h3>
-              <p class="card-small-text">Student</p>
+              <p class="testimonial-card-small-text">Student</p>
               <p>“The TIE Program by Open Minds: Knotting Success, One Idea at a Time.” 🎯</p>
             </div>
           </div>
         </div>
 
-        <div class="slide">
-          <div class="card">
-            <div class="card-image">
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
               <img src="images/female.jpg" alt="Holly Thompson" />
             </div>
-            <div class="card-content">
+            <div class="testimonial-card-content">
               <h3>Meera</h3>
-              <p class="card-small-text">Student</p>
-             <p>“Open Minds Programs: Where Curiosity Meets Creativity!” 🌟</p>     </div>
+              <p class="testimonial-card-small-text">Student</p>
+              <p>“Open Minds Programs: Where Curiosity Meets Creativity!” 🌟</p>
+            </div>
           </div>
         </div>
 
-        <div class="slide">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/male.jpg" alt="Holly Thompson" />
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
+              <img src="images/male.jpg" alt="Kumar Prasanth" />
             </div>
-            <div class="card-content">
+            <div class="testimonial-card-content">
               <h3>Kumar Prasanth</h3>
-              <p class="card-small-text">Student</p>
-             <p>“The Career Bundle: Your Passport to Professional Greatness!” </p> </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/female.jpg" alt="Holly Thompson" />
+              <p class="testimonial-card-small-text">Student</p>
+              <p>“The Career Bundle: Your Passport to Professional Greatness!”</p>
             </div>
-            <div class="card-content">
-              <h3>Kalpana Devi M</h3>
-              <p class="card-small-text">Student</p>
-             <p>Great teaching and easy to crack communication assessments</p>   </div>
           </div>
         </div>
 
-        <div class="slide">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/female.jpg" alt="Holly Thompson" />
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
+              <img src="images/female.jpg" alt="Kalpana Devi M" />
             </div>
-            <div class="card-content">
+            <div class="testimonial-card-content">
+              <h3>Kalpana Devi M</h3>
+              <p class="testimonial-card-small-text">Student</p>
+              <p>Great teaching and easy to crack communication assessments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
+              <img src="images/female.jpg" alt="Gnana Merlin A" />
+            </div>
+            <div class="testimonial-card-content">
               <h3>Gnana Merlin A</h3>
-              <p class="card-small-text">Student</p>
-            <p>“Siva Srinivasan, the Architect of Inspiration!” </p>  </div>
+              <p class="testimonial-card-small-text">Student</p>
+              <p>“Siva Srinivasan, the Architect of Inspiration!”</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="arrow next arrow-next">&#10095;</div>
   </div>
-  <br><br>
+
+  <!-- Taste of Clients Section -->
+  <h2 class="t-subheading">Taste of Clients</h2>
+  <p class="t-para-small">Hear from our esteemed college and university partners about their experiences with our programs. Their testimonials reflect the success and satisfaction of hosting our enriching events.</p>
+
+  <div class="client-slider-container">
+    <div class="client-slider-wrapper">
+      <div class="client-slider">
+        <!-- Client Testimonials -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
+              <img src="images/female.jpg" alt="Client Name" />
+            </div>
+            <div class="testimonial-card-content">
+              <h3>Client Name 1</h3>
+              <p class="testimonial-card-small-text">College Partner</p>
+              <p>“Hosting Open Minds was an outstanding experience for our institution.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image">
+              <img src="images/female.jpg" alt="Client Name" />
+            </div>
+            <div class="testimonial-card-content">
+              <h3>Client Name 2</h3>
+              <p class="testimonial-card-small-text">University Partner</p>
+              <p>“The sessions were transformative for our students.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more client testimonials here as needed -->
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
+
 <section id="contact-section">
   <div class="contact" id="touch-id">
     <div class="contact-form-container">
@@ -1314,31 +1653,48 @@
 
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-          event.preventDefault(); // Prevent form from submitting the traditional way
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from submitting the traditional way
 
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-          // Send email using SMTP.js
-          Email.send({
-            Host: "smtp.yourisp.com",
-            Username: "official@openminds1x.com",
-            Password: "password",
-            To: 'official@openminds1x.com',
-            From: email,
-            Subject: `New message from ${name}`,
-            Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
-          }).then(
-            response => {
-              document.getElementById("responseMessage").innerText = "Message sent successfully!";
-            },
-            error => {
-              document.getElementById("responseMessage").innerText = "There was an error sending the message.";
-            }
-          );
-        });
+  // Send email using SMTP.js
+  Email.send({
+    Host: "smtp.yourisp.com",
+    Username: "official@openminds1x.com",
+    Password: "password",
+    To: 'official@openminds1x.com',
+    From: email,
+    Subject: `New message from ${name}`,
+    Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
+  }).then(
+    response => {
+      const responseMessage = document.getElementById("responseMessage");
+      responseMessage.innerText = "Thank you, PizzaBot! We have received your message.";
+      responseMessage.style.color = "#28a745"; // Green color for success
+      responseMessage.style.opacity = 1; // Show the message
+
+      // Keep the message visible for 5 seconds before fading out
+      setTimeout(() => {
+        responseMessage.style.opacity = 0; // Fade out the message
+      }, 5000); // Adjust the time (milliseconds) as needed
+    },
+    error => {
+      const responseMessage = document.getElementById("responseMessage");
+      responseMessage.innerText = "There was an error sending the message.";
+      responseMessage.style.color = "#dc3545"; // Red color for error
+      responseMessage.style.opacity = 1; // Show the message
+
+      // Keep the message visible for 5 seconds before fading out
+      setTimeout(() => {
+        responseMessage.style.opacity = 0; // Fade out the message
+      }, 5000); // Adjust the time (milliseconds) as needed
+    }
+  );
+});
+
       </script>
 
       <div class="contact-image">
@@ -1349,9 +1705,25 @@
 </section>
 
 
+<!-- cert section-->
+<section id="certification-section">
+  <div class="certification-content">
+    <h2 class="certification-heading">Why Compromise on Quality?</h2>
+    <p class="certification-text">Always look for <strong>BIS/ISI certified</strong> products and make informed choices.</p>
+    <p class="certification-text">Ensure quality and safety with every purchase, and trust the mark that matters.</p>
+    <p class="certification-tagline">Buy certified, live confidently.</p>
+  </div>
+  <div class="certification-logo">
+    <!-- Logo will be added here -->
+    <img src="images/chef/BIS-Hallmark-L.png" alt="BIS/ISI Certified Logo" />
+  </div>
+</section>
+
+
 <!-- subscribe popup -->
 <div id="subscribe-modal" class="modal">
   <div class="Myelin-modal-content2">    <span class="close" id="subscribe-close">&times;</span><br>
+     <h1>Thanks for Subscribing</h1>
      <h1>Newsletter Coming Soon !!!</h1><br>
     </div>
     </div>

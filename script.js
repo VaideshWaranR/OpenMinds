@@ -950,6 +950,13 @@ $('.om-gallery-thumbnail-list a').click(function(e) {
   $('#om-modal-gallery-image').attr('src', $(this).attr('href'));
 });
 
+
+
+
+
+
+
+
 // const openMindsContainer = document.querySelector('.open-minds-container');
 // const openMindsControlsContainer = document.querySelector('.open-minds-controls');
 // const openMindsControls = ['previous', 'next'];

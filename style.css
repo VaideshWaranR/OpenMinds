@@ -164,6 +164,19 @@ html ,body{
   word-spacing: 0.3em;
   text-align: justify;
   font-family: "Poppins";
+ 
+}
+.centered-paragraphs p {
+  text-align: center;
+}
+.highlight {
+  font-weight: bold;
+  color: #f8e516; /* Set to a distinct color */
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.2); /* Adds a subtle highlight effect */
+  padding: 0 4px; /* Adds padding around highlighted text */
+  border-radius: 4px; /* Optional: Rounds the corners of the highlight */
+  font-size: 1.1em; /* Slightly increases the font size */
 }
 
 .enquire-button {
@@ -204,7 +217,7 @@ html ,body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} 
 #about{
   /* height: 100vh;
   width: 100vw;
@@ -316,16 +329,18 @@ font-weight: 500;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.about-img{
-  
+.about-img {
   height: 300px;
   width: 600px;
-  background-image:url('./images/landingpage/aboutus/1.jpg');
-  background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: contain;
   margin-left: 100px;
   padding-right: 10px;
+  overflow: hidden; /* Ensures video does not overflow the container */
+}
+
+.about-video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .know-more {
   
@@ -375,6 +390,409 @@ font-weight: 500;
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* WHAT WE SERVE page 3 */
+#fiveE-inclusive {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ff0077, #00eaff, #ffdf00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Accent line with vibrant gradient */
+.accent-line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0077, #ffdf00);
+  margin: 15px auto 0;
+  transition: width 0.6s ease;
+}
+
+.accent-line.drawn {
+  width: 80%;
+}
+
+/* Glassmorphism box with neon outline */
+.inclusive-modal {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 50px rgba(255, 0, 119, 0.4), 0 5px 20px rgba(0, 234, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inclusive-modal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(255, 0, 119, 0.6), 0 5px 20px rgba(0, 234, 255, 0.4);
+}
+
+/* Floating neon particles */
+.floating-particle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(0, 234, 255, 0.8);
+  animation: floatParticle 6s linear infinite;
+}
+.floating-particle:nth-child(1) {
+  top: 10%; left: 15%;
+  animation-duration: 7s;
+}
+.floating-particle:nth-child(2) {
+  top: 65%; right: 25%;
+  animation-duration: 5s;
+}
+.floating-particle:nth-child(3) {
+  bottom: 20%; left: 70%;
+  animation-duration: 6s;
+}
+
+/* Animated title, subtitle, and paragraph with bold, high-contrast colors */
+.animated-title {
+  font-size: 3.2em;
+  background: linear-gradient(90deg, #ff0077, #00eaff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.animated-subtitle {
+  font-size: 2em;
+  color: #ffdf00;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.animated-paragraph {
+  font-size: 1.2em;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Visibility animation for elements */
+.animated-title, .animated-subtitle, .animated-paragraph {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient background animation */
+@keyframes gradientAnimation {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Floating particle animation */
+@keyframes floatParticle {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-20px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+
+
+#what-we-serve{
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  margin: 0;
+  background-color: #6874f2;
+  flex-direction: column;
+}
+
+/* Carousel container */
+.carousel-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* Carousel styling */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Image styling */
+.carousel img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Enlarged selected image */
+.carousel img.selected {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Description box directly below carousel */
+.description-box {
+  padding: 15px;
+  background-color: #b0daf2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  min-height: 50px;
+}
+
+
+
+
+
+
+/* become a chef parte page 4 */
+.z{
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+
+#features {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px; /* Increase the gap between cards if needed */
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  cursor: pointer;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; /* Center the entire features section */
+  padding: 20px 0;
+  overflow-x: auto;
+}
+.feature {
+  display: flex;
+  flex-direction: column; /* Stack image and text */
+  align-items: center;
+  position: relative;
+  width: 300px; /* Increase card width */
+  height: 300px; /* Increase card height */
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.feature img {
+  width: 100%;
+  height: 80%; /* Adjust image height relative to the card */
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature h3 {
+  position: absolute;
+  bottom: 0; /* Aligns text overlay at the bottom */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
+  color: white;
+  padding: 10px; /* Add padding for better spacing */
+  font-size: 16px; /* Adjust font size for better fit */
+  text-align: center; /* Center-align the text */
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-overflow: ellipsis; /* Adds '...' if the text is too long */
+  border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+
+#content-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 40px;
+}
+
+.content {
+  display: none;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #4DB4FF, #6A00FF);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.4s forwards;
+}
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.content.hidden {
+  display: none;
+}
+
+.content:not(.hidden) {
+  display: block;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  padding: 10px 0;
+  color: #f2f2f2;
+}
+
+/* btw pg 4 and 5 */
+
+/* General section styling */
+
+.trusted-us-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #575454; /* Black background below */
+  color: white; /* White text for contrast */
+}
+
+.trusted-us-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Scroll container to hold arrows and scrollable content */
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Trusted companies - horizontally scrollable */
+.trusted-companies {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  padding: 20px;
+  flex-wrap: nowrap;
+  width: 80%;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.trusted-companies::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Edge */
+}
+
+.company {
+  min-width: 250px;
+  flex-shrink: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.company:hover {
+  transform: scale(1.1);
+  background-color: #ffeb3b; /* Change background color on hover */
+}
+
+/* Scroll arrow buttons */
+.scroll-swipe {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.scroll-swipe:hover {
+  color: #ccc;
+  transform: scale(1.2) translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.left-swipe {
+  left: 10px;
+}
+
+.right-swipe {
+  right: 10px;
+}
+
+/* Optional: Hide arrows if content is fully scrolled */
+.left-swipe, .right-swipe {
+  display: block;
+}
+
+
+
+
+
+
 #gallery{
   height: 120vh;
   width: 100vw;
@@ -382,6 +800,7 @@ font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .gal-part1{
   width: 35vw;
@@ -537,6 +956,121 @@ p.special-content {
   color: #000000; /* Change color on hover */
 }
 
+/* page 7*/
+
+.impact-counter-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* Ensures equal height for all boxes */
+  justify-content: center;
+  gap: 40px;
+  
+}
+
+.impact-counter-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px; /* Set a consistent height for all boxes */
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+  
+}
+
+.impact-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures image is not stretched */
+  margin-bottom: 15px;
+}
+
+.impact-heading {
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight:bolder;
+}
+
+.impact-description {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0 10px; /* Adds some padding for text inside the box */
+}
+
+.impact-counter {
+  font-size: 40px;
+  font-weight: bold;
+  color: #e74c3c;
+  display: block;
+  margin-top: auto; /* Pushes counter to the bottom of the box */
+}
+
+/* cert section*/
+
+#certification-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: linear-gradient(90deg, #4fa5fc, #8e25ff); /* Gradient background */
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certification-content {
+  max-width: 70%;
+}
+
+.certification-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.certification-text {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.certification-tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #ffe600; /* Highlighted tagline color */
+  text-align: center;
+}
+
+.certification-logo {
+  background: #ffffff; /* Bright background for logo */
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.certification-logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+
+
 
 #contact-section {
   padding: 20px;
@@ -676,11 +1210,13 @@ p.special-content {
 
 
 #responseMessage {
-  text-align: center; /* Center the text */
-  font-size: 18px; /* Increase the font size */
-  font-weight: bold; /* Make the text bold */
-  color: #28a745; /* Change the color to green (indicating success) */
-  margin-top: 15px; /* Add some space above */
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 15px;
+  opacity: 0; /* Start hidden */
+  transition: visibility 0s 1.05s; /* Set a delay for visibility */
 }
 
 
@@ -792,11 +1328,11 @@ p.special-content {
   font-size: 1.8rem;
   margin-bottom: 5px;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  /*transition: color 0.3s ease, transform 0.3s ease;  Smooth transition */
 }
 
 .footer-links ul li a {
-  color: inherit; /* Use the parent color */
+ /*  color: inherit; Use the parent color */
   text-decoration: none; /* Remove underline by default */
 }
 
@@ -807,6 +1343,26 @@ p.special-content {
 
 .footer-links ul li a:hover {
   color: darkblue; /* Darker color for the link on hover */
+}
+.footer-links ul li button {
+ 
+  font-family: "Questrial", sans-serif;
+ 
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: inherit; /* Inherit the parent color */
+  background: transparent; /* Remove any background */
+  border: none; /* Remove any border */
+  padding: 0; /* Remove padding */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.footer-links ul li button:hover {
+  color: blue; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+.footer-links ul li button:focus {
+  outline: none; /* Remove the default focus outline */
 }
 
 /* Social Media */
@@ -930,7 +1486,7 @@ font-size: 2rem;
 
 .quote {
   font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-align: center;
   background-color: #0094FF;
@@ -1579,7 +2135,8 @@ h2 {
 .program-card img {
   display: block;
   width: 100%;
-  height: auto;
+  height:auto;
+ 
   object-fit: cover; /* Cover the card area with the image */
 }
 
@@ -1700,51 +2257,63 @@ h2 {
   box-shadow: 0 0 5px #007bff; /* Focus effect */
 }
 
-/* Styles for testimonials section */
+/* Styles for testimonials section  taste tellers*/
 .slider-container {
   position: relative;
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
-
+/*
 .arrow {
   background-color: transparent;
   border: none;
-  font-size: 24px; /* Adjust size as needed */
+  font-size: 24px; 
   cursor: pointer;
   padding: 10px;
   transition: color 0.3s;
 }
 
+
 .arrow:hover {
-  color: #007bff; /* Change to desired hover color */
+  color: #007bff; 
 }
 
 .arrow.prev {
   position: absolute;
-  left: 10px; /* Positioning for left arrow */
+  left: 10px; 
 }
 
 .arrow.next {
   position: absolute;
-  right: 10px; /* Positioning for right arrow */
+  right: 10px; 
+}
+  */
+
+ /* #testimonial {
+    position: relative;
+    height: auto; 
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
 }
 
-#testimonial{
-  position: relative;
-  height: 110vh;
-  background-color:black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+
+.intro-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  max-width: 800px; 
+  margin: 20px auto; 
+  text-align: center; 
 }
-.t-heading{
-  position: absolute;
-  top: 5%;
-  text-align: center;
+  
+.t-heading {
   font-size: 3rem;
   font-family: "Shippori Antique", sans-serif;
   background: linear-gradient(90deg, #8e25ff, #4fa5fc);
@@ -1752,70 +2321,340 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  margin: 0;
 }
-.t-para{
-  position: absolute;
-  top: 18%;
-  left: 10%;
-  right: 10%;
+  
+.t-para {
   font-family: "Montserrat";
   font-size: 1.2rem;
   font-weight: 300;
- margin: 0 auto;
-  max-width: 800px;
   line-height: 1.8;
-  text-align: center;
+  margin: 20px 0 0;
+  max-width: 700px;
 }
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 1210px;
-  overflow: hidden;
-  margin-top: 100px;
+  
+  .t-subheading {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    color: #4fa5fc;
+  }
+  
+  .t-para-small {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1210px;
+    overflow: hidden;
+    margin-top: 50px;
 }
 
 .slider-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    animation: scroll 30s linear infinite;
 }
-
+ 
+  
+ 
 .slide {
   min-width: 33.33%;
   display: flex;
   justify-content: center;
+  flex-shrink: 0; 
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); } 
+}/*
+ /*  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 300px; 
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+
+/*
+
 .card {
-  background: rgba(255, 255, 255, 0.1); /* Transparent white for the glass effect */
+  width: 90%; 
+  max-width: 300px; 
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for visibility on dark background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to enhance the frosted effect */
-  backdrop-filter: blur(10px); /* Creates the frosted glass blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
-  width: 85%;
-  color: white; /* Ensure text is visible on the dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
+.card-content {
+  padding: 10px 0;
+  text-align: center;
+}
+
 .card-content h3 {
   font-size: 16px;
-  /* margin-bottom: 10px; */
+  margin: 10px 0 5px;
 }
 
 .card-content .card-small-text {
   font-size: 13px;
   color: #00b3ff;
+  margin-bottom: 5px;
 }
 
 .card-content p {
   font-size: 12px;
-  /* margin-bottom: 5px; */
+  margin: 0;
 }
 
+.card-image img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
+}/*
+
+
+
+
+#testimonial {
+  position: relative;
+  height: auto;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.t-heading {
+  font-size: 3rem;
+  font-family: "Shippori Antique", sans-serif;
+  background: linear-gradient(90deg, #8e25ff, #4fa5fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: 0;
+}
+
+.t-para {
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 20px 0 0;
+  max-width: 700px;
+}
+
+.t-subheading {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #4fa5fc;
+}
+
+.t-para-small {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* User Slider */
+#testimonial {
+  position: relative;
+  height: auto;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.t-intro-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.t-heading {
+  font-size: 3rem;
+  font-family: "Shippori Antique", sans-serif;
+  background: linear-gradient(90deg, #8e25ff, #4fa5fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: 0;
+}
+
+.t-para {
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 20px 0 0;
+  max-width: 700px;
+}
+
+.t-subheading {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #4fa5fc;
+}
+
+.t-para-small {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* User Slider */
+.user-slider-container,
+.client-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.user-slider-wrapper,
+.client-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.user-slider,
+.client-slider {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.testimonial-slide {
+  min-width: 33.33%;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.testimonial-card {
+  width: 90%;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.testimonial-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.testimonial-card-content {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.testimonial-card-content h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.testimonial-card-content .testimonial-card-small-text {
+  font-size: 13px;
+  color: #00b3ff;
+  margin-bottom: 5px;
+}
+
+.testimonial-card-content p {
+  font-size: 12px;
+  margin: 0;
+}
+.t-intro-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+
+  
+ 
+  
+/*
 .arrow {
   position: absolute;
   top: 50%;
@@ -1836,7 +2675,8 @@ h2 {
 .arrow.next {
   right: 100px;
 }
-
+  */
+/*
 #testimonial {
   padding: 5px;
 }
@@ -1847,56 +2687,168 @@ h2 {
 }
 
 .slide {
-  flex: 1 0 33.33%; /* Each slide takes up 1/3 of the slider width */
-  box-sizing: border-box; /* Ensures padding and borders are included in the width */ 
+  flex: 1 0 33.33%; 
+  box-sizing: border-box; 
+}*/
+/* Unlock section-specific styles */
+/* Unlock section-specific styles */
+/* Unlock section-specific styles */
+/* Unlock section-specific styles */
+/* General styling for the unlock section */
+/* General styling for the unlock section */
+/* General styling for the unlock section */
+#unlock-section {
+  text-align: center;
+  padding: 20px;
 }
 
-.card {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  width: 300px; /* Adjust width as needed */
-  margin: 10px;
-  transition: background-color 0.3s ease;
-  position: relative;
+/* Style for the description paragraph */
+.unlock-section-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Container styling for the carousel */
+.unlock-carousel-container {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent cards from wrapping */
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.unlock-carousel {
+  display: flex;
+  gap: 20px; /* Equal gap between cards */
+}
+
+/* Individual card styling */
+.unlock-carousel-item {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  display: inline-block;
+}
+
+.unlock-card {
+  background-color: #111;
+  border-radius: 12px;
   overflow: hidden;
-  height: fit-content;
+  width: 350px;
+  height: 420px;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.unlock-card-content {
+  padding: 15px;
+  flex-grow: 1; /* Ensures content area fills the available space */
+  overflow: hidden; /* Hides overflow if content is too large */
+}
+
+
+.unlock-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: normal;
+}
+
+.unlock-card-description {
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+/* Remove blue underline from links */
+.unlock-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.unlock-card:hover .unlock-card-image img {
+  transform: scale(1.1); /* Zoom effect */
+  opacity: 0.9; /* Slightly reduce opacity */
+}
+.unlock-card-image img {
+  width: 100%;
+  height: auto;
+}
+.unlock-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow to make the card pop */
+}
+
+
+
+
+
+
+
+.card {
+  width: 300px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  min-height: 400px; /* Increase card height */
 }
 
 .card-image {
-  height: 80%; /* 80% of the card height for the image */
+  width: 100%;
+  height: 250px; /* Fixed height for image */
   overflow: hidden;
 }
 
 .card-image img {
-  width: 100%; /* Make the image fill the width of the card */
-  height: 300px; /* Maintain aspect ratio */
-  display: block; /* Prevents inline spacing */
-  padding: 0;
-  /*transition: transform 0.3s ease; /* For zoom effect */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .card-content {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  height: auto;
-  padding: 10px; /* Space between content and edges */
-  background-color: black; /* Default background */
-  color: white; /* Text color */
-  transition: background-color 0.3s;
-  background-color: black; /* Initial background color */
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  flex-grow: 1; /* Allow content area to grow and fill remaining space */
 }
 
-.card:hover .card-content {
-  background-color: white; /* Change to white on hover */
-  color: black; /* Change text color on hover */
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card-content .card-small-text {
+  font-size: 0.9rem;
+  color: #00b3ff;
+  margin: 5px 0;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  font-weight: 300;
 }
 
 .card:hover .card-image img {
-  transform: scale(1.1); /* Zoom in the image on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
 }
+
+
+
+
+
+
 
 /* Arrow styles (optional) */
 .arrow {
@@ -2058,15 +3010,32 @@ margin: 0 auto;
 .resource-card {
   background-color: #fff;
   border: 1px solid #000000;
-  border-radius: 8px;
+  border-radius: 8px; /* Rounded corners on the entire card */
   margin: 10px;
   padding: 0;
-  flex: 0 0 calc(25% - 20px); /* Four cards at a time */
+  flex: 0 0 calc(25% - 20px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   font-size: large;
   display: flex;
   flex-direction: column;
+  height: 380px;
+  overflow: hidden; /* Ensures no overflow from the child elements */
+  position: relative; /* Required for the pseudo-element */
+}
+.card-image::before {
+  content: '';
+  position: absolute;
+  top: -1px; /* Extend slightly beyond the top */
+  left: -1px; /* Extend slightly beyond the left */
+  right: -1px; /* Extend slightly beyond the right */
+  bottom: 0;
+  background-image: url('path/to/your/image.jpg'); /* Replace with the actual image URL */
+  background-size: cover;
+  background-position: top center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: -1; /* Places it behind any content inside .card-image */
 }
 
 .card-image {
@@ -2079,9 +3048,8 @@ margin: 0 auto;
   align-items: flex-end;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
-
-
 .card-name {
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.989));
@@ -2264,13 +3232,7 @@ margin: 0 auto;
   margin-right: 200px;
 }
 
-.open-minds-content.hidden {
-  display: none; /* Ensures hidden class keeps content hidden */
-}
 
-.open-minds-content:not(.hidden) {
-  display: block; /* Show the content when not hidden */
-}
 
 .membership-offer-section {
   display: flex;
@@ -2545,7 +3507,6 @@ margin: 0 auto;
   font-family: "Anton",sans-serif;
   letter-spacing: 1px;
 }
-
 
 video {
   pointer-events: none; /* Prevent any interaction with the video */
@@ -2873,111 +3834,100 @@ ul.thumb li {
   margin: 5px;
 }
 
-[type=radio] {
-  display: none;
-}
 
-.open-section {
+/* General Styles */
+.news-section {
   background-color: #000;
+  padding: 20px;
+  color: #fff;
 }
 
-.open-section h2 {
+.news-section h2 {
   color: #fff;
   font-family: "Shippori Antique", sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 600;
   background: linear-gradient(90deg, #AB5BFB, #7690EA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-top: 35px;
   margin-bottom: 10px;
+  text-align: center;
   letter-spacing: 1px;
 }
 
-#slider {
-  height: 60vw;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-
-.open-para {
+.news-description {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
-  margin-left: 250px;
-  margin-right: 250px;
-  margin-bottom: 25px;
+  margin: 20px auto;
+  width: 70%;
   color: #ffffff;
 }
 
-#slider label {
-  margin: auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  cursor: pointer;
-  transition: transform 0.4s ease;
+/* Carousel styles */
+.news-carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 30px;
 }
 
-/* Define the CSS for all slides */
-#s1:checked ~ #slide1, #s2:checked ~ #slide2,
-#s3:checked ~ #slide3, #s4:checked ~ #slide4,
-#s5:checked ~ #slide5, #s6:checked ~ #slide6,
-#s7:checked ~ #slide7, #s8:checked ~ #slide8 {
-  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
-  transform: translate3d(0, 0, 0);
+.news-slide {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-#s1:checked ~ #slide2, #s2:checked ~ #slide3,
-#s3:checked ~ #slide4, #s4:checked ~ #slide5,
-#s5:checked ~ #slide6, #s6:checked ~ #slide7,
-#s7:checked ~ #slide8, #s8:checked ~ #slide1 {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
-  transform: translate3d(60%, 0, -100px);
-}
-
-#s1:checked ~ #slide3, #s2:checked ~ #slide4,
-#s3:checked ~ #slide5, #s4:checked ~ #slide6,
-#s5:checked ~ #slide7, #s6:checked ~ #slide8,
-#s7:checked ~ #slide1, #s8:checked ~ #slide2 {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-  transform: translate3d(100%, 0, -200px);
-}
-
-#s1:checked ~ #slide8, #s2:checked ~ #slide1,
-#s3:checked ~ #slide2, #s4:checked ~ #slide3,
-#s5:checked ~ #slide4, #s6:checked ~ #slide5,
-#s7:checked ~ #slide6, #s8:checked ~ #slide7 {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-  transform: translate3d(-100%, 0, -200px);
-}
-
-#s1:checked ~ #slide7, #s2:checked ~ #slide8,
-#s3:checked ~ #slide1, #s4:checked ~ #slide2,
-#s5:checked ~ #slide3, #s6:checked ~ #slide4,
-#s7:checked ~ #slide5, #s8:checked ~ #slide6 {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
-  transform: translate3d(-60%, 0, -100px);
-}
-
-
-
-/* #slide1 { background: #00BCD4; }
-#slide2 { background: #4CAF50; }
-#slide3 { background: #CDDC39; }
-#slide4 { background: #FFC107; }
-#slide5 { background: #FF5722; } */
-
-img.open {
-  width: 300px;
-  height: 300px;
+.news-slide img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.news-slide:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* News content styles */
+.news-content {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #AB5BFB;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+  display: none;
+}
+
+.news-content h3 {
+  font-size: 1.8rem;
+  color: #AB5BFB;
+  margin-bottom: 15px;
+}
+
+.news-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+
+
+
+
+
 
 
 
